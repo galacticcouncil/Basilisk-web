@@ -4,8 +4,36 @@ import styled from "styled-components"
 // Components
 import Image from "../image/image.component"
 import Link from "next/link"
+import { ButtonLink } from "../button/button.component"
 
 const Header: React.FC = () => {
+	const NAV_ITEMS = [
+		{
+			label: "Start",
+			href: "/",
+		},
+		{
+			label: "Features",
+			href: "/",
+		},
+		{
+			label: "About",
+			href: "/",
+		},
+		{
+			label: "Socials",
+			href: "/",
+		},
+		{
+			label: "Blog",
+			href: "/",
+		},
+		{
+			label: "Github",
+			href: "/",
+		},
+	]
+
 	return (
 		<HeaderContainer>
 			<Container>
@@ -15,29 +43,18 @@ const Header: React.FC = () => {
 
 				<Nav>
 					<NavList>
-						<NavItem>
-							<Link href="/">Start</Link>
-						</NavItem>
-						<NavItem>
-							<Link href="/">Features</Link>
-						</NavItem>
-						<NavItem>
-							<Link href="#">About</Link>
-						</NavItem>
-						<NavItem>
-							<Link href="#">Socials</Link>
-						</NavItem>
-						<NavItem>
-							<Link href="#">Blog</Link>
-						</NavItem>
-						<NavItem>
-							<Link href="#">Github</Link>
-						</NavItem>
+						{NAV_ITEMS.map((item, index) => (
+							<NavItem key={index}>
+								<Link href={item.href}>{item.label}</Link>
+							</NavItem>
+						))}
 					</NavList>
 				</Nav>
 
 				<CTAContainer>
-					<CTA href="#">Get Started</CTA>
+					<ButtonLink rounded href="#">
+						Get Started
+					</ButtonLink>
 				</CTAContainer>
 			</Container>
 		</HeaderContainer>
@@ -74,8 +91,10 @@ const NavList = styled.ul`
 	gap: 4rem;
 `
 
-const NavItem = styled.li``
+const NavItem = styled.li`
+	a {
+		color: ${({ theme }) => theme.header.navItemColor};
+	}
+`
 
 const CTAContainer = styled.div``
-
-const CTA = styled.a``

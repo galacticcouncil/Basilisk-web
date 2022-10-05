@@ -2,25 +2,25 @@
 import { Story, Meta } from "@storybook/react"
 
 // Components
-import { Button } from "./button.component"
+import { ButtonLink } from "./button.component"
 
 // Types
-import { IButtonProps } from "./button.types"
+import { IButtonLinkProps } from "./button.types"
 
 const meta: Meta = {
-	title: "Components/Button",
-	component: Button,
+	title: "Components/ButtonLink",
+	component: ButtonLink,
 }
 
 export default meta
 
-const Template: Story<IButtonProps> = (args) => <Button {...args} />
+const Template: Story<IButtonLinkProps> = (args) => <ButtonLink {...args} />
 
 export const Default = Template.bind({})
+
 Default.args = {
 	children: "Button",
-	disabled: false,
-	onClick: () => console.log("Button clicked"),
+	href: "#",
 	top: "initial",
 	bottom: "initial",
 	left: "initial",

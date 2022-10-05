@@ -5,8 +5,22 @@ export const light = {
 		primary: "#FFCE4F",
 		secondary: "#4FFFB0",
 	},
+	button: {
+		color: "#000",
+		background: `
+			linear-gradient(
+				90deg,
+				#4fffb0 1.27%,
+				#b3ff8f 48.96%,
+				#ff984e 104.14%
+			),
+			linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),
+			linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%)
+		`,
+	},
 	header: {
 		background: "rgba(22, 25, 28, 0.5)",
+		navItemColor: "#FFFFFF",
 	},
 	backgrounds: {},
 	fonts: {
