@@ -21,6 +21,19 @@ export const light = {
 	header: {
 		background: "rgba(22, 25, 28, 0.5)",
 		navItemColor: "#FFFFFF",
+		dropdownMenu: {
+			background: "rgba(76, 243, 168, 0.12)",
+			boxShadow: "0px 40px 70px rgba(0, 0, 0, 0.8)",
+			blur: "blur(20px)",
+		},
+		mobileMenu: {
+			background: "#121416",
+			navItemBorder: "0.0461563rem solid rgba(76, 243, 168, 0.12)",
+		},
+	},
+	hamMenu: {
+		color: "#FFFFFF",
+		bottomColor: "#9EA9B1",
 	},
 	backgrounds: {},
 	fonts: {

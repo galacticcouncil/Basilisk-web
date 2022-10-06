@@ -1,4 +1,5 @@
 // Utils
+import styled from "styled-components"
 
 // Components
 import Header from "../../components/header/header.component"
@@ -13,10 +14,14 @@ const PageLayout: React.FC<IProps> = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<main>{children}</main>
+			<Main>{children}</Main>
 			<Footer />
 		</>
 	)
 }
 
 export default PageLayout
+
+const Main = styled.main`
+	margin-top: 6.4rem;
+`

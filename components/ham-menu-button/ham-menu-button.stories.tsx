@@ -2,7 +2,10 @@
 import { Story, Meta } from "@storybook/react"
 
 // Components
-import HamMenuButton, { IProps } from "./ham-menu-button.component"
+import HamMenuButton from "./ham-menu-button.component"
+
+// Types
+import { IProps } from "./ham-menu-button.types"
 
 const meta: Meta = {
 	title: "Components/HamMenuButton",

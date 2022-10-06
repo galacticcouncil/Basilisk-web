@@ -61,14 +61,8 @@ export default class MyDocument extends Document {
 					<meta name="msapplication-TileColor" content="#da532c" />
 					<meta name="theme-color" content="#ffffff" /> */}
 
-					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link
-						rel="preconnect"
-						href="https://fonts.gstatic.com"
-						crossOrigin="true"
-					/>
-					<link
-						href="https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@400;600&display=swap"
+						href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap"
 						rel="stylesheet"
 					/>
 				</Head>

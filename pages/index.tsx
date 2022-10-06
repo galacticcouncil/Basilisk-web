@@ -5,6 +5,7 @@ import PageLayout from "../layouts/page/page.layout"
 
 // Components
 import Head from "next/head"
+import HeroSection from "../components/hero-section/hero-section.component"
 
 // Types
 import { ReactElement } from "react"
@@ -17,7 +18,7 @@ const Home = () => {
 				<meta name="description" content="" />
 			</Head>
 
-			<h1>Hello world</h1>
+			<HeroSection />
 		</>
 	)
 }

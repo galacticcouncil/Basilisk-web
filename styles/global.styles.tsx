@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     line-height: 1.5;
     font-size: 1.6rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     line-height: 1.5;
     background-color: #000;
     color: #fff;
@@ -23,7 +23,6 @@ export const GlobalStyles = createGlobalStyle`
 
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
   }
   
   
