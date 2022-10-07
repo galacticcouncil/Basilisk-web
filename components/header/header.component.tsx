@@ -456,7 +456,7 @@ const MobileMenuContainer = styled(motion.div)`
 
 const MobileNav = styled.nav`
 	margin-top: 6.4rem;
-	padding: 0 3.6rem;
+	padding: 0 3.6rem 8rem;
 
 	height: 100%;
 	overflow-y: auto;
