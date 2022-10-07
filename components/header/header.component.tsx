@@ -153,9 +153,10 @@ const Header: React.FC = () => {
 											<AnimatePresence>
 												{item.isHovered && (
 													<DropdownMenu
-														initial={{ opacity: 0, y: 10 }}
-														animate={{ opacity: 1, y: 0 }}
-														exit={{ opacity: 0, y: 10 }}
+														initial={{ opacity: 0 }}
+														animate={{ opacity: 1 }}
+														exit={{ opacity: 0 }}
+														transition={{ duration: 0.3, ease: "easeIn" }}
 													>
 														{item.list.map((listItem, index) => (
 															<DropdownMenuItem key={index}>
@@ -211,7 +212,10 @@ const Header: React.FC = () => {
 							y: -200,
 						}}
 						transition={{
-							duration: 0.6,
+							type: "spring",
+							mass: 1,
+							stiffness: 100,
+							damping: 15,
 						}}
 					>
 						<MobileNav>
@@ -222,7 +226,18 @@ const Header: React.FC = () => {
 										{item.list && (
 											<MobileDropdownButton onClick={() => item.toggle()}>
 												<span>{item.label}</span>
-												<IconSpan isOpen={item.isOpen}>
+												<IconSpan
+													isOpen={item.isOpen}
+													animate={
+														item.isOpen ? { rotate: "-45deg" } : { rotate: 0 }
+													}
+													transition={{
+														type: "spring",
+														mass: 1,
+														stiffness: 256,
+														damping: 24,
+													}}
+												>
 													<GoPlus />
 												</IconSpan>
 											</MobileDropdownButton>
@@ -233,6 +248,12 @@ const Header: React.FC = () => {
 													initial={{ opacity: 0, height: 0 }}
 													animate={{ opacity: 1, height: "auto" }}
 													exit={{ opacity: 0, height: 0 }}
+													transition={{
+														type: "spring",
+														mass: 1,
+														stiffness: 256,
+														damping: 24,
+													}}
 												>
 													<MobileDropdownList>
 														{item.list.map((listItem, index) => (
@@ -338,6 +359,11 @@ const navLinksStyles = css`
 	font-weight: 500;
 	line-height: 1.8;
 	color: ${({ theme }) => theme.header.navItemColor};
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		color: ${({ theme }) => theme.header.hoverNavItemColor};
+	}
 `
 
 const NavItem = styled.li`
@@ -379,12 +405,19 @@ const DropdownMenu = styled(motion.div)`
 `
 
 const DropdownMenuItem = styled(motion.div)`
-	padding: 1.7rem 2.4rem;
-
 	a {
+		padding: 1.7rem 2.4rem;
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
+
+		&:hover {
+			background: ${({ theme }) => theme.header.dropdownMenu.hoverBackground};
+		}
+	}
+
+	&:not(:last-child) {
+		border-bottom: ${({ theme }) => theme.header.dropdownMenu.borderBottom};
 	}
 `
 
@@ -409,7 +442,7 @@ const MobileMenuContainer = styled(motion.div)`
 	z-index: 99;
 
 	width: 100%;
-	min-height: 100vh;
+	height: 100vh;
 
 	background-color: ${({ theme }) => theme.header.mobileMenu.background};
 
@@ -424,6 +457,9 @@ const MobileMenuContainer = styled(motion.div)`
 const MobileNav = styled.nav`
 	margin-top: 6.4rem;
 	padding: 0 3.6rem;
+
+	height: 100%;
+	overflow-y: auto;
 `
 
 const MobileNavList = styled.ul``
@@ -462,9 +498,8 @@ const MobileDropdownButton = styled.button`
 	}
 `
 
-const IconSpan = styled.span<{ isOpen: boolean }>`
-	transition: 0.3s;
-	transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0deg)")};
+const IconSpan = styled(motion.span)<{ isOpen: boolean }>`
+	/* transition: 0.3s; */
 	color: ${({ isOpen, theme }) =>
 		isOpen ? theme.colors.secondary : theme.header.navItemColor};
 `
@@ -478,7 +513,6 @@ const MobileDropdownList = styled.ul`
 `
 
 const MobileDropdownMenuItem = styled(motion.li)`
-	padding: 0 2.4rem;
 	/* padding: 2rem 0; */
 
 	a {
@@ -487,7 +521,15 @@ const MobileDropdownMenuItem = styled(motion.li)`
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
-		color: ${({ theme }) => theme.header.navItemColor};
+		padding: 2rem 2.4rem;
+		color: ${({ theme }) => theme.header.mobileMenu.dropdownMenu.navItemColor};
+
+		&:hover {
+			color: ${({ theme }) =>
+				theme.header.mobileMenu.dropdownMenu.navItemColor};
+			background: ${({ theme }) =>
+				theme.header.mobileMenu.dropdownMenu.hoverBackground};
+		}
 	}
 
 	span {
