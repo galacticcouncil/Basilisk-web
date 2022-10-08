@@ -189,8 +189,8 @@ const BlurFigure = styled.figure`
 	width: 100%;
 	right: 0;
 	z-index: -1;
-
+	/* 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		bottom: -0.6rem;
-	}
+	} */
 `
