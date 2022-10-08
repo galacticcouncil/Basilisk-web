@@ -29,18 +29,21 @@ const HeroSection: React.FC = () => {
 					src="/assets/hero-section/app_ilu_mobile_v2.png"
 					alt="app ilu"
 					width={"100%"}
+					effect="blur"
 				/>
 				<Image
 					className="tablet"
 					src="/assets/hero-section/app_ilu_tablet_v2.png"
 					alt="app ilu"
 					width={"100%"}
+					effect="blur"
 				/>
 				<Image
 					className="desktop"
 					src="/assets/hero-section/app_ilu_desktop.png"
 					alt="app ilu"
 					width={"100%"}
+					effect="blur"
 				/>
 			</IluFigure>
 			<BlurFigure>
@@ -49,18 +52,21 @@ const HeroSection: React.FC = () => {
 					src="/assets/hero-section/bg-ilu_mobile.svg"
 					alt="background ilu"
 					width={"100%"}
+					effect="blur"
 				/>
 				<Image
 					className="tablet"
 					src="/assets/hero-section/bg-ilu_tablet.svg"
 					alt="background ilu"
 					width={"100%"}
+					effect="blur"
 				/>
 				<Image
 					className="desktop"
 					src="/assets/hero-section/bg-ilu.svg"
 					alt="background ilu"
 					width={"100%"}
+					effect="blur"
 				/>
 			</BlurFigure>
 		</SectionContainer>
