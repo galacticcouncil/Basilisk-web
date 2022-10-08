@@ -54,4 +54,12 @@ export const ButtonContainer = styled(motion.button)<IStyledProps>`
 
 export const AContainer = styled(motion.a)<IStyledProps>`
 	${PrimaryButtonStyles}
+	display: ${({ display }) => display || "flex"};
+`
+
+export const HeroAContainer = styled(motion.a)<IStyledProps>`
+	${PrimaryButtonStyles}
+	background: ${({ theme }) => theme.heroSection.ctaButtonBackground};
+	padding: 2rem 3.6rem;
+	display: ${({ display }) => display || "flex"};
 `

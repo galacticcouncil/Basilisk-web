@@ -190,7 +190,7 @@ const Header: React.FC = () => {
 
 					<CTAContainer>
 						<ButtonLink rounded href="#">
-							Get Started
+							Open Snek app
 						</ButtonLink>
 					</CTAContainer>
 					<HamMenuButton isOpen={isMenuOpen} onClick={() => toggleMenu()} />
@@ -399,9 +399,24 @@ const DropdownMenu = styled(motion.div)`
 	z-index: 101;
 
 	border-radius: 1.2rem;
-	background: ${({ theme }) => theme.header.dropdownMenu.background};
-	backdrop-filter: ${({ theme }) => theme.header.dropdownMenu.blur};
-	box-shadow: ${({ theme }) => theme.header.dropdownMenu.boxShadow};
+
+	background-color: ${({ theme }) =>
+		theme.header.dropdownMenu.beforeBackground};
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 1.2rem;
+		z-index: -100;
+
+		background: ${({ theme }) => theme.header.dropdownMenu.background};
+		backdrop-filter: ${({ theme }) => theme.header.dropdownMenu.blur};
+		box-shadow: ${({ theme }) => theme.header.dropdownMenu.boxShadow};
+	}
 `
 
 const DropdownMenuItem = styled(motion.div)`

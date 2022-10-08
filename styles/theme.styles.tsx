@@ -23,6 +23,7 @@ export const light = {
 		navItemColor: "#FFFFFF",
 		hoverNavItemColor: "#B8FFDF",
 		dropdownMenu: {
+			beforeBackground: "#000",
 			background: "rgba(76, 243, 168, 0.12)",
 			hoverBackground: "rgba(218, 255, 238, 0.06)",
 			borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
@@ -37,6 +38,12 @@ export const light = {
 				hoverBackground: "rgba(218, 255, 238, 0.06)",
 			},
 		},
+	},
+	heroSection: {
+		headingBackground:
+			"linear-gradient(90deg, #4fffb0 0%, #b3ff8f 50%, #ff984e 100%)",
+		descriptionColor: "#E5ECF1",
+		ctaButtonBackground: "linear-gradient(90deg, #4FFFB0 0%, #B3FF8F 100%)",
 	},
 	hamMenu: {
 		color: "#FFFFFF",

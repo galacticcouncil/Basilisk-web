@@ -8,6 +8,7 @@ export interface IStyledProps {
 	right?: string
 	width?: string
 	// outline?: boolean
+	display?: string
 	rounded?: boolean
 }
 

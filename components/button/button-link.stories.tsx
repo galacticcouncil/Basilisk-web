@@ -2,7 +2,7 @@
 import { Story, Meta } from "@storybook/react"
 
 // Components
-import { ButtonLink } from "./button.component"
+import { ButtonLink, HeroButtonLink } from "./button.component"
 
 // Types
 import { IButtonLinkProps } from "./button.types"
@@ -27,4 +27,5 @@ Default.args = {
 	right: "initial",
 	width: "initial",
 	rounded: false,
+	display: "flex",
 }
