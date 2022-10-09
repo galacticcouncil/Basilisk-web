@@ -6,6 +6,7 @@ import PageLayout from "../layouts/page/page.layout"
 // Components
 import Head from "next/head"
 import HeroSection from "../components/hero-section/hero-section.component"
+import OnChainSection from "../components/onchain-section/onchain-section.component"
 
 // Types
 import { ReactElement } from "react"
@@ -19,6 +20,7 @@ const Home = () => {
 			</Head>
 
 			<HeroSection />
+			<OnChainSection />
 		</>
 	)
 }

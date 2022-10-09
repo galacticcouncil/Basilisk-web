@@ -62,7 +62,7 @@ export default class MyDocument extends Document {
 					<meta name="theme-color" content="#ffffff" /> */}
 
 					<link
-						href="https://api.fontshare.com/v2/css?f[]=satoshi@800,700,500,400&display=swap"
+						href="https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,500&display=swap"
 						rel="stylesheet"
 					/>
 				</Head>
