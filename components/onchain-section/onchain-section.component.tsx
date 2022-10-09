@@ -55,10 +55,11 @@ const OnChainSection: React.FC = () => {
 export default OnChainSection
 
 const SectionContainer = styled.section`
+	position: relative;
+	z-index: 1;
 	padding: 6rem 2rem;
-
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	grid-row-gap: 6rem;
 
@@ -79,7 +80,7 @@ const Item = styled.div`
 	text-align: center;
 
 	:nth-child(1) {
-		grid-area: 1 / 1 / 2 / 3;
+		grid-area: 1 / 1 / 2 / 2;
 
 		:after {
 			content: "";
@@ -94,10 +95,10 @@ const Item = styled.div`
 		}
 	}
 	:nth-child(2) {
-		grid-area: 1 / 3 / 2 / 5;
+		grid-area: 1 / 2 / 2 / 3;
 	}
 	:nth-child(3) {
-		grid-area: 2 / 1 / 3 / 3;
+		grid-area: 2 / 1 / 3 / 2;
 		:after {
 			content: "";
 			position: absolute;
@@ -111,10 +112,10 @@ const Item = styled.div`
 		}
 	}
 	:nth-child(4) {
-		grid-area: 2 / 3 / 3 / 5;
+		grid-area: 2 / 2 / 3 / 3;
 	}
 	:nth-child(5) {
-		grid-area: 3 / 2 / 4 / 4;
+		grid-area: 3 / 1 / 4 / 3;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {

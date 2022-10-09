@@ -79,6 +79,7 @@ const SectionContainer = styled.section`
 	position: relative;
 	padding: 6rem 2rem 0;
 	overflow: hidden;
+	margin-bottom: -5.5rem;
 
 	.mobile {
 	}
@@ -92,6 +93,8 @@ const SectionContainer = styled.section`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		margin-bottom: -3rem;
+
 		.mobile {
 			display: none;
 			visibility: hidden;
@@ -105,6 +108,8 @@ const SectionContainer = styled.section`
 			visibility: hidden;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			margin-bottom: -0.6rem;
+
 			.mobile {
 				display: none;
 				visibility: hidden;
@@ -121,7 +126,7 @@ const SectionContainer = styled.section`
 	}
 `
 
-const Heading = styled.section`
+const Heading = styled.h1`
 	max-width: 25.7rem;
 	margin: 0 auto 1.5rem;
 	text-align: center;
@@ -148,7 +153,7 @@ const Heading = styled.section`
 		}
 	}
 `
-const Description = styled.section`
+const Description = styled.p`
 	max-width: 30.1rem;
 	margin: 0 auto 2.2rem;
 	text-align: center;
