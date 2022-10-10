@@ -44,6 +44,13 @@ const EarnRewardsSection = dynamic(
 	}
 )
 
+const SupportSection = dynamic(
+	() => import("../components/support-section/support-section.component"),
+	{
+		suspense: true,
+	}
+)
+
 const Home = () => {
 	return (
 		<>
@@ -58,6 +65,7 @@ const Home = () => {
 				<SwapTokensSection />
 				<NftSection />
 				<EarnRewardsSection />
+				<SupportSection />
 			</Suspense>
 		</>
 	)

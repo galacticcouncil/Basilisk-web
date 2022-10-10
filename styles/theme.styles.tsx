@@ -62,6 +62,12 @@ export const light = {
 		titleColor: "#EBEBEB",
 		descriptionColor: "#ACB2B5",
 	},
+	supportSection: {
+		color: "#EBEBEB",
+		mobileColor: "#EBEBEB",
+		colBackground: "rgba(218, 255, 238, 0.04)",
+		colBorder: "1px solid rgba(218, 255, 238, 0.06)",
+	},
 	hamMenu: {
 		color: "#FFFFFF",
 		bottomColor: "#9EA9B1",
