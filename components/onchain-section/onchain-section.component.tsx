@@ -30,24 +30,26 @@ const OnChainSection: React.FC = () => {
 
 	return (
 		<SectionContainer>
-			{data.map((item, index) => (
-				<>
-					<Item key={index}>
-						<ItemLabel>
-							<span>
-								<Image
-									src="/assets/icons/onchain.svg"
-									alt="onchain icon"
-									effect="blur"
-								/>
-							</span>
-							<span>{item.label}</span>
-						</ItemLabel>
-						<ItemValue>{item.value}</ItemValue>
-					</Item>
-					{/* {index !== data.length - 1 && index !== 2 && <ItemDivider />} */}
-				</>
-			))}
+			<Container>
+				{data.map((item, index) => (
+					<>
+						<Item key={index}>
+							<ItemLabel>
+								<span>
+									<Image
+										src="/assets/icons/onchain.svg"
+										alt="onchain icon"
+										effect="blur"
+									/>
+								</span>
+								<span>{item.label}</span>
+							</ItemLabel>
+							<ItemValue>{item.value}</ItemValue>
+						</Item>
+						{/* {index !== data.length - 1 && index !== 2 && <ItemDivider />} */}
+					</>
+				))}
+			</Container>
 		</SectionContainer>
 	)
 }
@@ -58,13 +60,19 @@ const SectionContainer = styled.section`
 	position: relative;
 	z-index: 2;
 	padding: 6rem 2rem;
+	background: ${({ theme }) => theme.onChainSection.background};
+	color: ${({ theme }) => theme.onChainSection.color};
+`
+
+const Container = styled.div`
+	max-width: 140rem;
+	width: 100%;
+	margin: 0 auto;
+
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	grid-row-gap: 6rem;
-
-	background: ${({ theme }) => theme.onChainSection.background};
-	color: ${({ theme }) => theme.onChainSection.color};
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-template-columns: repeat(6, 1fr);

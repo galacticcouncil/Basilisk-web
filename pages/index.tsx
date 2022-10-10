@@ -51,6 +51,20 @@ const SupportSection = dynamic(
 	}
 )
 
+const RoadmapSection = dynamic(
+	() => import("../components/roadmap-section/roadmap-section.component"),
+	{
+		suspense: true,
+	}
+)
+
+const LearnMoreSection = dynamic(
+	() => import("../components/learn-more-section/learn-more-section.component"),
+	{
+		suspense: true,
+	}
+)
+
 const Home = () => {
 	return (
 		<>
@@ -66,6 +80,8 @@ const Home = () => {
 				<NftSection />
 				<EarnRewardsSection />
 				<SupportSection />
+				<RoadmapSection />
+				<LearnMoreSection />
 			</Suspense>
 		</>
 	)
