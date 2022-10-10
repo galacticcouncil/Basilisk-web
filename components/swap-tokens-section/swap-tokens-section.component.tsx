@@ -49,9 +49,18 @@ const SwapTokensSection: React.FC = () => {
 export default SwapTokensSection
 
 const SectionIlu = styled.figure`
-	position: absolute;
-	top: 0;
-	right: 0;
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			visibility: visible;
+		}
+	}
 `
 
 const Section = styled.section`

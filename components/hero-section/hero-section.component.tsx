@@ -80,6 +80,7 @@ const SectionContainer = styled.section`
 	padding: 12.4rem 2rem 0;
 	overflow: hidden;
 	margin-bottom: -5.5rem;
+	z-index: 2;
 
 	&::before {
 		content: "";

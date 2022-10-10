@@ -34,7 +34,7 @@ const SectionContent: React.FC<IProps> = ({
 				<Image src={image.src} alt={image.alt} width="100%" effect="blur" />
 			</Col>
 			<Col>
-				<ContentTitle>{title}</ContentTitle>
+				<ContentTitle dangerouslySetInnerHTML={{ __html: title }} />
 				<ContentDescription>{description}</ContentDescription>
 				<Button rounded>{cta.label}</Button>
 			</Col>
@@ -46,10 +46,22 @@ export default SectionContent
 
 const Row = styled.div<IRowProps>`
 	display: flex;
-	flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	gap: 6rem;
-	margin-bottom: 6rem;
+
+	&:not(:last-child) {
+		margin-bottom: 10rem;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		align-items: unset;
+		flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		}
+	}
 `
 
 const Col = styled.div`
@@ -60,6 +72,17 @@ const Col = styled.div`
 	&:nth-child(2) {
 		max-width: 64rem;
 		width: 100%;
+		button {
+			margin: 0 auto;
+		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			button {
+				margin: initial;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
 	}
 `
 
@@ -70,7 +93,10 @@ const ContentTitle = styled.h3`
 	margin-bottom: 3.4rem;
 	color: ${({ theme }) => theme.sectionContainer.titleColor};
 
+	text-align: center;
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		text-align: start;
 		font-size: 3.8rem;
 		margin-bottom: 3.4rem;
 
@@ -82,11 +108,13 @@ const ContentTitle = styled.h3`
 `
 
 const ContentDescription = styled.h3`
+	text-align: center;
 	font-size: 1.6rem;
 	margin-bottom: 2.4rem;
 	color: ${({ theme }) => theme.sectionContainer.descriptionColor};
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		text-align: start;
 		font-size: 1.8rem;
 		margin-bottom: 3.5rem;
 

@@ -11,7 +11,7 @@ const NftSection: React.FC = () => {
 			<SectionHeading variant="BLUE">Time to Flip NFTs</SectionHeading>
 
 			<SectionContent
-				title="KodaDOT Marketplace"
+				title="KodaDOT<br/> Marketplace"
 				description="Buy and sell your favorite NFTs. Make offers for unlisted NFTs or set royalty fees to support the artist."
 				image={{
 					src: "/assets/ntf-section/lbp-tile.png",
@@ -24,7 +24,7 @@ const NftSection: React.FC = () => {
 
 			<SectionContent
 				reverse
-				title="Create NFT Auctions"
+				title="Create<br/> NFT Auctions"
 				description="Flip your jpegs with style. English, Top Up and Candle auctions - just choose your mode and let the luckiest bidder win."
 				image={{
 					src: "/assets/ntf-section/swap-okens-ile.svg",

@@ -56,7 +56,7 @@ export default OnChainSection
 
 const SectionContainer = styled.section`
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	padding: 6rem 2rem;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);

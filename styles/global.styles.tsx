@@ -26,8 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     font-family: 'Satoshi', sans-serif;
     line-height: 1.5;
-    background: linear-gradient(180deg, #1C2527 0%, #14161A 80.73%, #121316 100%);
-    background-repeat: no-repeat;
+    background-color: #000;
     color: #fff;
     height: auto;
   }

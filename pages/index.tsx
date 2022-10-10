@@ -29,6 +29,21 @@ const SwapTokensSection = dynamic(
 	}
 )
 
+const NftSection = dynamic(
+	() => import("../components/nft-section/nft-section.component"),
+	{
+		suspense: true,
+	}
+)
+
+const EarnRewardsSection = dynamic(
+	() =>
+		import("../components/earn-rewards-section/earn-rewards-section.component"),
+	{
+		suspense: true,
+	}
+)
+
 const Home = () => {
 	return (
 		<>
@@ -41,6 +56,8 @@ const Home = () => {
 			<Suspense fallback={"loading..."}>
 				<OnChainSection />
 				<SwapTokensSection />
+				<NftSection />
+				<EarnRewardsSection />
 			</Suspense>
 		</>
 	)

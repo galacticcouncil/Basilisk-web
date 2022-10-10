@@ -23,5 +23,5 @@ const PageLayout: React.FC<IProps> = ({ children }) => {
 export default PageLayout
 
 const Main = styled.main`
-	/* padding-top: 6.4rem; */
+	background: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);
 `
