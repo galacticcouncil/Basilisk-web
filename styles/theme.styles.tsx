@@ -40,6 +40,7 @@ export const light = {
 		},
 	},
 	heroSection: {
+		backgroundColor: "#000",
 		headingBackground:
 			"linear-gradient(90deg, #4fffb0 0%, #b3ff8f 50%, #ff984e 100%)",
 		descriptionColor: "#E5ECF1",
@@ -50,6 +51,16 @@ export const light = {
 			"linear-gradient(0deg, rgba(0, 0, 0, 0.2) -11.67%, rgba(0, 0, 0, 0) 32.64%), linear-gradient(90deg, #4FFFB0 1.27%, #B3FF8F 104.14%)",
 		color: "#000",
 		dividerColor: "#211F24",
+	},
+	sectionHeading: {
+		default: "linear-gradient(90deg, #4FFFB0 0%, #B3FF8F 50%, #FF984E 100%)",
+		blue: "linear-gradient(269.88deg, #0EA8FF 5.48%, #4555EA 82.61%, #0D1029 166.99%), linear-gradient(90deg, #4FFFB0 1.27%, #B3FF8F 104.14%)",
+		orange: "linear-gradient(90deg, #FF9264 0%, #FFCD6D 100%)",
+		green: "linear-gradient(90deg, #4FFFB0 0%, #B3FF8F 100%)",
+	},
+	sectionContainer: {
+		titleColor: "#EBEBEB",
+		descriptionColor: "#ACB2B5",
 	},
 	hamMenu: {
 		color: "#FFFFFF",

@@ -2,16 +2,17 @@
 import { Story, Meta } from "@storybook/react"
 
 // Components
-import HeroSection from "./hero-section.component"
+import NftSection from "./nft-section.component"
 
 const meta: Meta = {
-	title: "Sections/Hero",
-	component: HeroSection,
+	title: "Sections/Nft",
+	component: NftSection,
 }
 
 export default meta
 
-const Template: Story = (args) => <HeroSection {...args} />
+const Template: Story = (args) => <NftSection {...args} />
 
 export const Default = Template.bind({})
+
 Default.args = {}

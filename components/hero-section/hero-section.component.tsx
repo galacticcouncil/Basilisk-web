@@ -77,9 +77,20 @@ export default HeroSection
 
 const SectionContainer = styled.section`
 	position: relative;
-	padding: 6rem 2rem 0;
+	padding: 12.4rem 2rem 0;
 	overflow: hidden;
 	margin-bottom: -5.5rem;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: ${({ theme }) => theme.heroSection.backgroundColor};
+		z-index: -1;
+	}
 
 	.mobile {
 	}

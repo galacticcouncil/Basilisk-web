@@ -8,7 +8,7 @@ const EmptySquare: React.FC = () => (
 )
 
 const meta: Meta = {
-	title: "Components/FlexContainer",
+	title: "Components/Flex Container",
 	component: FlexContainer,
 	subcomponents: { EmptySquare },
 }

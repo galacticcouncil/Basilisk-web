@@ -23,5 +23,5 @@ const PageLayout: React.FC<IProps> = ({ children }) => {
 export default PageLayout
 
 const Main = styled.main`
-	margin-top: 6.4rem;
+	/* padding-top: 6.4rem; */
 `

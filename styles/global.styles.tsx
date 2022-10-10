@@ -1,6 +1,16 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
+    @font-face {
+      font-family: 'FontOver';
+      src: url('/fonts/font_over/Font-Over.otf');
+      src: url('/fonts/font_over/Font-Over.otf');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+
+
   *, *:before, *:after {
     margin: 0;
     padding: 0;
@@ -16,13 +26,15 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     font-family: 'Satoshi', sans-serif;
     line-height: 1.5;
-    background-color: #000;
+    background: linear-gradient(180deg, #1C2527 0%, #14161A 80.73%, #121316 100%);
+    background-repeat: no-repeat;
     color: #fff;
     height: auto;
   }
 
 
   h1, h2, h3, h4, h5, h6 {
+    /* font-family: 'FontOver', sans-serif; */
   }
   
   

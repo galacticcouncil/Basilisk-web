@@ -8,7 +8,7 @@ import HamMenuButton from "./ham-menu-button.component"
 import { IProps } from "./ham-menu-button.types"
 
 const meta: Meta = {
-	title: "Components/HamMenuButton",
+	title: "Components/Ham Menu Button",
 	component: HamMenuButton,
 }
 

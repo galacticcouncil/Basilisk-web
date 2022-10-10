@@ -5,7 +5,7 @@ import { Story, Meta } from "@storybook/react"
 import OnChainSection from "./onchain-section.component"
 
 const meta: Meta = {
-	title: "Sections/OnChainSection",
+	title: "Sections/OnChain",
 	component: OnChainSection,
 }
 
