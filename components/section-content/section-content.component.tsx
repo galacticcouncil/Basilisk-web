@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 // Components
 import Image from "../../components/image/image.component"
-import { Button } from "../../components/button/button.component"
+import { Button, ButtonLink } from "../../components/button/button.component"
 
 // Types
 interface IRowProps {
@@ -18,6 +18,7 @@ export interface IProps extends IRowProps {
 	}
 	cta: {
 		label: string
+		disabled?: boolean
 	}
 }
 
@@ -36,7 +37,12 @@ const SectionContent: React.FC<IProps> = ({
 			<Col>
 				<ContentTitle dangerouslySetInnerHTML={{ __html: title }} />
 				<ContentDescription>{description}</ContentDescription>
-				<Button rounded>{cta.label}</Button>
+				<Button variant="GREEN" disabled={cta.disabled} rounded>
+					{cta.label}
+				</Button>
+				{/* <ButtonLink disabled rounded display="inline-flex">
+					{cta.label}
+				</ButtonLink> */}
 			</Col>
 		</Row>
 	)

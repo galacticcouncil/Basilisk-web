@@ -15,7 +15,16 @@ const RoadmapSection: React.FC = () => {
 				All decisions affecting the protocol are adopted in a democratic
 				process.
 			</Description>
-			<Button rounded left="auto" right="auto">
+			<Button
+				variant="GREEN"
+				icon={{
+					src: "/assets/icons/roadmap-icon.svg",
+					alt: "roadmap icon",
+				}}
+				rounded
+				left="auto"
+				right="auto"
+			>
 				Check live roadmap
 			</Button>
 		</Section>

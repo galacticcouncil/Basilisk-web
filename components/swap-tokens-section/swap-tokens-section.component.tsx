@@ -39,7 +39,8 @@ const SwapTokensSection: React.FC = () => {
 					alt: "swap tokens ilu 2",
 				}}
 				cta={{
-					label: "Snek swap",
+					label: "Coming soon",
+					disabled: true,
 				}}
 			/>
 		</Section>

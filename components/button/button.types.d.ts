@@ -10,8 +10,20 @@ export interface IStyledProps {
 	// outline?: boolean
 	display?: string
 	rounded?: boolean
+	disabled?: boolean
+	variant?: "DEFAULT" | "GREEN" | "GREEN_BLACK"
 }
 
-export interface IButtonProps extends HTMLMotionProps<"button">, IStyledProps {}
+export interface IButtonProps extends HTMLMotionProps<"button">, IStyledProps {
+	icon?: {
+		src: string
+		alt: string
+	}
+}
 
-export interface IButtonLinkProps extends HTMLMotionProps<"a">, IStyledProps {}
+export interface IButtonLinkProps extends HTMLMotionProps<"a">, IStyledProps {
+	icon?: {
+		src: string
+		alt: string
+	}
+}

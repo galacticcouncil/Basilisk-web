@@ -31,7 +31,8 @@ const NftSection: React.FC = () => {
 					alt: "nft ilu 2",
 				}}
 				cta={{
-					label: "coming soon",
+					label: "Coming soon",
+					disabled: true,
 				}}
 			/>
 		</Section>

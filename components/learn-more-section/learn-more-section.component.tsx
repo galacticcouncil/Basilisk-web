@@ -50,8 +50,12 @@ const LearnMoreSection: React.FC = () => {
 					<br /> about Basilisk
 				</Title>
 				<ButtonsContainer>
-					<Button rounded>Tokenomics</Button>
-					<Button rounded>Press Kit</Button>
+					<Button variant="GREEN_BLACK" rounded>
+						Tokenomics
+					</Button>
+					<Button variant="GREEN_BLACK" rounded>
+						Press Kit
+					</Button>
 				</ButtonsContainer>
 			</Container>
 		</Section>

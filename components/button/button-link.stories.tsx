@@ -27,5 +27,6 @@ Default.args = {
 	right: "initial",
 	width: "initial",
 	rounded: false,
+	disabled: false,
 	display: "flex",
 }
