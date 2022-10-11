@@ -74,7 +74,7 @@ const Container = styled.div`
 	grid-template-rows: repeat(3, 1fr);
 	grid-row-gap: 6rem;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 
@@ -126,7 +126,7 @@ const Item = styled.div`
 		grid-area: 3 / 1 / 4 / 3;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		:nth-child(1) {
 			grid-area: 1 / 1 / 2 / 3;
 
@@ -196,7 +196,7 @@ const ItemLabel = styled.h2`
 	justify-content: center;
 	gap: 1rem;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 1.208rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 2rem;
@@ -208,7 +208,7 @@ const ItemValue = styled.div`
 	font-weight: 900;
 	font-size: 3.4rem;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 3.867rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 6.4rem;

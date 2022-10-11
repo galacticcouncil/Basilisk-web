@@ -54,13 +54,14 @@ const SectionIlu = styled.figure`
 	display: none;
 	visibility: hidden;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			position: absolute;
 			top: -25rem;
 			left: 0;
 			display: block;
 			visibility: visible;
+			z-index: -1;
 		}
 	}
 `

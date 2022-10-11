@@ -55,7 +55,7 @@ const Row = styled.div<IRowProps>`
 		margin-bottom: 10rem;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		align-items: unset;
 		flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
 
@@ -76,7 +76,7 @@ const Col = styled.div`
 			margin: 0 auto;
 		}
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 			button {
 				margin: initial;
 			}
@@ -95,7 +95,7 @@ const ContentTitle = styled.h3`
 
 	text-align: center;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		text-align: start;
 		font-size: 3.8rem;
 		margin-bottom: 3.4rem;
@@ -113,7 +113,7 @@ const ContentDescription = styled.h3`
 	margin-bottom: 2.4rem;
 	color: ${({ theme }) => theme.sectionContainer.descriptionColor};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		text-align: start;
 		font-size: 1.8rem;
 		margin-bottom: 3.5rem;

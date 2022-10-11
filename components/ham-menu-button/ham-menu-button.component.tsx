@@ -30,7 +30,7 @@ const ToggleButton = styled.button`
 	align-items: center;
 	gap: 1rem;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: none;
 			outline: none;

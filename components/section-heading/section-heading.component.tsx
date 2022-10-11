@@ -1,6 +1,9 @@
 // Utils
 import styled, { css } from "styled-components"
 
+// Components
+import FlexContainer from "../flex-container/flex-container.component"
+
 // Types
 interface IHeadingProps {
 	variant?: "DEFAULT" | "BLUE" | "ORANGE" | "GREEN"
@@ -10,7 +13,11 @@ export interface IProps extends IHeadingProps {
 }
 
 const SectionHeading: React.FC<IProps> = ({ children, ...props }) => {
-	return <Heading {...props}>{children}</Heading>
+	return (
+		<FlexContainer justifyContent="center">
+			<Heading {...props}>{children}</Heading>
+		</FlexContainer>
+	)
 }
 
 export default SectionHeading
@@ -29,11 +36,12 @@ const greenStyles = css`
 `
 
 const Heading = styled.h2<IHeadingProps>`
+	display: inline-block;
 	text-align: center;
 	font-size: 3.2rem;
 	font-family: "FontOver", sans-serif;
 	letter-spacing: 0.03em;
-	margin-bottom: 2rem;
+	margin: 0 auto 2rem;
 
 	${({ variant }) => {
 		switch (variant) {
@@ -55,13 +63,13 @@ const Heading = styled.h2<IHeadingProps>`
 	background-clip: text;
 	text-fill-color: transparent;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 3.12rem;
-		margin-bottom: 6rem;
+		margin: 0 auto 6rem;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 5.2rem;
-			margin-bottom: 10rem;
+			margin: 0 auto 13rem;
 		}
 	}
 `

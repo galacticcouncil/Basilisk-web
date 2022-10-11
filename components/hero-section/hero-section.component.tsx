@@ -104,7 +104,7 @@ const SectionContainer = styled.section`
 		visibility: hidden;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-bottom: -3rem;
 
 		.mobile {
@@ -153,7 +153,7 @@ const Heading = styled.h1`
 	background-clip: text;
 	text-fill-color: transparent;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		max-width: 42.7rem;
 		font-size: 4.2rem;
 		margin: 0 auto 1.78rem;
@@ -174,7 +174,7 @@ const Description = styled.p`
 	font-weight: 500;
 	color: ${({ theme }) => theme.heroSection.descriptionColor};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		max-width: 106.3rem;
 		font-size: 1.8rem;
 		margin: 0 auto 1.78rem;
@@ -207,7 +207,7 @@ const BlurFigure = styled.figure`
 	right: 0;
 	z-index: -1;
 	/* 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		bottom: -0.6rem;
 	} */
 `

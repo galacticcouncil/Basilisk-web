@@ -18,7 +18,11 @@ const SupportSection: React.FC = () => {
 					</Title>
 
 					<PartnersDirectory>
-						<Image src="/assets/support-section/nova.png" alt="Nova" />
+						<Image
+							src="/assets/support-section/nova.png"
+							alt="Nova"
+							height={"100%"}
+						/>
 					</PartnersDirectory>
 				</Col>
 				<Col>
@@ -28,8 +32,16 @@ const SupportSection: React.FC = () => {
 					</Title>
 
 					<PartnersDirectory>
-						<Image src="/assets/support-section/talisman.svg" alt="Nova" />
-						<Image src="/assets/support-section/polkadot.svg" alt="Nova" />
+						<Image
+							src="/assets/support-section/talisman.svg"
+							alt="talisman"
+							height={"100%"}
+						/>
+						<Image
+							src="/assets/support-section/polkadot.svg"
+							alt="polkadot"
+							height={"100%"}
+						/>
 					</PartnersDirectory>
 				</Col>
 			</Row>
@@ -46,7 +58,7 @@ const Section = styled.section`
 		margin-bottom: 2rem;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		h2 {
 			margin-bottom: 2.4rem;
 		}
@@ -65,7 +77,7 @@ const Row = styled.div`
 	flex-direction: column;
 	gap: 2rem;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		flex-direction: row;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		}
@@ -84,11 +96,12 @@ const Col = styled.div`
 	flex-direction: column;
 	align-items: center;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		align-items: start;
 		justify-content: center;
+		padding: 3.1rem 1.56rem 3.1rem 3rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			padding: 4rem 5rem;
+			padding: 5.2rem 2.6rem 5.2rem 4rem;
 		}
 	}
 `
@@ -106,7 +119,7 @@ const Title = styled.h3`
 		visibility: hidden;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		color: ${({ theme }) => theme.supportSection.color};
 		font-weight: 900;
 		font-size: 2.64rem;
@@ -128,9 +141,13 @@ const Title = styled.h3`
 const PartnersDirectory = styled.div`
 	display: flex;
 	gap: 2rem;
+	height: 4.2rem;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		height: 3.2rem;
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			height: 6rem;
 		}
 	}
 `

@@ -32,7 +32,7 @@ const Section = styled.section`
 		margin-bottom: 1rem;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		h2 {
 			margin-bottom: 0.6rem;
 		}
@@ -52,7 +52,7 @@ const Description = styled.p`
 	margin-bottom: 2.8rem;
 	color: ${({ theme }) => theme.roadmapSection.color};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 1.68rem;
 		max-width: 64.98rem;
 		margin: 0 auto 2.4rem;

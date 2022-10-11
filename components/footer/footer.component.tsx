@@ -145,7 +145,7 @@ const Logo = styled.div`
 	/* display: none;
 	visibility: hidden; */
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* display: block;
 			visibility: visible; */
@@ -158,7 +158,7 @@ const FooterContainer = styled.footer`
 	padding: 5rem 2rem;
 	background-color: ${({ theme }) => theme.footer.background};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		padding: 3rem 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 5rem 2rem;
@@ -176,7 +176,7 @@ const Row = styled(motion.div)`
 	/* border: 1px solid blue; */
 	/* justify-items: center; */
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		justify-items: unset;
 		grid-template-columns: 1fr 2fr;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -190,7 +190,7 @@ const Col = styled(motion.div)`
 		/* border: 1px solid red; */
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 				@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 					justify-self: unset;
 				}
@@ -207,7 +207,7 @@ const Col = styled(motion.div)`
 		/* align-items: center; */
 		gap: 4rem;
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 			flex-direction: row;
 			justify-content: space-evenly;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -225,7 +225,7 @@ const Title = styled(motion.h3)`
 	font-size: 1.8rem;
 	color: ${({ theme }) => theme.footer.navTitleColor};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-bottom: 1.33rem;
 		font-size: 1.08rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -241,7 +241,7 @@ const NavList = styled.ul`
 	justify-content: start;
 	flex-direction: column;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		gap: 0.66rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			gap: 1.1rem;
@@ -275,7 +275,7 @@ const LabelA = styled.a`
 	font-size: 1.3rem;
 	color: ${({ theme }) => theme.footer.navItemColor};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 0.78rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 1.3rem;

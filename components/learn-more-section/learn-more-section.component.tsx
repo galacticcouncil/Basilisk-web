@@ -68,7 +68,7 @@ const MobileLeftIlu = styled.figure`
 	position: absolute;
 	top: 0;
 	left: 0;
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		display: none;
 		visibility: hidden;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -79,7 +79,7 @@ const MobileRightIlu = styled.figure`
 	position: absolute;
 	top: 0;
 	right: 0;
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		display: none;
 		visibility: hidden;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -90,7 +90,7 @@ const MobileRightIlu = styled.figure`
 const DesktopRightTopIlu = styled.figure`
 	display: none;
 	visibility: hidden;
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		position: absolute;
 		top: -6rem;
 		right: -7rem;
@@ -111,7 +111,7 @@ const DesktopRightTopIlu = styled.figure`
 const DesktopRightBottomIlu = styled.figure`
 	display: none;
 	visibility: hidden;
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		position: absolute;
 		bottom: -0.7rem;
 		right: 0;
@@ -137,7 +137,7 @@ const Container = styled.div`
 	background: ${({ theme }) => theme.learnMoreSection.background};
 	color: ${({ theme }) => theme.learnMoreSection.color};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		padding: 4.316rem 4.5rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 13.55rem 10.693rem;
@@ -146,6 +146,8 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
+	position: relative;
+	z-index: 1;
 	font-weight: 900;
 	font-size: 3.2rem;
 	line-height: 3.52rem;
@@ -153,7 +155,7 @@ const Title = styled.h2`
 
 	margin-bottom: 2.8rem;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		text-align: start;
 		font-size: 3.4rem;
 		line-height: 3.74rem;
@@ -172,12 +174,14 @@ const ButtonsContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
+	position: relative;
+	z-index: 1;
 
 	button {
 		width: 100%;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		button {
 			width: initial;
 		}

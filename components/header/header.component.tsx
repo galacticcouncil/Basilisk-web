@@ -319,7 +319,7 @@ const Logo = styled.div`
 	display: none;
 	visibility: hidden;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: block;
 			visibility: visible;
@@ -328,7 +328,7 @@ const Logo = styled.div`
 `
 
 const MobileLogo = styled.div`
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: none;
 			visibility: hidden;
@@ -340,7 +340,7 @@ const Nav = styled.nav`
 	display: none;
 	visibility: hidden;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: block;
 			visibility: visible;
@@ -440,7 +440,7 @@ const CTAContainer = styled.div`
 	display: none;
 	visibility: hidden;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: block;
 			visibility: visible;
@@ -461,7 +461,7 @@ const MobileMenuContainer = styled(motion.div)`
 
 	background-color: ${({ theme }) => theme.header.mobileMenu.background};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: none;
 			visibility: hidden;
