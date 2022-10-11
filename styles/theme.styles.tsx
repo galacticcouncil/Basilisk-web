@@ -76,6 +76,11 @@ export const light = {
 			"linear-gradient(0deg, rgba(0, 0, 0, 0.2) -11.67%, rgba(0, 0, 0, 0) 32.64%), linear-gradient(90deg, #4FFFB0 1.27%, #B3FF8F 104.14%)",
 		color: "#121416",
 	},
+	footer: {
+		background: "#121416",
+		navTitleColor: "#fff",
+		navItemColor: "#787E82",
+	},
 	hamMenu: {
 		color: "#FFFFFF",
 		bottomColor: "#9EA9B1",

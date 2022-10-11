@@ -10,13 +10,18 @@ const LearnMoreSection: React.FC = () => {
 		<Section>
 			<Container>
 				<MobileLeftIlu>
-					<Image src="/assets/learn-more-section/top-left.svg" alt="top left" />
+					<Image
+						src="/assets/learn-more-section/top-left.svg"
+						alt="top left"
+						effect="blur"
+					/>
 				</MobileLeftIlu>
 
 				<MobileRightIlu>
 					<Image
 						src="/assets/learn-more-section/top-right.svg"
 						alt="top left"
+						effect="blur"
 					/>
 				</MobileRightIlu>
 
@@ -26,6 +31,7 @@ const LearnMoreSection: React.FC = () => {
 						alt="top left"
 						width={"100%"}
 						height={"100%"}
+						effect="blur"
 					/>
 				</DesktopRightTopIlu>
 
@@ -35,6 +41,7 @@ const LearnMoreSection: React.FC = () => {
 						alt="bottom right"
 						width={"100%"}
 						height={"100%"}
+						effect="blur"
 					/>
 				</DesktopRightBottomIlu>
 
