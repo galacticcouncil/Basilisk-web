@@ -77,6 +77,15 @@ export const light = {
 	},
 	roadmapSection: {
 		color: "#ACB2B5",
+		greenRow: "linear-gradient(90deg, #212328 31.29%, #4CF3A8 119.04%)",
+		blueRow: "linear-gradient(90deg, #212328 31.29%, #4C71F3 119.04%)",
+		yellowRow:
+			"linear-gradient(270deg, #FFD363 16.3%, #CDA351 40.52%, #1F2125 85.7%), linear-gradient(0deg, #212328, #212328), linear-gradient(90deg, #FFA34F 0%, #B3FF8F 100%)",
+		orangeRow:
+			"linear-gradient(270deg, #FF9263 23.52%, rgba(255, 136, 165, 0.34) 49.56%, rgba(0, 0, 0, 0) 99.72%), linear-gradient(0deg, #212328, #212328), linear-gradient(90deg, #FFA34F 0%, #B3FF8F 100%)",
+
+		titleColor: "FFFFFF",
+		statusColor: "",
 	},
 	learnMoreSection: {
 		background:
