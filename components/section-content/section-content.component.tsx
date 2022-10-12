@@ -11,6 +11,10 @@ interface IRowProps {
 }
 export interface IProps extends IRowProps {
 	title: string
+	titleIcon?: {
+		src: string
+		alt: string
+	}
 	description: string
 	image: {
 		src: string
@@ -24,6 +28,7 @@ export interface IProps extends IRowProps {
 
 const SectionContent: React.FC<IProps> = ({
 	title,
+	titleIcon,
 	description,
 	image,
 	cta,
@@ -35,7 +40,21 @@ const SectionContent: React.FC<IProps> = ({
 				<Image src={image.src} alt={image.alt} width="100%" effect="blur" />
 			</Col>
 			<Col>
-				<ContentTitle dangerouslySetInnerHTML={{ __html: title }} />
+				<ContentTitle
+					dangerouslySetInnerHTML={{
+						__html: `${title} ${
+							titleIcon &&
+							`<span>
+						<Image
+							src="${titleIcon?.src}"
+							alt="${titleIcon?.alt}"
+							width="37"
+							height="37"
+						/>
+					</span>`
+						}`,
+					}}
+				/>
 				<ContentDescription>{description}</ContentDescription>
 				<Button variant="GREEN" disabled={cta.disabled} rounded>
 					{cta.label}
@@ -93,6 +112,8 @@ const Col = styled.div`
 `
 
 const ContentTitle = styled.h3`
+	position: relative;
+
 	font-weight: 900;
 	line-height: 120%;
 	font-size: 3.2rem;
@@ -101,10 +122,23 @@ const ContentTitle = styled.h3`
 
 	text-align: center;
 
+	spam {
+		display: none;
+		visibility: hidden;
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		text-align: start;
 		font-size: 3.8rem;
 		margin-bottom: 3.4rem;
+
+		span {
+			display: block;
+			visibility: visible;
+			position: absolute;
+			top: -4.5rem;
+			left: -3.8rem;
+		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 6.4rem;

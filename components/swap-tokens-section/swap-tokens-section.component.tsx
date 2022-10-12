@@ -20,6 +20,10 @@ const SwapTokensSection: React.FC = () => {
 
 			<SectionContent
 				title="Swap tokens with peace of mind."
+				titleIcon={{
+					src: "/assets/icons/title-icon-white.svg",
+					alt: "white icon",
+				}}
 				description="Buy and sell tokens. Permissionless and without relying on centralized exchanges or other intermediaries."
 				image={{
 					src: "/assets/swap-tokens-section/swap-okens-ile.svg",
@@ -33,6 +37,10 @@ const SwapTokensSection: React.FC = () => {
 			<SectionContent
 				reverse
 				title="Support projects through Snek LBP"
+				titleIcon={{
+					src: "/assets/icons/title-icon-orange.svg",
+					alt: "white icon",
+				}}
 				description="Support young projects which want to distribute tokens to their community while bootstrapping liquidity."
 				image={{
 					src: "/assets/swap-tokens-section/lbp-tile.svg",

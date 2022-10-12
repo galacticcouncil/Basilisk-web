@@ -3,19 +3,29 @@ import styled, { css } from "styled-components"
 
 // Components
 import FlexContainer from "../flex-container/flex-container.component"
+import Image from "../image/image.component"
 
 // Types
 interface IHeadingProps {
 	variant?: "DEFAULT" | "BLUE" | "ORANGE" | "GREEN"
 }
 export interface IProps extends IHeadingProps {
+	icon?: {
+		src: string
+		alt: string
+	}
 	children: React.ReactNode | React.ReactNode[]
 }
 
 const SectionHeading: React.FC<IProps> = ({ children, ...props }) => {
 	return (
-		<FlexContainer justifyContent="center">
+		<FlexContainer justifyContent="center" alignItems="center">
 			<Heading {...props}>{children}</Heading>
+			{props.icon && (
+				<IconSpan>
+					<Image src={props.icon.src} alt={props.icon.alt} width="100%" />
+				</IconSpan>
+			)}
 		</FlexContainer>
 	)
 }
@@ -41,7 +51,7 @@ const Heading = styled.h2<IHeadingProps>`
 	font-size: 3.2rem;
 	font-family: "FontOver", sans-serif;
 	letter-spacing: 0.03em;
-	margin: 0 auto 2rem;
+	margin-bottom: 2rem;
 
 	${({ variant }) => {
 		switch (variant) {
@@ -65,11 +75,28 @@ const Heading = styled.h2<IHeadingProps>`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 3.12rem;
-		margin: 0 auto 6rem;
-
+		margin-bottom: 6rem;
+		/* margin: 0 auto 6rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 5.2rem;
-			margin: 0 auto 13rem;
+			margin-bottom: 13rem;
+			/* margin: 0 auto 13rem; */
+		}
+	}
+`
+
+const IconSpan = styled.span`
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		display: inline-block;
+		visibility: visible;
+		width: 2.247rem;
+		margin-bottom: 7rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			width: 3.745rem;
+			margin-bottom: 14rem;
 		}
 	}
 `
