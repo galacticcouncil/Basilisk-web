@@ -43,7 +43,12 @@ const RoadmapItem: React.FC<IProps> = ({
 						<Status>{status}</Status>
 					</Content>
 					<ItemIcon>
-						<Image src={icon.src} alt={icon.alt} />
+						<Image
+							src={icon.src}
+							alt={icon.alt}
+							width={"100%"}
+							height={"100%"}
+						/>
 					</ItemIcon>
 				</FlexContainer>
 			</Item>
@@ -171,4 +176,6 @@ const ItemIcon = styled.figure`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 3rem;
+	/* height: 3.6rem; */
 `

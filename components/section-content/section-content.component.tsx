@@ -122,7 +122,7 @@ const ContentTitle = styled.h3`
 
 	text-align: center;
 
-	spam {
+	span {
 		display: none;
 		visibility: hidden;
 	}

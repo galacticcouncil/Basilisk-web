@@ -13,7 +13,7 @@ const RoadmapSection: React.FC = () => {
 			title: "XYK Pools",
 			status: "Completed it mate",
 			icon: {
-				src: "/assets/roadmap-section/basilisk.png",
+				src: "/assets/roadmap-section/basilisk-v2.png",
 				alt: "basilisk",
 			},
 			variant: "GREEN",
@@ -23,17 +23,17 @@ const RoadmapSection: React.FC = () => {
 			title: "Liquidity Provisioning",
 			status: "Completed it mate",
 			icon: {
-				src: "/assets/roadmap-section/money.png",
+				src: "/assets/roadmap-section/money-v2.png",
 				alt: "money",
 			},
 			variant: "GREEN",
-			process: "35%",
+			process: "33%",
 		},
 		{
 			title: "NFT Marketplace",
 			status: "Completed it mate",
 			icon: {
-				src: "/assets/roadmap-section/pallete.png",
+				src: "/assets/roadmap-section/pallete-v2.png",
 				alt: "pallete",
 			},
 			variant: "GREEN",
@@ -43,77 +43,77 @@ const RoadmapSection: React.FC = () => {
 			title: "LBP",
 			status: "SoonTM",
 			icon: {
-				src: "/assets/roadmap-section/bag.png",
+				src: "/assets/roadmap-section/bag-v2.png",
 				alt: "bag",
 			},
 			variant: "BLUE",
-			process: "55%",
+			process: "56%",
 		},
 		{
 			title: "Moar Token Pairs",
 			status: "SoonTM",
 			icon: {
-				src: "/assets/roadmap-section/pancake.png",
+				src: "/assets/roadmap-section/pancake-v2.png",
 				alt: "pancake",
 			},
 			variant: "BLUE",
-			process: "55%",
+			process: "56%",
 		},
 		{
 			title: "Liquidity Mining",
 			status: "SoonTM",
 			icon: {
-				src: "/assets/roadmap-section/pickaxe.png",
+				src: "/assets/roadmap-section/pickaxe-v2.png",
 				alt: "pickaxe",
 			},
 			variant: "BLUE",
-			process: "55%",
+			process: "56%",
 		},
 		{
 			title: "Order Router",
 			status: "SoonTM",
 			icon: {
-				src: "/assets/roadmap-section/semafor.png",
+				src: "/assets/roadmap-section/semafor-v2.png",
 				alt: "semafor",
 			},
 			variant: "BLUE",
-			process: "55%",
+			process: "56%",
 		},
 		{
 			title: "Stableswap",
 			status: "SoonTM",
 			icon: {
-				src: "/assets/roadmap-section/coin.png",
+				src: "/assets/roadmap-section/coin-v2.png",
 				alt: "coin",
 			},
 			variant: "BLUE",
-			process: "55%",
+			process: "56%",
 		},
 		{
 			title: "NFT Auctions",
 			status: "3 Weeks",
 			icon: {
-				src: "/assets/roadmap-section/pen.png",
+				src: "/assets/roadmap-section/pen-v2.png",
 				alt: "pen",
 			},
 			variant: "YELLOW",
-			process: "65%",
+			process: "70%",
 		},
 		{
 			title: "Smartboi Pants - Redeemable NFTs",
 			status: "3 Weeks",
 			icon: {
-				src: "/assets/roadmap-section/shorts.png",
+				src: "/assets/roadmap-section/shorts-v2.png",
 				alt: "shorts",
 			},
 			variant: "YELLOW",
-			process: "65%",
+			process: "70%",
 		},
 		{
 			title: "TWAMM",
 			status: "It’s been 84 years",
 			icon: {
-				src: "/assets/roadmap-section/hourglass.png",
+				src: "/assets/roadmap-section/hourglass-v2.png",
 				alt: "hourglass",
 			},
 			variant: "ORANGE",
@@ -123,7 +123,7 @@ const RoadmapSection: React.FC = () => {
 			title: "Order Matching",
 			status: "It’s been 84 years",
 			icon: {
-				src: "/assets/roadmap-section/emoji.png",
+				src: "/assets/roadmap-section/emoji-v2.png",
 				alt: "money",
 			},
 			variant: "ORANGE",
@@ -133,7 +133,7 @@ const RoadmapSection: React.FC = () => {
 			title: "Slip-based Fees",
 			status: "It’s been 84 years",
 			icon: {
-				src: "/assets/roadmap-section/fish.png",
+				src: "/assets/roadmap-section/fish-v2.png",
 				alt: "money",
 			},
 			variant: "ORANGE",
@@ -183,7 +183,14 @@ const RoadmapSection: React.FC = () => {
 
 				<SnakeFigure>
 					<Image
+						className="desktop"
 						src="/assets/roadmap-section/snake.svg"
+						alt="snake"
+						width={"100%"}
+					/>
+					<Image
+						className="mobile"
+						src="/assets/roadmap-section/mobile-snake.svg"
 						alt="snake"
 						width={"100%"}
 					/>
@@ -279,6 +286,24 @@ const IconFigure = styled.figure`
 const SnakeFigure = styled.figure`
 	width: 49.5%;
 	margin-bottom: 1rem;
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		.desktop {
+			display: block;
+			visibility: visible;
+		}
+		.mobile {
+			display: none;
+			visibility: hidden;
+		}
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		}
+	}
 `
 
 const Border = styled.div`
