@@ -111,9 +111,10 @@ const Item = styled.div<IItemProps>`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-bottom: 2.04rem;
+		padding: 0.6rem 2.5rem;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			padding: 0.6rem 2.5rem;
+			padding: 1rem 2.5rem;
 		}
 	}
 `

@@ -161,7 +161,7 @@ const FooterContainer = styled.footer`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		padding: 3rem 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			padding: 5rem 2rem;
+			padding: 6rem 4rem;
 		}
 	}
 `

@@ -55,7 +55,7 @@ export default EarnRewardsSection
 
 const Section = styled.section`
 	position: relative;
-	padding: 8rem 2rem;
+	padding: 18rem 2rem 8rem;
 `
 
 const SectionIlu = styled.figure`

@@ -225,6 +225,8 @@ const Section = styled.section`
 			margin-bottom: 0.6rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			padding: 8rem 2.5rem;
+
 			h2 {
 				margin-bottom: 1rem;
 			}
@@ -257,7 +259,8 @@ const Description = styled.p`
 
 const RoadmapContainer = styled.div`
 	position: relative;
-	margin-top: 2rem;
+	margin-top: 4.3rem;
+	margin-bottom: 11.5rem;
 	padding: 2rem 0;
 	/* padding-top: 2rem; */
 	/* border: 1px solid red; */

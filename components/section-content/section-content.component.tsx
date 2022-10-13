@@ -74,10 +74,10 @@ const Row = styled.div<IRowProps>`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 6rem;
+	gap: 7rem;
 
 	&:not(:last-child) {
-		margin-bottom: 10rem;
+		margin-bottom: 23rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

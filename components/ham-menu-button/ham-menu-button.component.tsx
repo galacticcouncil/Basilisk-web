@@ -9,12 +9,8 @@ const HamMenuButton: React.FC<IProps> = ({ isOpen, onClick }) => {
 		<ToggleButton onClick={onClick}>
 			<Label>Menu</Label>
 			<Hamburger className={isOpen ? "open" : ""}>
-				<Left
-				// class="icon-left"
-				></Left>
-				<Right
-				// class="icon-right"
-				></Right>
+				<Left />
+				<Right />
 			</Hamburger>
 		</ToggleButton>
 	)

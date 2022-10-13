@@ -170,6 +170,8 @@ const Description = styled.p`
 	margin: 0 auto 2.2rem;
 	text-align: center;
 
+	opacity: 0.8;
+
 	font-size: 1.6rem;
 	font-weight: 500;
 	color: ${({ theme }) => theme.heroSection.descriptionColor};

@@ -47,7 +47,7 @@ export const light = {
 		},
 	},
 	heroSection: {
-		backgroundColor: "#000",
+		backgroundColor: "#121416",
 		headingBackground:
 			"linear-gradient(90deg, #4fffb0 0%, #b3ff8f 50%, #ff984e 100%)",
 		descriptionColor: "#E5ECF1",

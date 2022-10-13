@@ -52,7 +52,7 @@ const SupportSection: React.FC = () => {
 export default SupportSection
 
 const Section = styled.section`
-	padding: 8rem 2rem;
+	padding: 16rem 2rem 8rem;
 
 	h2 {
 		margin-bottom: 2rem;

@@ -66,6 +66,11 @@ export default LearnMoreSection
 
 const Section = styled.section`
 	padding: 0 2rem;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			padding: 0 4rem;
+		}
+	}
 `
 
 const MobileLeftIlu = styled.figure`
