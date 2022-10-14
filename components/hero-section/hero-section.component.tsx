@@ -1,5 +1,6 @@
 // Utils
 import styled from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // Components
 import { HeroButtonLink } from "../button/button.component"
@@ -7,23 +8,108 @@ import Image from "../image/image.component"
 
 // Hooks
 
+const variants: Variants = {
+	hidden: {
+		opacity: 0,
+		// y: 100,
+	},
+	visible: {
+		opacity: 1,
+		// y: 0,
+		transition: {
+			// delay: 0.3,
+			delayChildren: 0.2,
+			staggerChildren: 0.4,
+		},
+	},
+}
+
+const titleVariants: Variants = {
+	hidden: {
+		opacity: 0,
+		y: 75,
+	},
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			duration: 2,
+			// ease: "easeIn",
+			type: "spring",
+			mass: 1,
+			stiffness: 100,
+			damping: 15,
+			// type: "spring",
+			// mass: 1,
+			// stiffness: 256,
+			// damping: 24,
+			// ease: [0.5, 0, 0.56, 0.99],
+		},
+	},
+}
+
+// const descriptionVariants: Variants = {
+// 	hidden: {
+// 		opacity: 0,
+// 		y: 50,
+// 	},
+// 	visible: {
+// 		opacity: 1,
+// 		y: 0,
+// 		transition: {
+// 			duration: 1.5,
+// 			// ease: "easeIn",
+// 			type: "spring",
+// 			mass: 1,
+// 			stiffness: 256,
+// 			damping: 24,
+// 			// ease: [0.5, 0, 0.56, 0.99],
+// 		},
+// 	},
+// }
+
+const opacityVariants: Variants = {
+	hidden: {
+		opacity: 0,
+	},
+	visible: {
+		opacity: 1,
+		transition: {
+			// delay: 0.5,
+			duration: 1,
+			ease: "easeIn",
+			// type: "spring",
+			// mass: 1,
+			// stiffness: 100,
+			// damping: 15,
+		},
+	},
+}
+
 const HeroSection: React.FC = () => {
 	return (
-		<SectionContainer>
-			<Heading>The Snek you don’t want to live without.</Heading>
-			<Description>
+		<SectionContainer
+			variants={variants}
+			initial="hidden"
+			animate="visible"
+			exit="hidden"
+		>
+			<Heading variants={titleVariants}>
+				The Snek you don’t want to live without.
+			</Heading>
+			<Description variants={titleVariants}>
 				<span>Basilisk brings permissionless liquidity to Kusama</span>
 				<span>
 					Support young projects. Swap tokens or flip NFTs and earn rewards.
 				</span>
 			</Description>
 			<CtaContainer>
-				<HeroButtonLink rounded display="inline-flex">
+				<HeroButtonLink variants={titleVariants} rounded display="inline-flex">
 					Open Snek App
 				</HeroButtonLink>
 			</CtaContainer>
 
-			<IluFigure>
+			<IluFigure variants={opacityVariants}>
 				<Image
 					className="mobile"
 					src="/assets/hero-section/app_ilu_mobile_v2.png"
@@ -75,12 +161,13 @@ const HeroSection: React.FC = () => {
 
 export default HeroSection
 
-const SectionContainer = styled.section`
+const SectionContainer = styled(motion.section)`
 	position: relative;
 	padding: 12.4rem 2rem 0;
 	overflow: hidden;
 	margin-bottom: -5.5rem;
 	z-index: 2;
+	min-height: 100vh;
 
 	&::before {
 		content: "";
@@ -138,7 +225,7 @@ const SectionContainer = styled.section`
 	}
 `
 
-const Heading = styled.h1`
+const Heading = styled(motion.h1)`
 	max-width: 25.7rem;
 	margin: 0 auto 1.5rem;
 	text-align: center;
@@ -165,7 +252,7 @@ const Heading = styled.h1`
 		}
 	}
 `
-const Description = styled.p`
+const Description = styled(motion.p)`
 	max-width: 30.1rem;
 	margin: 0 auto 2.2rem;
 	text-align: center;
@@ -191,17 +278,17 @@ const Description = styled.p`
 	}
 `
 
-const CtaContainer = styled.div`
+const CtaContainer = styled(motion.div)`
 	display: flex;
 	justify-content: center;
 `
 
-const IluFigure = styled.figure`
+const IluFigure = styled(motion.figure)`
 	max-width: 116.578rem;
 	margin: 0 auto;
 `
 
-const BlurFigure = styled.figure`
+const BlurFigure = styled(motion.figure)`
 	position: absolute;
 	bottom: 0rem;
 	left: 0;

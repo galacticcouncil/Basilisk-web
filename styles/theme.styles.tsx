@@ -7,16 +7,7 @@ export const light = {
 	},
 	button: {
 		color: "#000",
-		background: `
-			linear-gradient(
-				90deg,
-				#4fffb0 1.27%,
-				#b3ff8f 48.96%,
-				#ff984e 104.14%
-			),
-			linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),
-			linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%)
-		`,
+		background: `linear-gradient(90deg, #4FFFB0 0%, #B3FF8F 100%)`,
 		disabledBackground: "rgba(218, 255, 238, 0.06)",
 		disabledColor:
 			"linear-gradient(90deg, #4FFFB0 1.27%, #B3FF8F 48.96%, #FF984E 104.14%), linear-gradient(90deg, #4FFFB0 1.27%, #A2FF76 53.24%, #FF984E 104.14%), linear-gradient(90deg, #FFCE4F 1.27%, #4FFFB0 104.14%)",
