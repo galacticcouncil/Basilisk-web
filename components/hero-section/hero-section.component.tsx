@@ -38,11 +38,11 @@ const titleVariants: Variants = {
 		y: 0,
 		transition: {
 			duration: 1,
-			// ease: "easeIn",
-			type: "spring",
-			mass: 1,
-			stiffness: 100,
-			damping: 15,
+			ease: "easeIn",
+			// type: "spring",
+			// mass: 1,
+			// stiffness: 100,
+			// damping: 15,
 			// type: "spring",
 			// mass: 1,
 			// stiffness: 256,
@@ -59,9 +59,9 @@ const opacityVariants: Variants = {
 	visible: {
 		opacity: 1,
 		transition: {
-			delay: 2,
+			delay: 2.5,
 			// duration: 1,
-			// ease: "easeIn",
+			ease: "easeIn",
 			// type: "spring",
 			// mass: 1,
 			// stiffness: 100,
