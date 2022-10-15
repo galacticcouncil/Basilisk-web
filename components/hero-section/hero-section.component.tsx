@@ -2,6 +2,10 @@
 import styled from "styled-components"
 import { motion, Variants } from "framer-motion"
 
+// Hooks
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "usehooks-ts"
+
 // Components
 import { HeroButtonLink } from "../button/button.component"
 import Image from "../image/image.component"
@@ -48,26 +52,6 @@ const titleVariants: Variants = {
 	},
 }
 
-// const descriptionVariants: Variants = {
-// 	hidden: {
-// 		opacity: 0,
-// 		y: 50,
-// 	},
-// 	visible: {
-// 		opacity: 1,
-// 		y: 0,
-// 		transition: {
-// 			duration: 1.5,
-// 			// ease: "easeIn",
-// 			type: "spring",
-// 			mass: 1,
-// 			stiffness: 256,
-// 			damping: 24,
-// 			// ease: [0.5, 0, 0.56, 0.99],
-// 		},
-// 	},
-// }
-
 const opacityVariants: Variants = {
 	hidden: {
 		opacity: 0,
@@ -87,6 +71,10 @@ const opacityVariants: Variants = {
 }
 
 const HeroSection: React.FC = () => {
+	const theme = useTheme()
+	const isTablet = useMediaQuery(`(min-width: ${theme.breakpoints.sm}`)
+	const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg}`)
+
 	return (
 		<SectionContainer
 			variants={variants}
@@ -110,50 +98,74 @@ const HeroSection: React.FC = () => {
 			</CtaContainer>
 
 			<IluFigure variants={opacityVariants}>
-				<Image
-					className="mobile"
-					src="/assets/hero-section/app_ilu_mobile_v2.png"
-					alt="app ilu"
-					width={"100%"}
-					effect="blur"
-				/>
-				<Image
-					className="tablet"
-					src="/assets/hero-section/app_ilu_tablet_v2.png"
-					alt="app ilu"
-					width={"100%"}
-					effect="blur"
-				/>
-				<Image
-					className="desktop"
-					src="/assets/hero-section/app_ilu_desktop.png"
-					alt="app ilu"
-					width={"100%"}
-					effect="blur"
-				/>
+				{!isTablet && !isDesktop && (
+					<Image
+						className="mobile"
+						src="/assets/hero-section/app_ilu_mobile_v2.png"
+						alt="app ilu"
+						width={"100%"}
+						effect="blur"
+					/>
+				)}
+				{isTablet && !isDesktop && (
+					<Image
+						className="tablet"
+						src="/assets/hero-section/app_ilu_tablet_v2.png"
+						alt="app ilu"
+						width={"100%"}
+						effect="blur"
+					/>
+				)}
+				{isTablet && isDesktop && (
+					<Image
+						className="desktop"
+						src="/assets/hero-section/app_ilu_desktop.png"
+						alt="app ilu"
+						width={"100%"}
+						effect="blur"
+					/>
+				)}
 			</IluFigure>
 			<BlurFigure>
-				<Image
-					className="mobile"
-					src="/assets/hero-section/bg-ilu_mobile.svg"
-					alt="background ilu"
-					width={"100%"}
-					effect="blur"
-				/>
-				<Image
-					className="tablet"
-					src="/assets/hero-section/bg-ilu_tablet.svg"
-					alt="background ilu"
-					width={"100%"}
-					effect="blur"
-				/>
-				<Image
-					className="desktop"
-					src="/assets/hero-section/bg-ilu.svg"
-					alt="background ilu"
-					width={"100%"}
-					effect="blur"
-				/>
+				{!isTablet && !isDesktop && (
+					<Image
+						className="mobile"
+						src="/assets/hero-section/bg-ilu_mobile.svg"
+						alt="background ilu"
+						width={"100%"}
+						height={"100%"}
+						effect="blur"
+						style={{
+							objectFit: "cover",
+						}}
+					/>
+				)}
+				{isTablet && !isDesktop && (
+					<Image
+						className="tablet"
+						src="/assets/hero-section/bg-ilu_tablet.svg"
+						alt="background ilu"
+						width={"100%"}
+						height={"100%"}
+						effect="blur"
+						style={{
+							objectFit: "cover",
+						}}
+					/>
+				)}
+				{isTablet && isDesktop && (
+					<Image
+						className="desktop"
+						src="/assets/hero-section/bg-ilu.svg"
+						alt="background ilu"
+						width={"100%"}
+						height={"100%"}
+						effect="blur"
+						style={{
+							objectFit: "cover",
+						}}
+					/>
+				)}
 			</BlurFigure>
 		</SectionContainer>
 	)
@@ -165,6 +177,7 @@ const SectionContainer = styled(motion.section)`
 	position: relative;
 	padding: 12.4rem 2rem 0;
 	overflow: hidden;
+	/* margin-top: 12.4rem; */
 	margin-bottom: -5.5rem;
 	z-index: 2;
 	min-height: 100vh;
@@ -180,7 +193,7 @@ const SectionContainer = styled(motion.section)`
 		z-index: -1;
 	}
 
-	.mobile {
+	/* .mobile {
 	}
 	.tablet {
 		display: none;
@@ -222,7 +235,7 @@ const SectionContainer = styled(motion.section)`
 				visibility: visible;
 			}
 		}
-	}
+	} */
 `
 
 const Heading = styled(motion.h1)`
@@ -290,9 +303,12 @@ const IluFigure = styled(motion.figure)`
 
 const BlurFigure = styled(motion.figure)`
 	position: absolute;
-	bottom: 0rem;
+	bottom: 0;
 	left: 0;
 	width: 100%;
+	height: 100%;
+	/* min-height: 100vh; */
+
 	right: 0;
 	z-index: -1;
 	/* 
