@@ -97,12 +97,6 @@ const Footer: React.FC = () => {
 									<Link href={item.slug}>
 										<LabelA>
 											<LabelSpan>{item.label}</LabelSpan>
-											<IconSpan>
-												<Image
-													src="/assets/icons/right-arrow.svg"
-													alt="Right Arrow"
-												/>
-											</IconSpan>
 										</LabelA>
 									</Link>
 								</NavItem>
@@ -117,12 +111,6 @@ const Footer: React.FC = () => {
 									<Link href={item.slug}>
 										<LabelA>
 											<LabelSpan>{item.label}</LabelSpan>
-											<IconSpan>
-												<Image
-													src="/assets/icons/right-arrow.svg"
-													alt="Right Arrow"
-												/>
-											</IconSpan>
 										</LabelA>
 									</Link>
 								</NavItem>

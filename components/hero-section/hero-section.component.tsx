@@ -23,7 +23,7 @@ const variants: Variants = {
 		transition: {
 			// delay: 0.3,
 			delayChildren: 0.2,
-			staggerChildren: 0.4,
+			staggerChildren: 0.6,
 		},
 	},
 }
@@ -38,11 +38,11 @@ const titleVariants: Variants = {
 		y: 0,
 		transition: {
 			duration: 1,
-			// ease: "easeIn",
+			ease: "easeIn",
 			// type: "spring",
-			mass: 1,
-			stiffness: 100,
-			damping: 15,
+			// mass: 1,
+			// stiffness: 100,
+			// damping: 15,
 			// type: "spring",
 			// mass: 1,
 			// stiffness: 256,
