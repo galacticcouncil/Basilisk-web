@@ -92,12 +92,14 @@ const HeroSection: React.FC = () => {
 					The Snek you don’t want to live without.
 				</Heading>
 				<Description variants={titleVariants}>
-					<span>Basilisk brings permissionless liquidity to Kusama</span>
-					<span>
+					<motion.span>
+						Basilisk brings permissionless liquidity to Kusama
+					</motion.span>
+					<motion.span>
 						Support young projects. Swap tokens or flip NFTs and earn rewards.
-					</span>
+					</motion.span>
 				</Description>
-				<CtaContainer>
+				<CtaContainer variants={titleVariants}>
 					<HeroButtonLink
 						variants={titleVariants}
 						rounded

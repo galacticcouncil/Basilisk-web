@@ -93,15 +93,15 @@ const Home = () => {
 			</Head>
 
 			<HeroSection />
+			<OnChainSection />
+			<SwapTokensSection />
 			<Suspense fallback={"loading..."}>
-				<OnChainSection />
-				<SwapTokensSection />
 				<NftSection />
 				<EarnRewardsSection />
-				<SupportSection />
-				<RoadmapSection />
-				<LearnMoreSection />
 			</Suspense>
+			<SupportSection />
+			<RoadmapSection />
+			<LearnMoreSection />
 		</>
 	)
 }
