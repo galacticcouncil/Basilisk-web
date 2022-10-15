@@ -30,47 +30,47 @@ import OnChainSection from "../components/onchain-section/onchain-section.compon
 
 const SwapTokensSection = dynamic(
 	() =>
-		import("../components/swap-tokens-section/swap-tokens-section.component")
+		import("../components/swap-tokens-section/swap-tokens-section.component"),
+	{
+		suspense: true,
+	}
+)
+
+const NftSection = dynamic(
+	() => import("../components/nft-section/nft-section.component")
 	// {
 	// 	suspense: true,
 	// }
 )
 
-// const NftSection = dynamic(
-// 	() => import("../components/nft-section/nft-section.component")
-// 	// {
-// 	// 	suspense: true,
-// 	// }
-// )
+const EarnRewardsSection = dynamic(
+	() =>
+		import("../components/earn-rewards-section/earn-rewards-section.component"),
+	{
+		suspense: true,
+	}
+)
 
-// const EarnRewardsSection = dynamic(
-// 	() =>
-// 		import("../components/earn-rewards-section/earn-rewards-section.component")
-// 	// {
-// 	// 	suspense: true,
-// 	// }
-// )
+const SupportSection = dynamic(
+	() => import("../components/support-section/support-section.component"),
+	{
+		suspense: true,
+	}
+)
 
-// const SupportSection = dynamic(
-// 	() => import("../components/support-section/support-section.component")
-// 	// {
-// 	// 	suspense: true,
-// 	// }
-// )
+const RoadmapSection = dynamic(
+	() => import("../components/roadmap-section/roadmap-section.component"),
+	{
+		suspense: true,
+	}
+)
 
-// const RoadmapSection = dynamic(
-// 	() => import("../components/roadmap-section/roadmap-section.component")
-// 	// {
-// 	// 	suspense: true,
-// 	// }
-// )
-
-// const LearnMoreSection = dynamic(
-// 	() => import("../components/learn-more-section/learn-more-section.component")
-// 	// {
-// 	// 	suspense: true,
-// 	// }
-// )
+const LearnMoreSection = dynamic(
+	() => import("../components/learn-more-section/learn-more-section.component"),
+	{
+		suspense: true,
+	}
+)
 
 const Home = () => {
 	return (
@@ -82,14 +82,14 @@ const Home = () => {
 
 			<HeroSection />
 			<OnChainSection />
-			<SwapTokensSection />
-			{/* <Suspense fallback={"loading..."}>
+			<Suspense fallback={"loading..."}>
+				<SwapTokensSection />
 				<NftSection />
 				<EarnRewardsSection />
+				<SupportSection />
+				<RoadmapSection />
+				<LearnMoreSection />
 			</Suspense>
-			<SupportSection />
-			<RoadmapSection />
-			<LearnMoreSection /> */}
 		</>
 	)
 }

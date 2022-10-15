@@ -5,46 +5,6 @@ import { motion, Variants } from "framer-motion"
 // Compoments
 import Image from "../image/image.component"
 
-const variants: Variants = {
-	hidden: {
-		opacity: 0,
-		// y: 100,
-	},
-	visible: {
-		opacity: 1,
-		// y: 0,
-		transition: {
-			// delay: 0.3,
-			delayChildren: 0.2,
-			staggerChildren: 0.4,
-		},
-	},
-}
-
-const itemVariants: Variants = {
-	hidden: {
-		opacity: 0,
-		// y: 75,
-	},
-	visible: {
-		opacity: 1,
-		// y: 0,
-		transition: {
-			duration: 1,
-			ease: "easeIn",
-			// type: "spring",
-			// mass: 1,
-			// stiffness: 100,
-			// damping: 15,
-			// type: "spring",
-			// mass: 1,
-			// stiffness: 256,
-			// damping: 24,
-			// ease: [0.5, 0, 0.56, 0.99],
-		},
-	},
-}
-
 const OnChainSection: React.FC = () => {
 	const data = [
 		{
@@ -68,6 +28,46 @@ const OnChainSection: React.FC = () => {
 			value: "5k",
 		},
 	]
+
+	const variants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 100,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				// delay: 0.3,
+				delayChildren: 0.2,
+				staggerChildren: 0.4,
+			},
+		},
+	}
+
+	const itemVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 75,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				duration: 1,
+				ease: "easeIn",
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 100,
+				// damping: 15,
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 256,
+				// damping: 24,
+				// ease: [0.5, 0, 0.56, 0.99],
+			},
+		},
+	}
 
 	return (
 		<SectionContainer>
