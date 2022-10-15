@@ -76,36 +76,17 @@ const HeroSection: React.FC = () => {
 	}
 
 	return (
-		<SectionContainer
-		// variants={variants}
-		// initial="hidden"
-		// animate="visible"
-		// exit="hidden"
-		>
+		<SectionContainer>
 			<motion.div
-			// variants={variants}
-			// initial="hidden"
-			// animate="visible"
-			// exit="hidden"
+				variants={variants}
+				initial="hidden"
+				animate="visible"
+				exit="hidden"
 			>
-				<Heading
-					variants={titleVariants}
-					initial="hidden"
-					animate="visible"
-					transition={{
-						delay: 0.5,
-					}}
-				>
+				<Heading variants={titleVariants}>
 					The Snek you don’t want to live without.
 				</Heading>
-				<Description
-					variants={titleVariants}
-					initial="hidden"
-					animate="visible"
-					transition={{
-						delay: 1.5,
-					}}
-				>
+				<Description variants={titleVariants}>
 					<motion.span>
 						Basilisk brings permissionless liquidity to Kusama
 					</motion.span>
@@ -113,14 +94,9 @@ const HeroSection: React.FC = () => {
 						Support young projects. Swap tokens or flip NFTs and earn rewards.
 					</motion.span>
 				</Description>
-				<CtaContainer>
+				<CtaContainer variants={titleVariants}>
 					<HeroButtonLink
 						variants={titleVariants}
-						initial="hidden"
-						animate="visible"
-						transition={{
-							delay: 2.5,
-						}}
 						rounded
 						display="inline-flex"
 					>
