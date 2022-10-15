@@ -13,76 +13,64 @@ import { ReactElement } from "react"
 
 // Sections
 import HeroSection from "../components/hero-section/hero-section.component"
+import OnChainSection from "../components/onchain-section/onchain-section.component"
+// import SwapTokensSection from "../components/swap-tokens-section/swap-tokens-section.component"
+// import NftSection from "../components/nft-section/nft-section.component"
+// import EarnRewardsSection from "../components/earn-rewards-section/earn-rewards-section.component"
+// import SupportSection from "../components/support-section/support-section.component"
+// import RoadmapSection from "../components/roadmap-section/roadmap-section.component"
+// import LearnMoreSection from "../components/learn-more-section/learn-more-section.component"
 
-const OnChainSection = dynamic(
-	() =>
-		import("../components/onchain-section/onchain-section.component").then(
-			(mod) => mod.default
-		)
-	// {
-	// 	suspense: true,
-	// }
-)
+// const OnChainSection = dynamic(
+// 	() => import("../components/onchain-section/onchain-section.component")
+// 	// {
+// 	// 	suspense: true,
+// 	// }
+// )
 
 const SwapTokensSection = dynamic(
 	() =>
-		import(
-			"../components/swap-tokens-section/swap-tokens-section.component"
-		).then((mod) => mod.default)
+		import("../components/swap-tokens-section/swap-tokens-section.component")
 	// {
 	// 	suspense: true,
 	// }
 )
 
-const NftSection = dynamic(
-	() =>
-		import("../components/nft-section/nft-section.component").then(
-			(mod) => mod.default
-		)
-	// {
-	// 	suspense: true,
-	// }
-)
+// const NftSection = dynamic(
+// 	() => import("../components/nft-section/nft-section.component")
+// 	// {
+// 	// 	suspense: true,
+// 	// }
+// )
 
-const EarnRewardsSection = dynamic(
-	() =>
-		import(
-			"../components/earn-rewards-section/earn-rewards-section.component"
-		).then((mod) => mod.default)
-	// {
-	// 	suspense: true,
-	// }
-)
+// const EarnRewardsSection = dynamic(
+// 	() =>
+// 		import("../components/earn-rewards-section/earn-rewards-section.component")
+// 	// {
+// 	// 	suspense: true,
+// 	// }
+// )
 
-const SupportSection = dynamic(
-	() =>
-		import("../components/support-section/support-section.component").then(
-			(mod) => mod.default
-		)
-	// {
-	// 	suspense: true,
-	// }
-)
+// const SupportSection = dynamic(
+// 	() => import("../components/support-section/support-section.component")
+// 	// {
+// 	// 	suspense: true,
+// 	// }
+// )
 
-const RoadmapSection = dynamic(
-	() =>
-		import("../components/roadmap-section/roadmap-section.component").then(
-			(mod) => mod.default
-		)
-	// {
-	// 	suspense: true,
-	// }
-)
+// const RoadmapSection = dynamic(
+// 	() => import("../components/roadmap-section/roadmap-section.component")
+// 	// {
+// 	// 	suspense: true,
+// 	// }
+// )
 
-const LearnMoreSection = dynamic(
-	() =>
-		import(
-			"../components/learn-more-section/learn-more-section.component"
-		).then((mod) => mod.default)
-	// {
-	// 	suspense: true,
-	// }
-)
+// const LearnMoreSection = dynamic(
+// 	() => import("../components/learn-more-section/learn-more-section.component")
+// 	// {
+// 	// 	suspense: true,
+// 	// }
+// )
 
 const Home = () => {
 	return (
@@ -95,13 +83,13 @@ const Home = () => {
 			<HeroSection />
 			<OnChainSection />
 			<SwapTokensSection />
-			<Suspense fallback={"loading..."}>
+			{/* <Suspense fallback={"loading..."}>
 				<NftSection />
 				<EarnRewardsSection />
 			</Suspense>
 			<SupportSection />
 			<RoadmapSection />
-			<LearnMoreSection />
+			<LearnMoreSection /> */}
 		</>
 	)
 }
