@@ -108,7 +108,9 @@ const HeroSection: React.FC = () => {
 				</CtaContainer>
 			</motion.div>
 
-			<IluFigure variants={opacityVariants}>
+			<IluFigure
+			// variants={opacityVariants}
+			>
 				{!isTablet && !isDesktop && (
 					<Image
 						className="mobile"
