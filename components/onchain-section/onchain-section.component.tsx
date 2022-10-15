@@ -1,8 +1,49 @@
 // Utils
 import styled from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // Compoments
 import Image from "../image/image.component"
+
+const variants: Variants = {
+	hidden: {
+		opacity: 0,
+		// y: 100,
+	},
+	visible: {
+		opacity: 1,
+		// y: 0,
+		transition: {
+			// delay: 0.3,
+			delayChildren: 0.2,
+			staggerChildren: 0.4,
+		},
+	},
+}
+
+const itemVariants: Variants = {
+	hidden: {
+		opacity: 0,
+		// y: 75,
+	},
+	visible: {
+		opacity: 1,
+		// y: 0,
+		transition: {
+			duration: 1,
+			ease: "easeIn",
+			// type: "spring",
+			// mass: 1,
+			// stiffness: 100,
+			// damping: 15,
+			// type: "spring",
+			// mass: 1,
+			// stiffness: 256,
+			// damping: 24,
+			// ease: [0.5, 0, 0.56, 0.99],
+		},
+	},
+}
 
 const OnChainSection: React.FC = () => {
 	const data = [
@@ -30,24 +71,27 @@ const OnChainSection: React.FC = () => {
 
 	return (
 		<SectionContainer>
-			<Container>
+			<Container
+				variants={variants}
+				initial="hidden"
+				whileInView="visible"
+				exit="hidden"
+				viewport={{ once: true }}
+			>
 				{data.map((item, index) => (
-					<>
-						<Item key={index}>
-							<ItemLabel>
-								<span>
-									<Image
-										src="/assets/icons/onchain.svg"
-										alt="onchain icon"
-										effect="blur"
-									/>
-								</span>
-								<span>{item.label}</span>
-							</ItemLabel>
-							<ItemValue>{item.value}</ItemValue>
-						</Item>
-						{/* {index !== data.length - 1 && index !== 2 && <ItemDivider />} */}
-					</>
+					<Item key={index} variants={itemVariants}>
+						<ItemLabel>
+							<span>
+								<Image
+									src="/assets/icons/onchain.svg"
+									alt="onchain icon"
+									effect="blur"
+								/>
+							</span>
+							<span>{item.label}</span>
+						</ItemLabel>
+						<ItemValue>{item.value}</ItemValue>
+					</Item>
 				))}
 			</Container>
 		</SectionContainer>
@@ -64,7 +108,7 @@ const SectionContainer = styled.section`
 	color: ${({ theme }) => theme.onChainSection.color};
 `
 
-const Container = styled.div`
+const Container = styled(motion.div)`
 	max-width: 140rem;
 	width: 100%;
 	margin: 0 auto;
@@ -83,7 +127,7 @@ const Container = styled.div`
 	}
 `
 
-const Item = styled.div`
+const Item = styled(motion.div)`
 	position: relative;
 	text-align: center;
 

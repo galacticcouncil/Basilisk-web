@@ -38,11 +38,11 @@ const titleVariants: Variants = {
 		y: 0,
 		transition: {
 			duration: 1,
-			ease: "easeIn",
-			// type: "spring",
-			// mass: 1,
-			// stiffness: 100,
-			// damping: 15,
+			// ease: "easeIn",
+			type: "spring",
+			mass: 1,
+			stiffness: 100,
+			damping: 15,
 			// type: "spring",
 			// mass: 1,
 			// stiffness: 256,
@@ -59,9 +59,9 @@ const opacityVariants: Variants = {
 	visible: {
 		opacity: 1,
 		transition: {
-			// delay: 0.5,
+			delay: 2,
 			// duration: 1,
-			ease: "easeIn",
+			// ease: "easeIn",
 			// type: "spring",
 			// mass: 1,
 			// stiffness: 100,
@@ -82,20 +82,31 @@ const HeroSection: React.FC = () => {
 			animate="visible"
 			exit="hidden"
 		>
-			<Heading variants={titleVariants}>
-				The Snek you don’t want to live without.
-			</Heading>
-			<Description variants={titleVariants}>
-				<span>Basilisk brings permissionless liquidity to Kusama</span>
-				<span>
-					Support young projects. Swap tokens or flip NFTs and earn rewards.
-				</span>
-			</Description>
-			<CtaContainer>
-				<HeroButtonLink variants={titleVariants} rounded display="inline-flex">
-					Open Snek App
-				</HeroButtonLink>
-			</CtaContainer>
+			<motion.div
+				variants={variants}
+				initial="hidden"
+				animate="visible"
+				exit="hidden"
+			>
+				<Heading variants={titleVariants}>
+					The Snek you don’t want to live without.
+				</Heading>
+				<Description variants={titleVariants}>
+					<span>Basilisk brings permissionless liquidity to Kusama</span>
+					<span>
+						Support young projects. Swap tokens or flip NFTs and earn rewards.
+					</span>
+				</Description>
+				<CtaContainer>
+					<HeroButtonLink
+						variants={titleVariants}
+						rounded
+						display="inline-flex"
+					>
+						Open Snek App
+					</HeroButtonLink>
+				</CtaContainer>
+			</motion.div>
 
 			<IluFigure variants={opacityVariants}>
 				{!isTablet && !isDesktop && (
