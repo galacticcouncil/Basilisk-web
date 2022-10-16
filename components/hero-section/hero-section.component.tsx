@@ -82,23 +82,23 @@ const HeroSection: React.FC = () => {
 	// 	},
 	// }
 
-	// const opacityVariants: Variants = {
-	// 	hidden: {
-	// 		opacity: 0,
-	// 	},
-	// 	visible: {
-	// 		opacity: 1,
-	// 		transition: {
-	// 			delay: 2.5,
-	// 			// duration: 1,
-	// 			ease: "easeIn",
-	// 			// type: "spring",
-	// 			// mass: 1,
-	// 			// stiffness: 100,
-	// 			// damping: 15,
-	// 		},
-	// 	},
-	// }
+	const opacityVariants: Variants = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: {
+				delay: 3,
+				// duration: 1,
+				ease: "easeIn",
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 100,
+				// damping: 15,
+			},
+		},
+	}
 
 	console.count("HeroSection")
 
@@ -171,7 +171,7 @@ const HeroSection: React.FC = () => {
 					/>
 				)}
 			</IluFigure>
-			{/* <BlurFigure>
+			<BlurFigure variants={opacityVariants} initial="hidden" animate="visible">
 				{!isTablet && !isDesktop && (
 					<Image
 						className="mobile"
@@ -211,7 +211,7 @@ const HeroSection: React.FC = () => {
 						}}
 					/>
 				)}
-			</BlurFigure> */}
+			</BlurFigure>
 		</SectionContainer>
 	)
 }
