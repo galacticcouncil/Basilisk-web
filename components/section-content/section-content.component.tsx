@@ -1,9 +1,13 @@
 // Utils
 import styled from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // Components
 import Image from "../../components/image/image.component"
-import { Button, ButtonLink } from "../../components/button/button.component"
+import {
+	Button,
+	// ButtonLink
+} from "../../components/button/button.component"
 
 // Types
 interface IRowProps {
@@ -34,12 +38,58 @@ const SectionContent: React.FC<IProps> = ({
 	cta,
 	reverse,
 }) => {
+	const variants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 100,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				// delay: 0.3,
+				delayChildren: 0.2,
+				staggerChildren: 0.6,
+			},
+		},
+	}
+
+	const titleVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 75,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				duration: 1,
+				ease: "easeIn",
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 100,
+				// damping: 15,
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 256,
+				// damping: 24,
+				// ease: [0.5, 0, 0.56, 0.99],
+			},
+		},
+	}
+
 	return (
-		<Row reverse={reverse}>
-			<Col>
+		<Row
+			reverse={reverse}
+			variants={variants}
+			initial="hidden"
+			whileInView="visible"
+			// exit="hidden"
+		>
+			<Col variants={titleVariants}>
 				<Image src={image.src} alt={image.alt} width="100%" effect="blur" />
 			</Col>
-			<Col>
+			<Col variants={titleVariants}>
 				<ContentTitle
 					dangerouslySetInnerHTML={{
 						__html: `${title} ${
@@ -69,7 +119,7 @@ const SectionContent: React.FC<IProps> = ({
 
 export default SectionContent
 
-const Row = styled.div<IRowProps>`
+const Row = styled(motion.div)<IRowProps>`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -89,7 +139,7 @@ const Row = styled.div<IRowProps>`
 	}
 `
 
-const Col = styled.div`
+const Col = styled(motion.div)`
 	&:nth-child(1) {
 		max-width: 54.7rem;
 		width: 100%;
@@ -111,7 +161,7 @@ const Col = styled.div`
 	}
 `
 
-const ContentTitle = styled.h3`
+const ContentTitle = styled(motion.h3)`
 	position: relative;
 
 	font-weight: 900;
@@ -147,7 +197,7 @@ const ContentTitle = styled.h3`
 	}
 `
 
-const ContentDescription = styled.h3`
+const ContentDescription = styled(motion.h3)`
 	text-align: center;
 	font-size: 1.6rem;
 	margin-bottom: 2.4rem;
