@@ -107,7 +107,8 @@ const SectionContainer = styled.section`
 	position: relative;
 	z-index: 2;
 	padding: 6rem 2rem;
-	background: ${({ theme }) => theme.onChainSection.background};
+	background-color: green;
+	/* background: ${({ theme }) => theme.onChainSection.background}; */
 	color: ${({ theme }) => theme.onChainSection.color};
 `
 

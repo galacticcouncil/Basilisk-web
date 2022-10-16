@@ -17,45 +17,45 @@ const HeroSection: React.FC = () => {
 	const isTablet = useMediaQuery(`(min-width: ${theme.breakpoints.sm}`)
 	const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg}`)
 
-	// const variants: Variants = {
-	// 	hidden: {
-	// 		opacity: 0,
-	// 		// y: 100,
-	// 	},
-	// 	visible: {
-	// 		opacity: 1,
-	// 		// y: 0,
-	// 		transition: {
-	// 			// delay: 0.3,
-	// 			delayChildren: 0.2,
-	// 			staggerChildren: 0.6,
-	// 		},
-	// 	},
-	// }
+	const variants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 100,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				// delay: 0.3,
+				delayChildren: 0.2,
+				staggerChildren: 0.6,
+			},
+		},
+	}
 
-	// const titleVariants: Variants = {
-	// 	hidden: {
-	// 		opacity: 0,
-	// 		y: 75,
-	// 	},
-	// 	visible: {
-	// 		opacity: 1,
-	// 		y: 0,
-	// 		transition: {
-	// 			duration: 1,
-	// 			ease: "easeIn",
-	// 			// type: "spring",
-	// 			// mass: 1,
-	// 			// stiffness: 100,
-	// 			// damping: 15,
-	// 			// type: "spring",
-	// 			// mass: 1,
-	// 			// stiffness: 256,
-	// 			// damping: 24,
-	// 			// ease: [0.5, 0, 0.56, 0.99],
-	// 		},
-	// 	},
-	// }
+	const titleVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 75,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				duration: 1,
+				ease: "easeIn",
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 100,
+				// damping: 15,
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 256,
+				// damping: 24,
+				// ease: [0.5, 0, 0.56, 0.99],
+			},
+		},
+	}
 
 	// const descVariants: Variants = {
 	// 	hidden: {
@@ -105,18 +105,20 @@ const HeroSection: React.FC = () => {
 	return (
 		<SectionContainer>
 			<motion.div
-			// variants={variants}
-			// initial="hidden"
-			// animate="visible"
-			// exit="hidden"
+				variants={variants}
+				initial="hidden"
+				animate="visible"
+				exit="hidden"
 			>
 				<Heading
-				// variants={titleVariants} initial="hidden" animate="visible"
+					variants={titleVariants}
+					// initial="hidden" animate="visible"
 				>
 					The Snek you don’t want to live without.
 				</Heading>
 				<Description
-				// variants={descVariants} initial="hidden" animate="visible"
+					variants={titleVariants}
+					// initial="hidden" animate="visible"
 				>
 					<motion.span>
 						Basilisk brings permissionless liquidity to Kusama
