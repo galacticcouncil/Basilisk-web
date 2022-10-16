@@ -175,7 +175,7 @@ const HeroSection: React.FC = () => {
 				{!isTablet && !isDesktop && (
 					<Image
 						className="mobile"
-						src="/assets/hero-section/bg-ilu_mobile.svg"
+						src="/assets/hero-section/bg-ilu_mobile-v2.png"
 						alt="background ilu"
 						width={"100%"}
 						height={"100%"}
