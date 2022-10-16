@@ -171,7 +171,7 @@ const HeroSection: React.FC = () => {
 					/>
 				)}
 			</IluFigure>
-			<BlurFigure>
+			{/* <BlurFigure>
 				{!isTablet && !isDesktop && (
 					<Image
 						className="mobile"
@@ -211,7 +211,7 @@ const HeroSection: React.FC = () => {
 						}}
 					/>
 				)}
-			</BlurFigure>
+			</BlurFigure> */}
 		</SectionContainer>
 	)
 }
