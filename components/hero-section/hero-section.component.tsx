@@ -259,11 +259,13 @@ const Heading = styled(motion.h1)`
 	line-height: 1.1;
 	font-weight: 800;
 
-	background: ${({ theme }) => theme.heroSection.headingBackground};
+	color: #eee;
+
+	/* background: ${({ theme }) => theme.heroSection.headingBackground};
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	text-fill-color: transparent;
+	text-fill-color: transparent; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		max-width: 42.7rem;
