@@ -131,7 +131,7 @@ const HeroSection: React.FC = () => {
 				// variants={titleVariants}
 				>
 					<HeroButtonLink
-						// variants={titleVariants}
+						variants={titleVariants}
 						rounded
 						display="inline-flex"
 					>

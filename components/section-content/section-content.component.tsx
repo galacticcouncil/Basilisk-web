@@ -84,13 +84,16 @@ const SectionContent: React.FC<IProps> = ({
 			variants={variants}
 			initial="hidden"
 			whileInView="visible"
+			viewport={{ once: true }}
+
 			// exit="hidden"
 		>
 			<Col variants={titleVariants}>
 				<Image src={image.src} alt={image.alt} width="100%" effect="blur" />
 			</Col>
-			<Col variants={titleVariants}>
+			<Col>
 				<ContentTitle
+					variants={titleVariants}
 					dangerouslySetInnerHTML={{
 						__html: `${title} ${
 							titleIcon &&
@@ -105,8 +108,15 @@ const SectionContent: React.FC<IProps> = ({
 						}`,
 					}}
 				/>
-				<ContentDescription>{description}</ContentDescription>
-				<Button variant="GREEN" disabled={cta.disabled} rounded>
+				<ContentDescription variants={titleVariants}>
+					{description}
+				</ContentDescription>
+				<Button
+					variants={titleVariants}
+					variant="GREEN"
+					disabled={cta.disabled}
+					rounded
+				>
 					{cta.label}
 				</Button>
 				{/* <ButtonLink disabled rounded display="inline-flex">
