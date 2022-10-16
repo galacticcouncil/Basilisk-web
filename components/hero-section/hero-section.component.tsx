@@ -57,36 +57,63 @@ const HeroSection: React.FC = () => {
 		},
 	}
 
-	const opacityVariants: Variants = {
+	const descVariants: Variants = {
 		hidden: {
 			opacity: 0,
+			y: 75,
 		},
 		visible: {
 			opacity: 1,
+			y: 0,
 			transition: {
-				delay: 2.5,
-				// duration: 1,
+				delay: 1,
+				duration: 1,
 				ease: "easeIn",
 				// type: "spring",
 				// mass: 1,
 				// stiffness: 100,
 				// damping: 15,
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 256,
+				// damping: 24,
+				// ease: [0.5, 0, 0.56, 0.99],
 			},
 		},
 	}
 
+	// const opacityVariants: Variants = {
+	// 	hidden: {
+	// 		opacity: 0,
+	// 	},
+	// 	visible: {
+	// 		opacity: 1,
+	// 		transition: {
+	// 			delay: 2.5,
+	// 			// duration: 1,
+	// 			ease: "easeIn",
+	// 			// type: "spring",
+	// 			// mass: 1,
+	// 			// stiffness: 100,
+	// 			// damping: 15,
+	// 		},
+	// 	},
+	// }
+
+	console.count("HeroSection")
+
 	return (
 		<SectionContainer>
 			<motion.div
-				variants={variants}
-				initial="hidden"
-				animate="visible"
-				exit="hidden"
+			// variants={variants}
+			// initial="hidden"
+			// animate="visible"
+			// exit="hidden"
 			>
-				<Heading variants={titleVariants}>
+				<Heading variants={titleVariants} initial="hidden" animate="visible">
 					The Snek you don’t want to live without.
 				</Heading>
-				<Description variants={titleVariants}>
+				<Description variants={descVariants} initial="hidden" animate="visible">
 					<motion.span>
 						Basilisk brings permissionless liquidity to Kusama
 					</motion.span>
@@ -259,13 +286,11 @@ const Heading = styled(motion.h1)`
 	line-height: 1.1;
 	font-weight: 800;
 
-	color: #eee;
-
-	/* background: ${({ theme }) => theme.heroSection.headingBackground};
+	background: ${({ theme }) => theme.heroSection.headingBackground};
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	text-fill-color: transparent; */
+	text-fill-color: transparent;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		max-width: 42.7rem;
