@@ -300,10 +300,24 @@ const HeaderContainer = styled.header`
 	left: 0;
 	right: 0;
 	height: 6.4rem;
-	z-index: 100;
+	z-index: 9900;
 
 	background-color: ${({ theme }) => theme.header.background};
-	backdrop-filter: blur(4.75rem);
+	/* backdrop-filter: blur(4.75rem); */
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 1.2rem;
+		z-index: -100;
+
+		background-color: ${({ theme }) => theme.header.background};
+		backdrop-filter: blur(4.75rem);
+	}
 `
 
 const Container = styled.div`
@@ -396,14 +410,14 @@ const DropdownMenu = styled(motion.div)`
 	width: 25rem;
 	top: 100%;
 	left: 0;
-	z-index: 101;
+	z-index: 100;
 
 	border-radius: 1.2rem;
+	overflow: hidden;
 
-	background-color: ${({ theme }) =>
-		theme.header.dropdownMenu.beforeBackground};
+	box-shadow: ${({ theme }) => theme.header.dropdownMenu.boxShadow};
 
-	&:before {
+	&:after {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -412,10 +426,9 @@ const DropdownMenu = styled(motion.div)`
 		height: 100%;
 		border-radius: 1.2rem;
 		z-index: -100;
-
-		background: ${({ theme }) => theme.header.dropdownMenu.background};
-		backdrop-filter: ${({ theme }) => theme.header.dropdownMenu.blur};
-		box-shadow: ${({ theme }) => theme.header.dropdownMenu.boxShadow};
+		background-color: ${({ theme }) =>
+			theme.header.dropdownMenu.beforeBackground};
+		backdrop-filter: blur(20px);
 	}
 `
 

@@ -33,8 +33,8 @@ export const light = {
 		navItemColor: "#FFFFFF",
 		hoverNavItemColor: "#B8FFDF",
 		dropdownMenu: {
-			beforeBackground: "#000",
-			background: "rgba(76, 243, 168, 0.12)",
+			beforeBackground: "rgba(76, 243, 168, 0.12)",
+			background: "rgba(22, 25, 28, 0.5)",
 			hoverBackground: "rgba(218, 255, 238, 0.06)",
 			borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
 			boxShadow: "0px 40px 70px rgba(0, 0, 0, 0.8)",
