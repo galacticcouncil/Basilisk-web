@@ -51,6 +51,9 @@ const PrimaryButtonStyles = css<IStyledProps>`
 		inherits: false;
 	}
 
+	--myColor1: ${({ theme }) => theme.button.firstColor};
+	--myColor2: ${({ theme }) => theme.button.secondColor};
+
 	background: linear-gradient(90deg, var(--myColor1), var(--myColor2));
 	transition: box-shadow 0.3s, --myColor1 0.3s, --myColor2 0.3s;
 
@@ -171,6 +174,9 @@ export const HeroAContainer = styled(motion.a)<IStyledProps>`
 		initial-value: ${({ theme }) => theme.button.secondColor};
 		inherits: false;
 	}
+
+	--myColor1: ${({ theme }) => theme.button.firstColor};
+	--myColor2: ${({ theme }) => theme.button.secondColor};
 
 	&:focus {
 		outline: none;
