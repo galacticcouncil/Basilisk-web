@@ -8,15 +8,7 @@ import SectionContent from "../section-content/section-content.component"
 const NftSection: React.FC = () => {
 	return (
 		<Section>
-			<SectionHeading
-				variant="BLUE"
-				icon={{
-					src: "/assets/icons/title-icon-green.svg",
-					alt: "green icon",
-				}}
-			>
-				Time to Flip NFTs
-			</SectionHeading>
+			<SectionHeading variant="BLUE">Time to Flip NFTs</SectionHeading>
 
 			<SectionContent
 				title="KodaDOT<br/> Marketplace"
@@ -30,7 +22,7 @@ const NftSection: React.FC = () => {
 					alt: "nft ilu",
 				}}
 				cta={{
-					label: "open Kodaot",
+					label: "open KODADOT",
 				}}
 			/>
 

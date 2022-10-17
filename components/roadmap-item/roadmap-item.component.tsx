@@ -40,7 +40,11 @@ const RoadmapItem: React.FC<IProps> = ({
 				<FlexContainer alignItems="center">
 					<Content>
 						<Title>{title}</Title>
-						<Status>{status}</Status>
+						<Status
+							dangerouslySetInnerHTML={{
+								__html: status,
+							}}
+						/>
 					</Content>
 					<ItemIcon>
 						<Image

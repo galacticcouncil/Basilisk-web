@@ -41,7 +41,7 @@ const RoadmapSection: React.FC = () => {
 		},
 		{
 			title: "LBP",
-			status: "SoonTM",
+			status: "Soon<sup>TM</sup>",
 			icon: {
 				src: "/assets/roadmap-section/bag-v2.png",
 				alt: "bag",
@@ -51,7 +51,7 @@ const RoadmapSection: React.FC = () => {
 		},
 		{
 			title: "Moar Token Pairs",
-			status: "SoonTM",
+			status: "Soon<sup>TM</sup>",
 			icon: {
 				src: "/assets/roadmap-section/pancake-v2.png",
 				alt: "pancake",
@@ -61,7 +61,7 @@ const RoadmapSection: React.FC = () => {
 		},
 		{
 			title: "Liquidity Mining",
-			status: "SoonTM",
+			status: "Soon<sup>TM</sup>",
 			icon: {
 				src: "/assets/roadmap-section/pickaxe-v2.png",
 				alt: "pickaxe",
@@ -71,7 +71,7 @@ const RoadmapSection: React.FC = () => {
 		},
 		{
 			title: "Order Router",
-			status: "SoonTM",
+			status: "Soon<sup>TM</sup>",
 			icon: {
 				src: "/assets/roadmap-section/semafor-v2.png",
 				alt: "semafor",
@@ -81,7 +81,7 @@ const RoadmapSection: React.FC = () => {
 		},
 		{
 			title: "Stableswap",
-			status: "SoonTM",
+			status: "Soon<sup>TM</sup>",
 			icon: {
 				src: "/assets/roadmap-section/coin-v2.png",
 				alt: "coin",
@@ -259,11 +259,11 @@ const Description = styled.p`
 
 const RoadmapContainer = styled.div`
 	position: relative;
-	margin-top: 4.3rem;
-	margin-bottom: 11.5rem;
 	padding: 2rem 0;
 	/* padding-top: 2rem; */
 	/* border: 1px solid red; */
+	max-width: 130rem;
+	margin: 4.3rem auto 11.5rem;
 `
 
 const IconFigure = styled.figure`
@@ -322,7 +322,7 @@ const Border = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		border-left: 0.3rem dotted #fff;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			border-left: 0.5rem dotted #fff;
+			border-left: 0.3rem dotted #fff;
 		}
 	}
 `

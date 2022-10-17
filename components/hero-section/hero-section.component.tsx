@@ -100,8 +100,6 @@ const HeroSection: React.FC = () => {
 		},
 	}
 
-	console.count("HeroSection")
-
 	return (
 		<SectionContainer>
 			<motion.div
@@ -171,7 +169,9 @@ const HeroSection: React.FC = () => {
 					/>
 				)}
 			</IluFigure>
-			<BlurFigure variants={opacityVariants} initial="hidden" animate="visible">
+			<BlurFigure
+			// variants={opacityVariants} initial="hidden" animate="visible"
+			>
 				{!isTablet && !isDesktop && (
 					<Image
 						className="mobile"
@@ -225,7 +225,7 @@ const SectionContainer = styled(motion.section)`
 	/* margin-top: 12.4rem; */
 	margin-bottom: -5.5rem;
 	z-index: 2;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 
 	&::before {
 		content: "";

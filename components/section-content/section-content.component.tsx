@@ -207,10 +207,12 @@ const ContentTitle = styled(motion.h3)`
 	}
 `
 
-const ContentDescription = styled(motion.h3)`
+const ContentDescription = styled(motion.p)`
 	text-align: center;
 	font-size: 1.6rem;
 	margin-bottom: 2.4rem;
+	font-weight: 500;
+	line-height: 36px;
 	color: ${({ theme }) => theme.sectionContainer.descriptionColor};
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

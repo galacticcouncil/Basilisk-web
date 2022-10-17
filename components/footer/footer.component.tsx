@@ -263,6 +263,12 @@ const LabelA = styled.a`
 	font-size: 1.3rem;
 	color: ${({ theme }) => theme.footer.navItemColor};
 
+	transitions: all 0.3s ease-in;
+
+	&:hover {
+		color: ${({ theme }) => theme.footer.hoverNavItemColor};
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 0.78rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {

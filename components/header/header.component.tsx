@@ -55,7 +55,7 @@ const Header: React.FC = () => {
 					label: "Tokenomics",
 					href: "/",
 					icon: {
-						src: "/assets/icons/github.svg",
+						src: "/assets/icons/tokenomics.svg",
 						alt: "github",
 					},
 				},
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
 					label: "Press Kit",
 					href: "/",
 					icon: {
-						src: "/assets/icons/twitter.svg",
+						src: "/assets/icons/press-kit.svg",
 						alt: "twitter",
 					},
 				},
