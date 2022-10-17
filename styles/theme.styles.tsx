@@ -81,6 +81,16 @@ export const light = {
 	roadmapSection: {
 		color: "#ACB2B5",
 		greenRow: "linear-gradient(90deg, #212328 31.29%, #4CF3A8 119.04%)",
+		// greenRow:
+		// 	"linear-gradient(90deg, rgba(68, 68, 74, 0) 0%, rgba(107, 210, 123, 1) 100%)",
+		greenBorder:
+			"linear-gradient(90deg, rgba(68, 68, 74, 0) 0%, rgba(107, 210, 123, 1) 100%)",
+		blueBorder:
+			"linear-gradient(90deg, rgba(68, 68, 74, 0) 0%, rgba(107, 142, 210, 1) 100%)",
+		yellowBorder:
+			"linear-gradient(90deg, rgba(68, 68, 74, 0) 0%, rgba(255, 244, 204, 1) 100%)",
+		orangeBorder:
+			"linear-gradient(90deg, rgba(68, 68, 74, 0) 0%, rgba(255, 174, 140, 1) 100%)",
 		blueRow: "linear-gradient(90deg, #212328 31.29%, #4C71F3 119.04%)",
 		yellowRow:
 			"linear-gradient(270deg, #FFD363 16.3%, #CDA351 40.52%, #1F2125 85.7%), linear-gradient(0deg, #212328, #212328), linear-gradient(90deg, #FFA34F 0%, #B3FF8F 100%)",

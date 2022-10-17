@@ -417,7 +417,7 @@ const DropdownMenu = styled(motion.div)`
 
 	box-shadow: ${({ theme }) => theme.header.dropdownMenu.boxShadow};
 
-	&:after {
+	&:before {
 		content: "";
 		position: absolute;
 		top: 0;

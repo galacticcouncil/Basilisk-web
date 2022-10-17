@@ -68,15 +68,63 @@ export default RoadmapItem
 
 const greenStyles = css<IItemProps>`
 	background: ${({ theme }) => theme.roadmapSection.greenRow};
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: -0.1rem;
+		left: -0.1rem;
+		right: -0.1rem;
+		bottom: -0.1rem;
+		border-radius: 1rem;
+		z-index: -100;
+		background: ${({ theme }) => theme.roadmapSection.greenBorder};
+	}
 `
 const blueStyles = css<IItemProps>`
 	background: ${({ theme }) => theme.roadmapSection.blueRow};
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: -0.1rem;
+		left: -0.1rem;
+		right: -0.1rem;
+		bottom: -0.1rem;
+		border-radius: 1rem;
+		z-index: -100;
+		background: ${({ theme }) => theme.roadmapSection.blueBorder};
+	}
 `
 const yellowStyles = css<IItemProps>`
 	background: ${({ theme }) => theme.roadmapSection.yellowRow};
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: -0.1rem;
+		left: -0.1rem;
+		right: -0.1rem;
+		bottom: -0.1rem;
+		border-radius: 1rem;
+		z-index: -100;
+		background: ${({ theme }) => theme.roadmapSection.yellowBorder};
+	}
 `
 const orangeStyles = css<IItemProps>`
 	background: ${({ theme }) => theme.roadmapSection.orangeRow};
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: -0.1rem;
+		left: -0.1rem;
+		right: -0.1rem;
+		bottom: -0.1rem;
+		border-radius: 1rem;
+		z-index: -100;
+		background: ${({ theme }) => theme.roadmapSection.orangeBorder};
+	}
 `
 
 const LineFigure = styled.figure`
@@ -119,6 +167,7 @@ const Item = styled.div<IItemProps>`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 1rem 2.5rem;
+			margin-bottom: 3.35rem;
 		}
 	}
 `
@@ -159,6 +208,7 @@ const Title = styled.h4`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 1.9rem;
 			line-height: 2.28rem;
+			margin-bottom: 0.4rem;
 		}
 	}
 `

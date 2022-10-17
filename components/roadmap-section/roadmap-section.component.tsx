@@ -214,7 +214,7 @@ export default RoadmapSection
 
 const Section = styled.section`
 	position: relative;
-	padding: 8rem 2rem;
+	padding: 8rem 2rem 0;
 
 	h2 {
 		margin-bottom: 1rem;
@@ -225,7 +225,7 @@ const Section = styled.section`
 			margin-bottom: 0.6rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			padding: 8rem 2.5rem;
+			padding: 8rem 2.5rem 0;
 
 			h2 {
 				margin-bottom: 1rem;
