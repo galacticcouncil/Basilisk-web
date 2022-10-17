@@ -311,7 +311,7 @@ const Container = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
-	max-width: 130rem;
+	max-width: 145rem;
 	margin: 0 auto;
 `
 

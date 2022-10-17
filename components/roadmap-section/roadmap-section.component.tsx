@@ -262,7 +262,7 @@ const RoadmapContainer = styled.div`
 	padding: 2rem 0;
 	/* padding-top: 2rem; */
 	/* border: 1px solid red; */
-	max-width: 130rem;
+	max-width: 121.6rem;
 	margin: 4.3rem auto 11.5rem;
 `
 
