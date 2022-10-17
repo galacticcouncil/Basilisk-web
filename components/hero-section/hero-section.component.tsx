@@ -57,30 +57,30 @@ const HeroSection: React.FC = () => {
 		},
 	}
 
-	// const descVariants: Variants = {
-	// 	hidden: {
-	// 		opacity: 0,
-	// 		y: 75,
-	// 	},
-	// 	visible: {
-	// 		opacity: 1,
-	// 		y: 0,
-	// 		transition: {
-	// 			delay: 1,
-	// 			duration: 1,
-	// 			ease: "easeIn",
-	// 			// type: "spring",
-	// 			// mass: 1,
-	// 			// stiffness: 100,
-	// 			// damping: 15,
-	// 			// type: "spring",
-	// 			// mass: 1,
-	// 			// stiffness: 256,
-	// 			// damping: 24,
-	// 			// ease: [0.5, 0, 0.56, 0.99],
-	// 		},
-	// 	},
-	// }
+	const descVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 75,
+		},
+		visible: {
+			opacity: 0.8,
+			y: 0,
+			transition: {
+				delay: 1,
+				duration: 1,
+				ease: "easeIn",
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 100,
+				// damping: 15,
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 256,
+				// damping: 24,
+				// ease: [0.5, 0, 0.56, 0.99],
+			},
+		},
+	}
 
 	const opacityVariants: Variants = {
 		hidden: {
@@ -115,7 +115,7 @@ const HeroSection: React.FC = () => {
 					The Snek you don’t want to live without.
 				</Heading>
 				<Description
-					variants={titleVariants}
+					variants={descVariants}
 					// initial="hidden" animate="visible"
 				>
 					<motion.span>
