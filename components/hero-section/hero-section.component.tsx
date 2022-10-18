@@ -293,7 +293,7 @@ const SectionContainer = styled(motion.section)`
 `
 
 const Heading = styled(motion.h1)`
-	max-width: 25.7rem;
+	max-width: 26.7rem;
 	margin: 0 auto 1.5rem;
 	text-align: center;
 
