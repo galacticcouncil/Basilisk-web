@@ -15,14 +15,14 @@ import { useBoolean, useHover } from "usehooks-ts"
 // Icons
 import { HiChevronDown } from "react-icons/hi"
 import { GoPlus } from "react-icons/go"
-import DocumentationIcon from "../../public/assets/icons/documantation.svg"
-import TokenomicsIcon from "../../public/assets/icons/tokenomics.svg"
-import PressKitIcon from "../../public/assets/icons/press-kit.svg"
-import DiscordIcon from "../../public/assets/icons/discord.svg"
-import TwitterIcon from "../../public/assets/icons/twitter.svg"
-import TelegramIcon from "../../public/assets/icons/telegram.svg"
-import SubstackIcon from "../../public/assets/icons/substack.svg"
-import RedditIcon from "../../public/assets/icons/reddit.svg"
+// import DocumentationIcon from "../../public/assets/icons/documantation.svg"
+// import TokenomicsIcon from "../../public/assets/icons/tokenomics.svg"
+// import PressKitIcon from "../../public/assets/icons/press-kit.svg"
+// import DiscordIcon from "../../public/assets/icons/discord.svg"
+// import TwitterIcon from "../../public/assets/icons/twitter.svg"
+// import TelegramIcon from "../../public/assets/icons/telegram.svg"
+// import SubstackIcon from "../../public/assets/icons/substack.svg"
+// import RedditIcon from "../../public/assets/icons/reddit.svg"
 
 const Header: React.FC = () => {
 	const { value: isMenuOpen, toggle: toggleMenu } = useBoolean(false)
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
 						alt: "documantation",
 						height: 25,
 					},
-					Icon: DocumentationIcon,
+					// Icon: DocumentationIcon,
 				},
 				{
 					label: "Tokenomics",
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/tokenomics.svg",
 						alt: "github",
 					},
-					Icon: TokenomicsIcon,
+					// Icon: TokenomicsIcon,
 				},
 				{
 					label: "Press Kit",
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
 						alt: "twitter",
 						height: 30,
 					},
-					Icon: PressKitIcon,
+					// Icon: PressKitIcon,
 				},
 			],
 		},
@@ -96,7 +96,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/discord.svg",
 						alt: "discord",
 					},
-					Icon: DiscordIcon,
+					// Icon: DiscordIcon,
 				},
 				{
 					label: "Twitter",
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/twitter.svg",
 						alt: "twitter",
 					},
-					Icon: TwitterIcon,
+					// Icon: TwitterIcon,
 				},
 				{
 					label: "Telegram",
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/telegram.svg",
 						alt: "telegram",
 					},
-					Icon: TelegramIcon,
+					// Icon: TelegramIcon,
 				},
 				{
 					label: "Substack",
@@ -123,7 +123,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/substack.svg",
 						alt: "substack",
 					},
-					Icon: SubstackIcon,
+					// Icon: SubstackIcon,
 				},
 				{
 					label: "Reddit",
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/reddit.svg",
 						alt: "reddit",
 					},
-					Icon: RedditIcon,
+					// Icon: RedditIcon,
 				},
 			],
 		},
