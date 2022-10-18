@@ -8,7 +8,10 @@ import SectionContent from "../section-content/section-content.component"
 const NftSection: React.FC = () => {
 	return (
 		<Section>
-			<SectionHeading variant="BLUE">Time to Flip NFTs</SectionHeading>
+			<SectionHeading variant="BLUE">
+				Time to
+				<br /> Flip NFTs
+			</SectionHeading>
 
 			<SectionContent
 				title="KodaDOT<br/> Marketplace"
@@ -50,5 +53,12 @@ const NftSection: React.FC = () => {
 export default NftSection
 
 const Section = styled.section`
-	padding: 8rem 2rem;
+	padding: 7.803rem 2rem 0;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		padding: 9rem 4rem 0;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			padding: 10rem 2rem;
+		}
+	}
 `

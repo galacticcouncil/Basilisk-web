@@ -101,8 +101,8 @@ const SectionContent: React.FC<IProps> = ({
 						<Image
 							src="${titleIcon?.src}"
 							alt="${titleIcon?.alt}"
-							width="37"
-							height="37"
+							width="100%"
+							height="100%"
 						/>
 					</span>`
 						}`,
@@ -133,18 +133,28 @@ const Row = styled(motion.div)<IRowProps>`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	gap: 7rem;
+	align-items: start;
+	gap: 4.097rem;
 
 	&:not(:last-child) {
-		margin-bottom: 23rem;
+		margin-bottom: 3.803rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		align-items: unset;
 		flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+		gap: 5.578rem;
+
+		&:not(:last-child) {
+			margin-bottom: 16rem;
+		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			gap: 7rem;
+
+			&:not(:last-child) {
+				margin-bottom: 23rem;
+			}
 		}
 	}
 `
@@ -177,7 +187,7 @@ const ContentTitle = styled(motion.h3)`
 	font-weight: 900;
 	line-height: 120%;
 	font-size: 3.2rem;
-	margin-bottom: 3.4rem;
+	margin-bottom: 1.6rem;
 	color: ${({ theme }) => theme.sectionContainer.titleColor};
 
 	text-align: center;
@@ -190,19 +200,27 @@ const ContentTitle = styled(motion.h3)`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		text-align: start;
 		font-size: 3.8rem;
-		margin-bottom: 3.4rem;
+		margin-bottom: 3.7rem;
 
 		span {
 			display: block;
 			visibility: visible;
 			position: absolute;
-			top: -4.5rem;
-			left: -3.8rem;
+			top: -3rem;
+			left: -2.5rem;
+			width: 2.25rem;
+			height: 2.25rem;
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 6.4rem;
 			margin-bottom: 3.4rem;
+			span {
+				top: -4.5rem;
+				left: -3.8rem;
+				width: 3.7rem;
+				height: 3.7rem;
+			}
 		}
 	}
 `
@@ -212,17 +230,19 @@ const ContentDescription = styled(motion.p)`
 	font-size: 1.6rem;
 	margin-bottom: 2.4rem;
 	font-weight: 500;
-	line-height: 36px;
+	line-height: 23px;
 	color: ${({ theme }) => theme.sectionContainer.descriptionColor};
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		line-height: 22px;
 		text-align: start;
 		font-size: 1.8rem;
-		margin-bottom: 3.5rem;
+		margin-bottom: 3.7rem;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 2.8rem;
 			margin-bottom: 6.7rem;
+			line-height: 36px;
 		}
 	}
 `

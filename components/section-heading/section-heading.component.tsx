@@ -51,7 +51,7 @@ const Heading = styled.h2<IHeadingProps>`
 	font-size: 3.2rem;
 	font-family: "FontOver", sans-serif;
 	letter-spacing: 0.03em;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 
 	${({ variant }) => {
 		switch (variant) {
@@ -74,8 +74,13 @@ const Heading = styled.h2<IHeadingProps>`
 	text-fill-color: transparent;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		br {
+			display: none;
+			visibility: hidden;
+		}
+
 		font-size: 3.12rem;
-		margin-bottom: 6rem;
+		margin-bottom: 8.95rem;
 		/* margin: 0 auto 6rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 5.2rem;

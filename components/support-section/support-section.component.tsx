@@ -52,13 +52,15 @@ const SupportSection: React.FC = () => {
 export default SupportSection
 
 const Section = styled.section`
-	padding: 16rem 2rem 8rem;
+	padding: 7.803rem 2rem 0;
 
 	h2 {
 		margin-bottom: 2rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		padding: 16.9rem 4rem 0;
+
 		h2 {
 			margin-bottom: 2.4rem;
 		}

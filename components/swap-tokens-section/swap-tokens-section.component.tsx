@@ -74,10 +74,10 @@ const SectionIlu = styled.figure`
 
 const Section = styled.section`
 	position: relative;
-	padding: 6rem 2rem;
+	padding: 6rem 2rem 0;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		padding: 6rem 2rem;
+		padding: 6rem 4rem 0;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 10rem 2rem;
 		}

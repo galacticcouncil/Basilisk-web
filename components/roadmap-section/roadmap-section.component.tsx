@@ -214,18 +214,19 @@ export default RoadmapSection
 
 const Section = styled.section`
 	position: relative;
-	padding: 8rem 2rem 0;
+	padding: 9rem 2rem 0;
 
 	h2 {
 		margin-bottom: 1rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		padding: 8.79rem 4rem 0;
 		h2 {
 			margin-bottom: 0.6rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			padding: 8rem 2.5rem 0;
+			padding: 14.65rem 2.5rem 0;
 
 			h2 {
 				margin-bottom: 1rem;
@@ -263,7 +264,14 @@ const RoadmapContainer = styled.div`
 	/* padding-top: 2rem; */
 	/* border: 1px solid red; */
 	max-width: 121.6rem;
-	margin: 4.3rem auto 11.5rem;
+	margin: 6.075rem auto 0;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin: 2.5rem auto 0;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			margin: 4.3rem auto 11.5rem;
+		}
+	}
 `
 
 const IconFigure = styled.figure`
