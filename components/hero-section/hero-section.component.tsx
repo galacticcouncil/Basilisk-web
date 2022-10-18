@@ -4,7 +4,7 @@ import { motion, Variants } from "framer-motion"
 
 // Hooks
 import { useTheme } from "styled-components"
-import { useMediaQuery } from "usehooks-ts"
+import { useMediaQuery, useBoolean } from "usehooks-ts"
 
 // Components
 import { HeroButtonLink } from "../button/button.component"
@@ -16,6 +16,7 @@ const HeroSection: React.FC = () => {
 	const theme = useTheme()
 	const isTablet = useMediaQuery(`(min-width: ${theme.breakpoints.sm}`)
 	const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg}`)
+	const { value: isBgLoaded, setTrue } = useBoolean(false)
 
 	const variants: Variants = {
 		hidden: {
@@ -26,9 +27,14 @@ const HeroSection: React.FC = () => {
 			opacity: 1,
 			// y: 0,
 			transition: {
+				// duration: 0.5,
 				// delay: 0.3,
-				delayChildren: 0.2,
-				staggerChildren: 0.6,
+				// delayChildren: 1,
+				staggerChildren: 0.08,
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 256,
+				// damping: 24,
 			},
 		},
 	}
@@ -36,22 +42,22 @@ const HeroSection: React.FC = () => {
 	const titleVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			y: 75,
+			y: 159,
 		},
 		visible: {
 			opacity: 1,
 			y: 0,
 			transition: {
 				duration: 1,
-				ease: "easeIn",
+				// ease: "easeIn",
 				// type: "spring",
 				// mass: 1,
 				// stiffness: 100,
 				// damping: 15,
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 256,
-				// damping: 24,
+				type: "spring",
+				mass: 1,
+				stiffness: 256,
+				damping: 24,
 				// ease: [0.5, 0, 0.56, 0.99],
 			},
 		},
@@ -66,109 +72,109 @@ const HeroSection: React.FC = () => {
 			opacity: 0.8,
 			y: 0,
 			transition: {
-				delay: 1,
-				duration: 1,
-				ease: "easeIn",
+				// delay: 1,
+				// duration: 1,
+				// ease: "easeIn",
 				// type: "spring",
 				// mass: 1,
 				// stiffness: 100,
 				// damping: 15,
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 256,
-				// damping: 24,
+				type: "spring",
+				mass: 1,
+				stiffness: 256,
+				damping: 24,
 				// ease: [0.5, 0, 0.56, 0.99],
 			},
 		},
 	}
 
-	const opacityVariants: Variants = {
-		hidden: {
-			opacity: 0,
-		},
-		visible: {
-			opacity: 1,
-			transition: {
-				delay: 3,
-				// duration: 1,
-				ease: "easeIn",
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 100,
-				// damping: 15,
-			},
-		},
-	}
+	// const opacityVariants: Variants = {
+	// 	hidden: {
+	// 		opacity: 0,
+	// 	},
+	// 	visible: {
+	// 		opacity: 1,
+	// 		transition: {
+	// 			delay: 3,
+	// 			// duration: 1,
+	// 			ease: "easeIn",
+	// 			// type: "spring",
+	// 			// mass: 1,
+	// 			// stiffness: 100,
+	// 			// damping: 15,
+	// 		},
+	// 	},
+	// }
 
 	return (
 		<SectionContainer>
-			<motion.div
-				variants={variants}
-				initial="hidden"
-				animate="visible"
-				exit="hidden"
-			>
-				<Heading
-					variants={titleVariants}
-					// initial="hidden" animate="visible"
+			{isBgLoaded && (
+				<motion.div
+					variants={variants}
+					initial="hidden"
+					animate="visible"
+					exit="hidden"
 				>
-					The Snek you don’t want to live without.
-				</Heading>
-				<Description
-					variants={descVariants}
-					// initial="hidden" animate="visible"
-				>
-					<motion.span>
-						Basilisk brings permissionless liquidity to Kusama
-					</motion.span>
-					<motion.span>
-						Support young projects. Swap tokens or flip NFTs and earn rewards.
-					</motion.span>
-				</Description>
-				<CtaContainer
-				// variants={titleVariants}
-				>
-					<HeroButtonLink
+					<Heading
 						variants={titleVariants}
-						rounded
-						display="inline-flex"
+						// initial="hidden" animate="visible"
 					>
-						Open Snek App
-					</HeroButtonLink>
-				</CtaContainer>
-			</motion.div>
+						The Snek you don’t want to live without.
+					</Heading>
+					<Description
+						variants={descVariants}
+						// initial="hidden" animate="visible"
+					>
+						<motion.span>
+							Basilisk brings permissionless liquidity to Kusama
+						</motion.span>
+						<motion.span>
+							Support young projects. Swap tokens or flip NFTs and earn rewards.
+						</motion.span>
+					</Description>
+					<CtaContainer
+					// variants={titleVariants}
+					>
+						<HeroButtonLink
+							variants={titleVariants}
+							rounded
+							display="inline-flex"
+						>
+							Open Snek App
+						</HeroButtonLink>
+					</CtaContainer>
+					<IluFigure variants={titleVariants}>
+						{!isTablet && !isDesktop && (
+							<Image
+								className="mobile"
+								src="/assets/hero-section/app_ilu_mobile_v2.png"
+								alt="app ilu"
+								width={"100%"}
+								effect="blur"
+							/>
+						)}
+						{isTablet && !isDesktop && (
+							<Image
+								className="tablet"
+								src="/assets/hero-section/app_ilu_tablet_v2.png"
+								alt="app ilu"
+								width={"100%"}
+								effect="blur"
+							/>
+						)}
+						{isTablet && isDesktop && (
+							<Image
+								className="desktop"
+								src="/assets/hero-section/app_ilu_desktop.png"
+								alt="app ilu"
+								width={"100%"}
+								effect="blur"
+							/>
+						)}
+					</IluFigure>
+				</motion.div>
+			)}
 
-			<IluFigure
-			// variants={opacityVariants}
-			>
-				{!isTablet && !isDesktop && (
-					<Image
-						className="mobile"
-						src="/assets/hero-section/app_ilu_mobile_v2.png"
-						alt="app ilu"
-						width={"100%"}
-						effect="blur"
-					/>
-				)}
-				{isTablet && !isDesktop && (
-					<Image
-						className="tablet"
-						src="/assets/hero-section/app_ilu_tablet_v2.png"
-						alt="app ilu"
-						width={"100%"}
-						effect="blur"
-					/>
-				)}
-				{isTablet && isDesktop && (
-					<Image
-						className="desktop"
-						src="/assets/hero-section/app_ilu_desktop.png"
-						alt="app ilu"
-						width={"100%"}
-						effect="blur"
-					/>
-				)}
-			</IluFigure>
 			<BlurFigure
 			// variants={opacityVariants} initial="hidden" animate="visible"
 			>
@@ -183,12 +189,13 @@ const HeroSection: React.FC = () => {
 						style={{
 							objectFit: "cover",
 						}}
+						afterLoad={() => setTrue()}
 					/>
 				)}
 				{isTablet && !isDesktop && (
 					<Image
 						className="tablet"
-						src="/assets/hero-section/bg-ilu_tablet.svg"
+						src="/assets/hero-section/bg-ilu_tablet-v2.png"
 						alt="background ilu"
 						width={"100%"}
 						height={"100%"}
@@ -196,12 +203,13 @@ const HeroSection: React.FC = () => {
 						style={{
 							objectFit: "cover",
 						}}
+						afterLoad={() => setTrue()}
 					/>
 				)}
 				{isTablet && isDesktop && (
 					<Image
 						className="desktop"
-						src="/assets/hero-section/bg-ilu.svg"
+						src="/assets/hero-section/bg-ilu-v2.png"
 						alt="background ilu"
 						width={"100%"}
 						height={"100%"}
@@ -209,6 +217,7 @@ const HeroSection: React.FC = () => {
 						style={{
 							objectFit: "cover",
 						}}
+						afterLoad={() => setTrue()}
 					/>
 				)}
 			</BlurFigure>
@@ -225,7 +234,7 @@ const SectionContainer = styled(motion.section)`
 	/* margin-top: 12.4rem; */
 	margin-bottom: -5.5rem;
 	z-index: 2;
-	/* min-height: 100vh; */
+	min-height: 90rem;
 
 	&::before {
 		content: "";
