@@ -348,6 +348,14 @@ const Description = styled(motion.p)`
 const CtaContainer = styled(motion.div)`
 	display: flex;
 	justify-content: center;
+	margin-bottom: 6.4rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin-bottom: 5.7rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			margin-bottom: 4.4rem;
+		}
+	}
 `
 
 const IluFigure = styled(motion.figure)`
