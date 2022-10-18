@@ -15,6 +15,14 @@ import { useBoolean, useHover } from "usehooks-ts"
 // Icons
 import { HiChevronDown } from "react-icons/hi"
 import { GoPlus } from "react-icons/go"
+import DocumentationIcon from "../../public/assets/icons/documantation.svg"
+import TokenomicsIcon from "../../public/assets/icons/tokenomics.svg"
+import PressKitIcon from "../../public/assets/icons/press-kit.svg"
+import DiscordIcon from "../../public/assets/icons/discord.svg"
+import TwitterIcon from "../../public/assets/icons/twitter.svg"
+import TelegramIcon from "../../public/assets/icons/telegram.svg"
+import SubstackIcon from "../../public/assets/icons/substack.svg"
+import RedditIcon from "../../public/assets/icons/reddit.svg"
 
 const Header: React.FC = () => {
 	const { value: isMenuOpen, toggle: toggleMenu } = useBoolean(false)
@@ -47,9 +55,11 @@ const Header: React.FC = () => {
 					label: "Documentation",
 					href: "/",
 					icon: {
-						src: "/assets/icons/documantation.svg",
+						src: "/assets/icons/docs.svg",
 						alt: "documantation",
+						height: 25,
 					},
+					Icon: DocumentationIcon,
 				},
 				{
 					label: "Tokenomics",
@@ -58,6 +68,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/tokenomics.svg",
 						alt: "github",
 					},
+					Icon: TokenomicsIcon,
 				},
 				{
 					label: "Press Kit",
@@ -65,7 +76,9 @@ const Header: React.FC = () => {
 					icon: {
 						src: "/assets/icons/press-kit.svg",
 						alt: "twitter",
+						height: 30,
 					},
+					Icon: PressKitIcon,
 				},
 			],
 		},
@@ -83,6 +96,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/discord.svg",
 						alt: "discord",
 					},
+					Icon: DiscordIcon,
 				},
 				{
 					label: "Twitter",
@@ -91,6 +105,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/twitter.svg",
 						alt: "twitter",
 					},
+					Icon: TwitterIcon,
 				},
 				{
 					label: "Telegram",
@@ -99,6 +114,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/telegram.svg",
 						alt: "telegram",
 					},
+					Icon: TelegramIcon,
 				},
 				{
 					label: "Substack",
@@ -107,6 +123,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/substack.svg",
 						alt: "substack",
 					},
+					Icon: SubstackIcon,
 				},
 				{
 					label: "Reddit",
@@ -115,6 +132,7 @@ const Header: React.FC = () => {
 						src: "/assets/icons/reddit.svg",
 						alt: "reddit",
 					},
+					Icon: RedditIcon,
 				},
 			],
 		},
@@ -167,12 +185,13 @@ const Header: React.FC = () => {
 																			alt={listItem.icon.alt}
 																			effect="blur"
 																			width={20}
-																			height={24}
+																			height={listItem.icon.height || 24}
 																			style={{
 																				objectFit: "contain",
 																				objectPosition: "center",
 																			}}
 																		/>
+																		{/* <listItem.Icon /> */}
 																		<span>{listItem.label}</span>
 																	</a>
 																</Link>
@@ -271,6 +290,8 @@ const Header: React.FC = () => {
 																				objectPosition: "center",
 																			}}
 																		/>
+																		{/* <listItem.Icon /> */}
+
 																		<span>{listItem.label}</span>
 																	</a>
 																</Link>
@@ -437,10 +458,18 @@ const DropdownMenuItem = styled(motion.div)`
 		padding: 1.7rem 2.4rem;
 		display: flex;
 		align-items: center;
-		gap: 1.5rem;
+		gap: 1.7rem;
+		color: ${({ theme }) => theme.header.dropdownMenu.color};
 
 		&:hover {
+			color: ${({ theme }) => theme.header.dropdownMenu.color};
 			background: ${({ theme }) => theme.header.dropdownMenu.hoverBackground};
+		}
+	}
+
+	svg {
+		path {
+			/* fill: green; */
 		}
 	}
 

@@ -39,6 +39,8 @@ export const light = {
 			borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
 			boxShadow: "0px 40px 70px rgba(0, 0, 0, 0.8)",
 			blur: "blur(20px)",
+			color: "#DAFFEE",
+			// hoverColor: "#fff",
 		},
 		mobileMenu: {
 			background: "#121416",
