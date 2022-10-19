@@ -1,6 +1,6 @@
 // Utils
 import styled from "styled-components"
-import { motion, Variants } from "framer-motion"
+import { motion, Variants, useScroll, useTransform } from "framer-motion"
 
 // Hooks
 import { useTheme } from "styled-components"
@@ -18,6 +18,13 @@ const HeroSection: React.FC = () => {
 	const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg}`)
 	const { value: isBgLoaded, setTrue } = useBoolean(false)
 
+	const { scrollYProgress } = useScroll()
+
+	console.log(scrollYProgress)
+
+	const transformIlu = useTransform(scrollYProgress, [0, 0.1], [0, 50])
+	// console.log(transformIlu)
+
 	const variants: Variants = {
 		hidden: {
 			opacity: 0,
@@ -30,7 +37,7 @@ const HeroSection: React.FC = () => {
 				// duration: 0.5,
 				// delay: 0.3,
 				// delayChildren: 1,
-				staggerChildren: 0.08,
+				staggerChildren: 0.03,
 				// type: "spring",
 				// mass: 1,
 				// stiffness: 256,
@@ -42,23 +49,18 @@ const HeroSection: React.FC = () => {
 	const titleVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			y: 159,
+			y: 150,
+			perspective: "1200px",
 		},
 		visible: {
 			opacity: 1,
 			y: 0,
+			perspective: 0,
 			transition: {
-				duration: 1,
-				// ease: "easeIn",
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 100,
-				// damping: 15,
 				type: "spring",
-				mass: 1,
-				stiffness: 256,
-				damping: 24,
-				// ease: [0.5, 0, 0.56, 0.99],
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
 			},
 		},
 	}
@@ -66,45 +68,47 @@ const HeroSection: React.FC = () => {
 	const descVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			y: 75,
+			y: 150,
 		},
 		visible: {
 			opacity: 0.8,
 			y: 0,
 			transition: {
-				// delay: 1,
-				// duration: 1,
-				// ease: "easeIn",
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 100,
-				// damping: 15,
 				type: "spring",
-				mass: 1,
-				stiffness: 256,
-				damping: 24,
-				// ease: [0.5, 0, 0.56, 0.99],
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
 			},
 		},
 	}
 
-	// const opacityVariants: Variants = {
-	// 	hidden: {
-	// 		opacity: 0,
-	// 	},
-	// 	visible: {
-	// 		opacity: 1,
-	// 		transition: {
-	// 			delay: 3,
-	// 			// duration: 1,
-	// 			ease: "easeIn",
-	// 			// type: "spring",
-	// 			// mass: 1,
-	// 			// stiffness: 100,
-	// 			// damping: 15,
-	// 		},
-	// 	},
-	// }
+	const iluVariants: Variants = {
+		hidden: {
+			// opacity: 0,
+			// perspective: "100px",
+			// transform: "rotateX(10deg)",
+			rotateX: "20deg",
+			y: -100,
+			scale: 0.9,
+		},
+		visible: {
+			// transform: "rotateX(0deg)",
+			rotateX: "0deg",
+			y: 0,
+			scale: 1,
+			// perspective: "0px",
+			// opacity: 1,
+			transition: {
+				// delay: 3,
+				// duration: 3,
+				// ease: "easeOut",
+				type: "spring",
+				mass: 1,
+				stiffness: 43,
+				damping: 30,
+			},
+		},
+	}
 
 	return (
 		<SectionContainer>
@@ -143,34 +147,44 @@ const HeroSection: React.FC = () => {
 							Open Snek App
 						</HeroButtonLink>
 					</CtaContainer>
-					<IluFigure variants={titleVariants}>
-						{!isTablet && !isDesktop && (
-							<Image
-								className="mobile"
-								src="/assets/hero-section/app_ilu_mobile_v2.png"
-								alt="app ilu"
-								width={"100%"}
-								effect="blur"
-							/>
-						)}
-						{isTablet && !isDesktop && (
-							<Image
-								className="tablet"
-								src="/assets/hero-section/app_ilu_tablet_v2.png"
-								alt="app ilu"
-								width={"100%"}
-								effect="blur"
-							/>
-						)}
-						{isTablet && isDesktop && (
-							<Image
-								className="desktop"
-								src="/assets/hero-section/app_ilu_desktop.png"
-								alt="app ilu"
-								width={"100%"}
-								effect="blur"
-							/>
-						)}
+					<IluFigure
+						style={{
+							y: transformIlu,
+						}}
+					>
+						<IluContainer
+							variants={iluVariants}
+							initial="hidden"
+							animate="visible"
+						>
+							{!isTablet && !isDesktop && (
+								<Image
+									className="mobile"
+									src="/assets/hero-section/app_ilu_mobile_v2.png"
+									alt="app ilu"
+									width={"100%"}
+									effect="blur"
+								/>
+							)}
+							{isTablet && !isDesktop && (
+								<Image
+									className="tablet"
+									src="/assets/hero-section/app_ilu_tablet_v2.png"
+									alt="app ilu"
+									width={"100%"}
+									effect="blur"
+								/>
+							)}
+							{isTablet && isDesktop && (
+								<Image
+									className="desktop"
+									src="/assets/hero-section/app_ilu_desktop.png"
+									alt="app ilu"
+									width={"100%"}
+									effect="blur"
+								/>
+							)}
+						</IluContainer>
 					</IluFigure>
 				</motion.div>
 			)}
@@ -361,6 +375,13 @@ const CtaContainer = styled(motion.div)`
 const IluFigure = styled(motion.figure)`
 	max-width: 116.578rem;
 	margin: 0 auto;
+	perspective: 120rem;
+`
+
+const IluContainer = styled(motion.div)`
+	perspective: 206rem;
+	transform-style: preserve-3d;
+	/* transform: rotateX(4deg); */
 `
 
 const BlurFigure = styled(motion.figure)`
