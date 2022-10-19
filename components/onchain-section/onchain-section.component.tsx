@@ -1,31 +1,48 @@
 // Utils
 import styled from "styled-components"
 import { motion, Variants } from "framer-motion"
+import dynamic from "next/dynamic"
 
 // Compoments
 import Image from "../image/image.component"
+
+// @ts-ignore
+// const Odometer = dynamic(import("react-odometerjs"), {
+// 	ssr: false,
+// 	// loading: () => "0",
+// })
 
 const OnChainSection: React.FC = () => {
 	const data = [
 		{
 			label: "TVL",
-			value: "$143k",
+			pre: "$",
+			value: 143,
+			after: "k",
 		},
 		{
 			label: "LIQUIDITY POOLS",
-			value: "$23m",
+			pre: "$",
+			value: 23,
+			after: "m",
 		},
 		{
 			label: "BSX WALLETS",
-			value: "2550k",
+			pre: "",
+			value: 2550,
+			after: "k",
 		},
 		{
 			label: "NFTS LISTED",
-			value: "$143k",
+			pre: "$",
+			value: 143,
+			after: "k",
 		},
 		{
 			label: "CROSS-CHAIN CHANNELS",
-			value: "5k",
+			pre: "",
+			value: 143,
+			after: "k",
 		},
 	]
 
@@ -39,8 +56,8 @@ const OnChainSection: React.FC = () => {
 			// y: 0,
 			transition: {
 				// delay: 0.3,
-				delayChildren: 0.2,
-				staggerChildren: 0.4,
+				// delayChildren: 0.2,
+				staggerChildren: 0.08,
 			},
 		},
 	}
@@ -48,23 +65,16 @@ const OnChainSection: React.FC = () => {
 	const itemVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			// y: 75,
+			y: 75,
 		},
 		visible: {
 			opacity: 1,
-			// y: 0,
+			y: 0,
 			transition: {
-				duration: 1,
-				ease: "easeIn",
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 100,
-				// damping: 15,
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 256,
-				// damping: 24,
-				// ease: [0.5, 0, 0.56, 0.99],
+				type: "spring",
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
 			},
 		},
 	}
@@ -90,7 +100,11 @@ const OnChainSection: React.FC = () => {
 							</span>
 							<span>{item.label}</span>
 						</ItemLabel>
-						<ItemValue>{item.value}</ItemValue>
+						<ItemValue>
+							{/* @ts-ignore */}
+							{/* <Odometer value={item.value} format="(.ddd),dd" /> */}
+							{item.pre + item.value + item.after}
+						</ItemValue>
 					</Item>
 				))}
 			</Container>
