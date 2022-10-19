@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
 
 	console.log(scrollYProgress)
 
-	const transformIlu = useTransform(scrollYProgress, [0, 0.1], [0, 50])
+	const transformIlu = useTransform(scrollYProgress, [0, 0.1], [0, -50])
 	// console.log(transformIlu)
 
 	const variants: Variants = {
