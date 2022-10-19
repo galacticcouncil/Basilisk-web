@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
 	// const theme = useTheme()
 	// const isTablet = useMediaQuery(`(min-width: ${theme.breakpoints.sm}`)
 	// const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg}`)
-	const { value: isBgLoaded, setTrue } = useBoolean(false)
+	const { value: isBgLoaded, setTrue } = useBoolean(true)
 
 	const { scrollYProgress } = useScroll()
 
@@ -179,11 +179,8 @@ const HeroSection: React.FC = () => {
 				</motion.div>
 			)}
 
-			<BlurFigure
-			// variants={opacityVariants} initial="hidden" animate="visible"
-			>
+			<BlurFigure className="mobile">
 				<Image
-					className="mobile"
 					src="/assets/hero-section/bg-ilu_mobile-v2.png"
 					alt="background ilu"
 					width={"100%"}
@@ -192,31 +189,37 @@ const HeroSection: React.FC = () => {
 					style={{
 						objectFit: "cover",
 					}}
-					afterLoad={() => setTrue()}
+					visibleByDefault={true}
+					// afterLoad={() => setTrue()}
 				/>
+			</BlurFigure>
+			<BlurFigure className="tablet">
 				<Image
-					className="tablet"
 					src="/assets/hero-section/bg-ilu_tablet-v2.png"
-					alt="background ilu"
+					alt="background ilu 2"
 					width={"100%"}
 					height={"100%"}
 					effect="blur"
 					style={{
 						objectFit: "cover",
 					}}
-					afterLoad={() => setTrue()}
+					visibleByDefault={true}
+					// afterLoad={() => setTrue()}
 				/>
+			</BlurFigure>
+			<BlurFigure className="desktop">
 				<Image
-					className="desktop"
 					src="/assets/hero-section/bg-ilu-v3.png"
-					alt="background ilu"
+					alt="background ilu 3"
 					width={"100%"}
 					height={"100%"}
 					effect="blur"
 					style={{
 						objectFit: "cover",
 					}}
-					afterLoad={() => setTrue()}
+					visibleByDefault={true}
+					threshold={200}
+					// afterLoad={() => setTrue()}
 				/>
 			</BlurFigure>
 		</SectionContainer>
@@ -273,7 +276,7 @@ const SectionContainer = styled(motion.section)`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin-bottom: -45rem;
+			margin-bottom: -40rem;
 
 			.mobile {
 				display: none;
@@ -375,18 +378,21 @@ const BlurFigure = styled(motion.figure)`
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 	/* min-height: 100vh; */
 
 	right: 0;
 	z-index: -1;
+	/* bottom: -20rem; */
 
-	img {
-		border: 1px solid red;
-		position: absolute;
-	}
-	/* 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		bottom: -0.6rem;
-	} */
+		/* bottom: -20rem; */
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* bottom: -65rem; */
+			width: 200rem;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -40rem;
+		}
+	}
 `

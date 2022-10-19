@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
 	return (
 		<FooterContainer>
 			<Row>
-				<Col>
+				<Col className="logo">
 					<Link href="/">
 						<a>
 							<Logo>
@@ -84,14 +84,14 @@ const Footer: React.FC = () => {
 				</Col>
 				<Col>
 					<ColItem>
-						<Title>Start</Title>
+						<Title className="divider">Start</Title>
 					</ColItem>
 					<ColItem>
-						<Title>Features</Title>
+						<Title className="divider">Features</Title>
 					</ColItem>
 					<ColItem>
 						<Title>About</Title>
-						<NavList>
+						<NavList className="divider">
 							{aboutItems.map((item, index) => (
 								<NavItem key={index}>
 									<Link href={item.slug}>
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
 					</ColItem>
 					<ColItem>
 						<Title>Socials</Title>
-						<NavList>
+						<NavList className="divider">
 							{socialsItems.map((item, index) => (
 								<NavItem key={index}>
 									<Link href={item.slug}>
@@ -164,9 +164,25 @@ const Row = styled(motion.div)`
 	/* border: 1px solid blue; */
 	/* justify-items: center; */
 
+	.logo {
+		grid-row: 2;
+	}
+
+	.divider {
+		border-bottom: 0.461563px solid rgba(76, 243, 168, 0.12);
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		justify-items: unset;
 		grid-template-columns: 1fr 2fr;
+
+		.logo {
+			grid-row: unset;
+		}
+
+		.divider {
+			border-bottom: unset;
+		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		}
 	}
@@ -209,13 +225,14 @@ const ColItem = styled(motion.div)`
 `
 
 const Title = styled(motion.h3)`
-	margin-bottom: 2.25rem;
 	font-size: 1.8rem;
 	color: ${({ theme }) => theme.footer.navTitleColor};
+	padding-bottom: 1.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-bottom: 1.33rem;
 		font-size: 1.08rem;
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-bottom: 2.25rem;
 			font-size: 1.8rem;
@@ -224,10 +241,12 @@ const Title = styled(motion.h3)`
 `
 
 const NavList = styled.ul`
+	/* margin-top: 1.5rem; */
 	display: flex;
 	gap: 1.1rem;
 	justify-content: start;
 	flex-direction: column;
+	padding-bottom: 1.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		gap: 0.66rem;
