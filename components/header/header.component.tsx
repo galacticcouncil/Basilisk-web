@@ -1,6 +1,6 @@
 // Utils
 import styled, { css } from "styled-components"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, Variants } from "framer-motion"
 
 // Components
 import Image from "../image/image.component"
@@ -146,9 +146,32 @@ const Header: React.FC = () => {
 		},
 	]
 
+	const headerVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: -100,
+			perspective: "1200px",
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			perspective: 0,
+			transition: {
+				type: "spring",
+				mass: 1,
+				stiffness: 65,
+				damping: 30,
+			},
+		},
+	}
+
 	return (
 		<>
-			<HeaderContainer>
+			<HeaderContainer
+				variants={headerVariants}
+				initial="hidden"
+				animate="visible"
+			>
 				<Container>
 					<Logo>
 						<Image src="/assets/logo-v1.svg" alt="logo" />
@@ -314,7 +337,7 @@ const Header: React.FC = () => {
 
 export default Header
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled(motion.header)`
 	padding: 0 2rem;
 	position: fixed;
 	top: 0;
