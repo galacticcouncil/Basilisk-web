@@ -1,17 +1,57 @@
 // Utils
 import styled from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // Components
 import Image from "../image/image.component"
 import SectionHeading from "../section-heading/section-heading.component"
 
 const SupportSection: React.FC = () => {
+	const variants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 100,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				// delay: 0.3,
+				// delayChildren: 0.2,
+				staggerChildren: 0.08,
+			},
+		},
+	}
+
+	const itemVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 75,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				type: "spring",
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
+			},
+		},
+	}
+
 	return (
 		<Section>
 			<SectionHeading variant="GREEN">Supporting BSX</SectionHeading>
 
-			<Row>
-				<Col>
+			<Row
+				variants={variants}
+				initial="hidden"
+				whileInView="visible"
+				exit="hidden"
+				viewport={{ once: true }}
+			>
+				<Col variants={itemVariants}>
 					<Title>
 						Mobile wallets
 						<br /> supporting BSX
@@ -25,7 +65,7 @@ const SupportSection: React.FC = () => {
 						/>
 					</PartnersDirectory>
 				</Col>
-				<Col>
+				<Col variants={itemVariants}>
 					<Title>
 						Web Extensions
 						<br /> supporting BSX
@@ -72,7 +112,7 @@ const Section = styled.section`
 	}
 `
 
-const Row = styled.div`
+const Row = styled(motion.div)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -86,7 +126,7 @@ const Row = styled.div`
 	}
 `
 
-const Col = styled.div`
+const Col = styled(motion.div)`
 	max-width: 58.4rem;
 	width: 100%;
 	border-radius: 1.2rem;
@@ -108,7 +148,7 @@ const Col = styled.div`
 	}
 `
 
-const Title = styled.h3`
+const Title = styled(motion.h3)`
 	font-size: 1.4rem;
 	margin-bottom: 1rem;
 	font-weight: 500;

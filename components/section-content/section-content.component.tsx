@@ -48,8 +48,8 @@ const SectionContent: React.FC<IProps> = ({
 			// y: 0,
 			transition: {
 				// delay: 0.3,
-				delayChildren: 0.2,
-				staggerChildren: 0.6,
+				// delayChildren: 0.1,
+				staggerChildren: 0.08,
 			},
 		},
 	}
@@ -63,17 +63,10 @@ const SectionContent: React.FC<IProps> = ({
 			opacity: 1,
 			y: 0,
 			transition: {
-				duration: 1,
-				ease: "easeIn",
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 100,
-				// damping: 15,
-				// type: "spring",
-				// mass: 1,
-				// stiffness: 256,
-				// damping: 24,
-				// ease: [0.5, 0, 0.56, 0.99],
+				type: "spring",
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
 			},
 		},
 	}
@@ -111,14 +104,11 @@ const SectionContent: React.FC<IProps> = ({
 				<ContentDescription variants={titleVariants}>
 					{description}
 				</ContentDescription>
-				<Button
-					variants={titleVariants}
-					variant="GREEN"
-					disabled={cta.disabled}
-					rounded
-				>
-					{cta.label}
-				</Button>
+				<motion.div variants={titleVariants}>
+					<Button variant="GREEN" disabled={cta.disabled} rounded>
+						{cta.label}
+					</Button>
+				</motion.div>
 				{/* <ButtonLink disabled rounded display="inline-flex">
 					{cta.label}
 				</ButtonLink> */}
