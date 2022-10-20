@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 // Compoments
 import Image from "../image/image.component"
-import { Button } from "../button/button.component"
+import { ButtonLink } from "../button/button.component"
 
 const LearnMoreSection: React.FC = () => {
 	return (
@@ -50,12 +50,12 @@ const LearnMoreSection: React.FC = () => {
 					<br /> about Basilisk
 				</Title>
 				<ButtonsContainer>
-					<Button variant="GREEN_BLACK" rounded>
+					<ButtonLink variant="GREEN_BLACK" rounded href="/">
 						Tokenomics
-					</Button>
-					<Button variant="GREEN_BLACK" rounded>
+					</ButtonLink>
+					<ButtonLink variant="GREEN_BLACK" rounded href="/">
 						Press Kit
-					</Button>
+					</ButtonLink>
 				</ButtonsContainer>
 			</Container>
 		</Section>
@@ -180,19 +180,19 @@ const ButtonsContainer = styled.div`
 	position: relative;
 	z-index: 1;
 
-	button {
+	a {
 		width: 100%;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		button {
+		a {
 			min-width: initial;
 			width: initial;
 			padding: 1.25rem 5.1rem;
 			font-size: 0.96rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			button {
+			a {
 				width: initial;
 				padding: 2.1rem 8.5rem;
 				font-size: 1.6rem;

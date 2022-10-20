@@ -8,7 +8,7 @@ import Image from "../image/image.component"
 
 const SwapTokensSection: React.FC = () => {
 	return (
-		<Section>
+		<Section id="swap-tokens">
 			<SectionIlu>
 				<Image
 					src="/assets/swap-tokens-section/top-left-ilu.svg"
