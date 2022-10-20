@@ -36,6 +36,16 @@ const SwapTokensSection = dynamic(
 	// }
 )
 
+const SupportProjectsSection = dynamic(
+	() =>
+		import(
+			"../components/support-projects-section/support-projects-section.component"
+		)
+	// {
+	// 	suspense: true,
+	// }
+)
+
 const NftSection = dynamic(
 	() => import("../components/nft-section/nft-section.component")
 	// {
@@ -46,6 +56,16 @@ const NftSection = dynamic(
 const EarnRewardsSection = dynamic(
 	() =>
 		import("../components/earn-rewards-section/earn-rewards-section.component")
+	// {
+	// 	suspense: true,
+	// }
+)
+
+const PermissionlesSection = dynamic(
+	() =>
+		import(
+			"../components/permissionless-section/permissionless-section.component"
+		)
 	// {
 	// 	suspense: true,
 	// }
@@ -113,8 +133,10 @@ const Home = () => {
 			<OnChainSection />
 			<Suspense fallback={"loading..."}>
 				<SwapTokensSection />
+				<SupportProjectsSection />
 				<NftSection />
 				<EarnRewardsSection />
+				<PermissionlesSection />
 				<SupportSection />
 				<RoadmapSection />
 				<LearnMoreSection />

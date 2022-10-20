@@ -6,28 +6,22 @@ import SectionHeading from "../section-heading/section-heading.component"
 import SectionContent from "../section-content/section-content.component"
 import Image from "../image/image.component"
 
-const SwapTokensSection: React.FC = () => {
+const SupportProjectsSection: React.FC = () => {
 	return (
-		<Section id="swap-tokens">
-			<SectionIlu>
-				<Image
-					src="/assets/swap-tokens-section/top-left-ilu.svg"
-					alt="top left ilu"
-				/>
-			</SectionIlu>
-
-			<SectionHeading variant="DEFAULT">Swap tokens</SectionHeading>
+		<Section id="support-projects">
+			<SectionHeading variant="DEFAULT">Support Young Projects</SectionHeading>
 
 			<SectionContent
-				title="Buy and Sell Tokens"
+				reverse
+				title="Help Raise Liquidity"
 				titleIcon={{
-					src: "/assets/icons/title-icon-white.svg",
+					src: "/assets/icons/title-icon-orange.svg",
 					alt: "white icon",
 				}}
-				description="Permissionless and without relying on centralized exchanges or other intermediaries."
+				description="Support young projects which want to distribute tokens to their community while bootstrapping liquidity."
 				image={{
-					src: "/assets/swap-tokens-section/first-ilu-v2.svg",
-					alt: "swap tokens ilu",
+					src: "/assets/swap-tokens-section/lbp-tile.svg",
+					alt: "swap tokens ilu 2",
 				}}
 				cta={{
 					type: "link",
@@ -39,7 +33,7 @@ const SwapTokensSection: React.FC = () => {
 	)
 }
 
-export default SwapTokensSection
+export default SupportProjectsSection
 
 const SectionIlu = styled.figure`
 	display: none;

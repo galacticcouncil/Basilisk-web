@@ -42,7 +42,7 @@ const SupportSection: React.FC = () => {
 
 	return (
 		<Section>
-			<SectionHeading variant="GREEN">Supporting BSX</SectionHeading>
+			<SectionHeading variant="GREEN">Supported by</SectionHeading>
 
 			<Row
 				variants={variants}
@@ -53,8 +53,9 @@ const SupportSection: React.FC = () => {
 			>
 				<Col variants={itemVariants}>
 					<Title>
-						Mobile wallets
-						<br /> supporting BSX
+						Web
+						<br />
+						<br />
 					</Title>
 
 					<PartnersDirectory>
@@ -66,10 +67,7 @@ const SupportSection: React.FC = () => {
 					</PartnersDirectory>
 				</Col>
 				<Col variants={itemVariants}>
-					<Title>
-						Web Extensions
-						<br /> supporting BSX
-					</Title>
+					<Title>Web put first (before mobile)</Title>
 
 					<PartnersDirectory>
 						<Image
@@ -157,8 +155,8 @@ const Title = styled(motion.h3)`
 	text-align: center;
 
 	br {
-		display: none;
-		visibility: hidden;
+		/* display: none;
+		visibility: hidden; */
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

@@ -11,7 +11,7 @@ const RoadmapSection: React.FC = () => {
 	const roadmapItems: IProps[] = [
 		{
 			title: "XYK Pools",
-			status: "Completed it mate",
+			status: "Snek did it",
 			icon: {
 				src: "/assets/roadmap-section/basilisk-v2.png",
 				alt: "basilisk",
@@ -100,7 +100,7 @@ const RoadmapSection: React.FC = () => {
 			process: "70%",
 		},
 		{
-			title: "Smartboi Pants - Redeemable NFTs",
+			title: "Redeemable NFTs",
 			status: "3 Weeks",
 			icon: {
 				src: "/assets/roadmap-section/shorts-v2.png",
