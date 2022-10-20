@@ -21,7 +21,7 @@ const PrimaryButtonStyles = css<IStyledProps>`
 	font-size: 1.6rem;
 	color: ${({ theme }) => theme.button.color};
 
-	min-width: 20rem;
+	/* min-width: 20rem; */
 	width: ${({ width }) => (width ? width : "unset")};
 
 	/* transition: 0.5s; */

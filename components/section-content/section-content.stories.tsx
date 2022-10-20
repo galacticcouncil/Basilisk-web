@@ -24,6 +24,7 @@ Default.args = {
 		alt: "ilu",
 	},
 	cta: {
+		type: "button",
 		label: "cta label",
 	},
 	reverse: false,
