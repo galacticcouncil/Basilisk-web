@@ -25,7 +25,7 @@ const LearnMoreSection: React.FC = () => {
 					/>
 				</MobileRightIlu>
 
-				<DesktopRightTopIlu>
+				{/* <DesktopRightTopIlu>
 					<Image
 						src="/assets/learn-more-section/top-right-desktop.svg"
 						alt="top left"
@@ -33,17 +33,17 @@ const LearnMoreSection: React.FC = () => {
 						height={"100%"}
 						effect="blur"
 					/>
-				</DesktopRightTopIlu>
+				</DesktopRightTopIlu> */}
 
-				<DesktopRightBottomIlu>
+				<DesktopRightIlu>
 					<Image
-						src="/assets/learn-more-section/bottom-right-desktop.svg"
+						src="/assets/learn-more-section/eyes-green-section.svg"
 						alt="bottom right"
 						width={"100%"}
 						height={"100%"}
 						effect="blur"
 					/>
-				</DesktopRightBottomIlu>
+				</DesktopRightIlu>
 
 				<Title>
 					Learn more
@@ -99,41 +99,32 @@ const MobileRightIlu = styled.figure`
 	}
 `
 
-const DesktopRightTopIlu = styled.figure`
+const DesktopRightIlu = styled.figure`
 	display: none;
 	visibility: hidden;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		position: absolute;
-		top: -6rem;
-		right: -7rem;
 		display: block;
 		visibility: visible;
-		width: 40rem;
-		height: 20rem;
+		/* width: 40rem; */
+		/* top: -48rem;
+		bottom: 0rem;
+		right: -67rem;
+		width: 150rem;
+		height: 150rem; */
+
+		top: -35rem;
+		bottom: 0rem;
+		right: -35rem;
+		width: 70rem;
+		height: 90rem;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			top: 0;
-			right: 0;
-			height: initial;
-			width: 46rem;
-		}
-	}
-`
-
-const DesktopRightBottomIlu = styled.figure`
-	display: none;
-	visibility: hidden;
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		position: absolute;
-		bottom: -0.7rem;
-		right: 0;
-		display: block;
-		visibility: visible;
-		width: 40rem;
-
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			/* width: initial; */
-			width: 75rem;
+			top: -42rem;
+			bottom: 0rem;
+			right: -64rem;
+			width: 133rem;
+			height: 135rem;
 		}
 	}
 `
@@ -195,9 +186,17 @@ const ButtonsContainer = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		button {
+			min-width: initial;
 			width: initial;
+			padding: 1.25rem 5.1rem;
+			font-size: 0.96rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			button {
+				width: initial;
+				padding: 2.1rem 8.5rem;
+				font-size: 1.6rem;
+			}
 		}
 	}
 `
