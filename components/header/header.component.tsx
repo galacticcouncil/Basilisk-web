@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 		},
 		{
 			label: "Features",
-			href: "/",
+			href: "/#swap-tokens",
 		},
 		{
 			ref: aboutRefButton,
@@ -173,9 +173,13 @@ const Header: React.FC = () => {
 				animate="visible"
 			>
 				<Container>
-					<Logo>
-						<Image src="/assets/logo-v1.svg" alt="logo" />
-					</Logo>
+					<Link href="/" passHref>
+						<a>
+							<Logo>
+								<Image src="/assets/logo-v1.svg" alt="logo" />
+							</Logo>
+						</a>
+					</Link>
 					<MobileLogo>
 						<Image src="/assets/logo-mobile-v1.svg" alt="logo" />
 					</MobileLogo>

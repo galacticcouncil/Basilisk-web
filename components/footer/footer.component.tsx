@@ -84,13 +84,25 @@ const Footer: React.FC = () => {
 				</Col>
 				<Col>
 					<ColItem>
-						<Title className="divider">Start</Title>
+						<Link passHref href={"/"}>
+							<a>
+								<Title className="divider">Start</Title>
+							</a>
+						</Link>
 					</ColItem>
 					<ColItem>
-						<Title className="divider">Features</Title>
+						<Link passHref href={"/#swap-tokens"}>
+							<a>
+								<Title className="divider">Features</Title>
+							</a>
+						</Link>
 					</ColItem>
 					<ColItem>
-						<Title>About</Title>
+						<Link passHref href={"/"}>
+							<a>
+								<Title>About</Title>
+							</a>
+						</Link>
 						<NavList className="divider">
 							{aboutItems.map((item, index) => (
 								<NavItem key={index}>
@@ -104,7 +116,11 @@ const Footer: React.FC = () => {
 						</NavList>
 					</ColItem>
 					<ColItem>
-						<Title>Socials</Title>
+						<Link passHref href={"/"}>
+							<a>
+								<Title>Socials</Title>
+							</a>
+						</Link>
 						<NavList className="divider">
 							{socialsItems.map((item, index) => (
 								<NavItem key={index}>
@@ -118,7 +134,11 @@ const Footer: React.FC = () => {
 						</NavList>
 					</ColItem>
 					<ColItem>
-						<Title>Blog</Title>
+						<Link passHref href={"/"}>
+							<a>
+								<Title>Blog</Title>
+							</a>
+						</Link>
 					</ColItem>
 				</Col>
 			</Row>

@@ -139,6 +139,7 @@ const HeroSection: React.FC = () => {
 							variants={titleVariants}
 							rounded
 							display="inline-flex"
+							href="#"
 						>
 							Open Snek App
 						</HeroButtonLink>

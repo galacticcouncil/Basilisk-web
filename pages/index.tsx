@@ -76,8 +76,37 @@ const Home = () => {
 	return (
 		<>
 			<Head>
-				<title>Basilisk</title>
-				<meta name="description" content="" />
+				{/* <!-- Primary Meta Tags --> */}
+				<title>Basilisk - DeFi & NFTs in Kusama</title>
+				<meta name="title" content="Basilisk - DeFi & NFTs in Kusama" />
+				<meta
+					name="description"
+					content="Snek brings permissionless liquidity to the Kusama ecosystem. Swap tokens, flip NFTs and earn rewards. Help young crypto projects bootstrap liquidity and receive tokens."
+				/>
+				<link rel="canonical" href="https://bsx.fi/" />
+
+				{/* <!-- Open Graph / Facebook --> */}
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="https://bsx.fi/" />
+				<meta property="og:title" content="Basilisk - DeFi & NFTs in Kusama" />
+				<meta
+					property="og:description"
+					content="Snek brings permissionless liquidity to the Kusama ecosystem. Swap tokens, flip NFTs and earn rewards. Help young crypto projects bootstrap liquidity and receive tokens."
+				/>
+				<meta property="og:image" content="/assets/logo-mobile-v1.svg" />
+
+				{/* <!-- Twitter --> */}
+				<meta property="twitter:card" content="summary_large_image" />
+				<meta property="twitter:url" content="https://bsx.fi/" />
+				<meta
+					property="twitter:title"
+					content="Basilisk - DeFi & NFTs in Kusama"
+				/>
+				<meta
+					property="twitter:description"
+					content="Snek brings permissionless liquidity to the Kusama ecosystem. Swap tokens, flip NFTs and earn rewards. Help young crypto projects bootstrap liquidity and receive tokens."
+				/>
+				<meta property="twitter:image" content="/assets/logo-mobile-v1.svg" />
 			</Head>
 
 			<HeroSection />
