@@ -236,7 +236,10 @@ const Header: React.FC = () => {
 
 					<CTAContainer>
 						<ButtonLink rounded href="#">
-							Open Snek app
+							DeFi
+						</ButtonLink>
+						<ButtonLink variant="GREEN" rounded href="#">
+							NFT
 						</ButtonLink>
 					</CTAContainer>
 					<HamMenuButton isOpen={isMenuOpen} onClick={() => toggleMenu()} />
@@ -390,6 +393,7 @@ const Logo = styled.div`
 `
 
 const MobileLogo = styled.div`
+	justify-self: start;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: none;
@@ -511,7 +515,8 @@ const CTAContainer = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			display: block;
+			display: flex;
+			gap: 1.6rem;
 			visibility: visible;
 		}
 	}

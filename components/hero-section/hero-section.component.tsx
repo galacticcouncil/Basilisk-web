@@ -10,7 +10,7 @@ import {
 } from "usehooks-ts"
 
 // Components
-import { HeroButtonLink } from "../button/button.component"
+import { ButtonLink } from "../button/button.component"
 import Image from "../image/image.component"
 
 // Hooks
@@ -135,14 +135,23 @@ const HeroSection: React.FC = () => {
 					<CtaContainer
 					// variants={titleVariants}
 					>
-						<HeroButtonLink
+						<ButtonLink
 							variants={titleVariants}
 							rounded
 							display="inline-flex"
 							href="#"
 						>
-							Open Snek App
-						</HeroButtonLink>
+							DeFi
+						</ButtonLink>
+						<ButtonLink
+							variants={titleVariants}
+							rounded
+							variant="GREEN"
+							display="inline-flex"
+							href="#"
+						>
+							NFT
+						</ButtonLink>
 					</CtaContainer>
 					<IluFigure
 						style={{
@@ -351,10 +360,14 @@ const Description = styled(motion.p)`
 const CtaContainer = styled(motion.div)`
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	margin-bottom: 6.4rem;
+	gap: 2.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-bottom: 5.7rem;
+		flex-direction: row;
 		/* margin-bottom: 2rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-bottom: 4.4rem;
