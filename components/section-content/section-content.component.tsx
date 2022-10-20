@@ -4,10 +4,7 @@ import { motion, Variants } from "framer-motion"
 
 // Components
 import Image from "../../components/image/image.component"
-import {
-	Button,
-	// ButtonLink
-} from "../../components/button/button.component"
+import { Button, ButtonLink } from "../../components/button/button.component"
 
 // Types
 interface IRowProps {
@@ -25,6 +22,8 @@ export interface IProps extends IRowProps {
 		alt: string
 	}
 	cta: {
+		type: "link" | "button"
+		href?: string
 		label: string
 		disabled?: boolean
 	}
@@ -105,13 +104,22 @@ const SectionContent: React.FC<IProps> = ({
 					{description}
 				</ContentDescription>
 				<motion.div variants={titleVariants}>
-					<Button variant="GREEN" disabled={cta.disabled} rounded>
-						{cta.label}
-					</Button>
+					{cta.type === "button" && (
+						<Button variant="GREEN" disabled={cta.disabled} rounded>
+							{cta.label}
+						</Button>
+					)}
+					{cta.type === "link" && (
+						<ButtonLink
+							variant="GREEN"
+							rounded
+							display="inline-flex"
+							href={cta.href}
+						>
+							{cta.label}
+						</ButtonLink>
+					)}
 				</motion.div>
-				{/* <ButtonLink disabled rounded display="inline-flex">
-					{cta.label}
-				</ButtonLink> */}
 			</Col>
 		</Row>
 	)

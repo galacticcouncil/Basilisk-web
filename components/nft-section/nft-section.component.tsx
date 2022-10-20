@@ -8,40 +8,40 @@ import SectionContent from "../section-content/section-content.component"
 const NftSection: React.FC = () => {
 	return (
 		<Section>
-			<SectionHeading variant="BLUE">
-				Time to
-				<br /> Flip NFTs
-			</SectionHeading>
+			<SectionHeading variant="BLUE">FLIP NFTs</SectionHeading>
 
 			<SectionContent
-				title="KodaDOT<br/> Marketplace"
+				title="Buy and Sell NFTs"
 				titleIcon={{
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",
 				}}
-				description="Buy and sell your favorite NFTs. Make offers for unlisted NFTs or set royalty fees to support the artist."
+				description="Offers for unlisted NFTs or set royalty fees to support the artist."
 				image={{
 					src: "/assets/ntf-section/lbp-tile.png",
 					alt: "nft ilu",
 				}}
 				cta={{
+					type: "link",
 					label: "open KODADOT",
+					href: "https://kodadot.xyz/",
 				}}
 			/>
 
 			<SectionContent
 				reverse
-				title="Create<br/> NFT Auctions"
+				title="Auction NFTs"
 				titleIcon={{
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",
 				}}
-				description="Flip your jpegs with style. English, Top Up and Candle auctions - just choose your mode and let the luckiest bidder win."
+				description="Flip JPEGs with style using auctions. English, Top Up and Candle auctions - just choose your mode and let the luckiest bidder win."
 				image={{
 					src: "/assets/ntf-section/swap-okens-ile.svg",
 					alt: "nft ilu 2",
 				}}
 				cta={{
+					type: "button",
 					label: "Coming soon",
 					disabled: true,
 				}}

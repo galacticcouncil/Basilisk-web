@@ -2,38 +2,15 @@
 import styled from "styled-components"
 
 // Components
-import Image from "../image/image.component"
 import SectionHeading from "../section-heading/section-heading.component"
 import SectionContent from "../section-content/section-content.component"
 
-const EarnRewardsSection: React.FC = () => {
+const PermissionlessSection: React.FC = () => {
 	return (
 		<Section>
-			<SectionIlu>
-				<Image src="/assets/earn-rewards-section/left-ilu.svg" alt="left ilu" />
-			</SectionIlu>
-
-			<SectionHeading variant="ORANGE">Earn rewards</SectionHeading>
+			<SectionHeading variant="ORANGE">Permissionless</SectionHeading>
 
 			<SectionContent
-				title="Liquidity<br/> Mining"
-				titleIcon={{
-					src: "/assets/icons/title-icon-orange-2.svg",
-					alt: "orange icon",
-				}}
-				description="Provide liquidity to selected Snek pools and earn additional incentives on top of rewards from trading fees."
-				image={{
-					src: "/assets/earn-rewards-section/lbp-tile.svg",
-					alt: "earn rewards ilu",
-				}}
-				cta={{
-					type: "button",
-					label: "Coming soon",
-					disabled: true,
-				}}
-			/>
-
-			{/* <SectionContent
 				reverse
 				title="Decentralized and Community-First"
 				titleIcon={{
@@ -50,12 +27,12 @@ const EarnRewardsSection: React.FC = () => {
 					label: "learn more",
 					href: "https://docs.bsx.fi/learn_democracy_intro/",
 				}}
-			/> */}
+			/>
 		</Section>
 	)
 }
 
-export default EarnRewardsSection
+export default PermissionlessSection
 
 const Section = styled.section`
 	position: relative;
