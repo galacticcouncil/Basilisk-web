@@ -33,9 +33,7 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<link rel="icon" href="/favicon.ico" />
-
-					{/* <link
+					<link
 						rel="apple-touch-icon"
 						sizes="180x180"
 						href="/favicon/apple-touch-icon.png"
@@ -58,8 +56,8 @@ export default class MyDocument extends Document {
 						href="/favicon/safari-pinned-tab.svg"
 						color="#5bbad5"
 					/>
-					<meta name="msapplication-TileColor" content="#da532c" />
-					<meta name="theme-color" content="#ffffff" /> */}
+					<meta name="msapplication-TileColor" content="#603cba" />
+					<meta name="theme-color" content="#ffffff" />
 
 					<link
 						href="https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,500&display=swap"
