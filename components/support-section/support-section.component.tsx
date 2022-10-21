@@ -52,7 +52,7 @@ const SupportSection: React.FC = () => {
 				viewport={{ once: true }}
 			>
 				<Col variants={itemVariants}>
-					<Title>Web put first (before mobile)</Title>
+					<Title>Web Wallets:</Title>
 
 					<PartnersDirectory>
 						<Image
@@ -69,9 +69,7 @@ const SupportSection: React.FC = () => {
 				</Col>
 				<Col variants={itemVariants}>
 					<Title>
-						Web
-						<br />
-						<br />
+					Mobile Wallets:
 					</Title>
 
 					<PartnersDirectory>

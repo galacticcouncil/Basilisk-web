@@ -143,7 +143,7 @@ const RoadmapSection: React.FC = () => {
 
 	return (
 		<Section>
-			<SectionHeading variant="GREEN">The roadmap</SectionHeading>
+			<SectionHeading variant="GREEN">Road of Snek</SectionHeading>
 			{/* 
 			<Description>
 				Basilisk is a decentralized protocol with a community-first approach.

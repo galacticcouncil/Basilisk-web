@@ -13,23 +13,23 @@ const EarnRewardsSection: React.FC = () => {
 				<Image src="/assets/earn-rewards-section/left-ilu.svg" alt="left ilu" />
 			</SectionIlu> */}
 
-			<SectionHeading variant="ORANGE">Earn rewards</SectionHeading>
+			<SectionHeading variant="ORANGE">BASILISK PROTOCOL</SectionHeading>
 
 			<SectionContent
-				title="Liquidity<br/> Mining"
+				title="Decentralized and Community-First."
 				titleIcon={{
 					src: "/assets/icons/title-icon-orange-2.svg",
 					alt: "orange icon",
 				}}
-				description="Provide liquidity to selected Snek pools and earn additional incentives on top of rewards from trading fees."
+				description="Basilisk is a decentralized protocol with a community-first approach. All decisions affecting the protocol are adopted in a democratic process."
 				image={{
 					src: "/assets/earn-rewards-section/lbp-tile.svg",
 					alt: "earn rewards ilu",
 				}}
 				cta={{
-					type: "button",
-					label: "Coming soon",
-					disabled: true,
+					type: "link",
+					href: "https://docs.bsx.fi/product_snek_swap/",
+					label: "LEARN MORE",
 				}}
 			/>
 
