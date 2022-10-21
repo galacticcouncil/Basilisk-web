@@ -63,8 +63,8 @@ const SwapTokensSection: React.FC = () => {
 				}}
 				description="Provide liquidity to selected Snek Swap pools and earn additional incentives on top of rewards from trading fees."
 				image={{
-					src: "/assets/earn-rewards-section/lbp-tile.svg",
-					alt: "earn rewards ilu",
+					src: "/assets/swap-tokens-section/tmp-third-ilu.svg",
+					alt: "earn rewards third ilu",
 				}}
 				cta={{
 					type: "link",

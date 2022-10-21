@@ -284,12 +284,12 @@ const IconFigure = styled.figure`
 		display: block;
 		visibility: visible;
 		position: absolute;
-		top: 2rem;
+		top: 0.7rem;
 		right: 0;
 		width: 0.527rem;
 		height: 0.534rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			top: 2.5rem;
+			top: 0.9rem;
 			width: 0.877rem;
 			height: 0.89rem;
 		}

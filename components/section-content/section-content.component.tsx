@@ -139,7 +139,7 @@ const Row = styled(motion.div)<IRowProps>`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		align-items: unset;
+		align-items: center;
 		flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
 		gap: 5.578rem;
 

@@ -16,6 +16,7 @@ const EarnRewardsSection: React.FC = () => {
 			<SectionHeading variant="ORANGE">BASILISK PROTOCOL</SectionHeading>
 
 			<SectionContent
+				reverse
 				title="Decentralized and Community-First."
 				titleIcon={{
 					src: "/assets/icons/title-icon-orange-2.svg",

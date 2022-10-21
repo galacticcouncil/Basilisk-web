@@ -10,7 +10,7 @@ const NftSection: React.FC = () => {
 	return (
 		<Section>
 			<SectionIlu>
-				<Image src="/assets/earn-rewards-section/left-ilu.svg" alt="left ilu" />
+				<Image src="/assets/ntf-section/left-ilu.svg" alt="left ilu" />
 			</SectionIlu>
 
 			<SectionHeading variant="BLUE">NFT Features</SectionHeading>
