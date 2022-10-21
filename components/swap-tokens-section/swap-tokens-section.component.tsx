@@ -19,7 +19,7 @@ const SwapTokensSection: React.FC = () => {
 			<SectionHeading variant="DEFAULT">DEFI features</SectionHeading>
 
 			<SectionContent
-				title="Buy and Sell Tokens"
+				title="Buy and sell tokens using Snek Swap."
 				titleIcon={{
 					src: "/assets/icons/title-icon-white.svg",
 					alt: "white icon",
@@ -32,7 +32,7 @@ const SwapTokensSection: React.FC = () => {
 				cta={{
 					type: "link",
 					href: "https://docs.bsx.fi/product_snek_swap/",
-					label: "Learn more",
+					label: "OPEN SNEK SWAP",
 				}}
 			/>
 		</Section>

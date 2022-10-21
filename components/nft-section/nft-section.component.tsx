@@ -11,12 +11,12 @@ const NftSection: React.FC = () => {
 			<SectionHeading variant="BLUE">NFT Features</SectionHeading>
 
 			<SectionContent
-				title="Buy and Sell NFTs"
+				title="Trade on Basilisk NFT Marketplace."
 				titleIcon={{
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",
 				}}
-				description="Offers for unlisted NFTs or set royalty fees to support the artist."
+				description="Buy and sell your favorite NFTs. Make offers for unlisted NFTs or set royalty fees to support the artist."
 				image={{
 					src: "/assets/ntf-section/lbp-tile.png",
 					alt: "nft ilu",
@@ -30,12 +30,12 @@ const NftSection: React.FC = () => {
 
 			<SectionContent
 				reverse
-				title="Auction NFTs"
+				title="Participate in NFT Auctions."
 				titleIcon={{
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",
 				}}
-				description="Flip JPEGs with style using auctions. English, Top Up and Candle auctions - just choose your mode and let the luckiest bidder win."
+				description="Flip your jpegs with style. English, Top Up and Candle auctions - just choose your mode and let the luckiest bidder win."
 				image={{
 					src: "/assets/ntf-section/swap-okens-ile.svg",
 					alt: "nft ilu 2",
