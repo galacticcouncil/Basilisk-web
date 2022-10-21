@@ -8,7 +8,7 @@ import SectionContent from "../section-content/section-content.component"
 const NftSection: React.FC = () => {
 	return (
 		<Section>
-			<SectionHeading variant="BLUE">FLIP NFTs</SectionHeading>
+			<SectionHeading variant="BLUE">NFT Features</SectionHeading>
 
 			<SectionContent
 				title="Buy and Sell NFTs"

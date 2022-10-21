@@ -26,7 +26,7 @@ const SupportProjectsSection: React.FC = () => {
 				cta={{
 					type: "link",
 					href: "https://docs.bsx.fi/product_snek_swap/",
-					label: "Learn more",
+					label: "Snek LBP",
 				}}
 			/>
 		</Section>

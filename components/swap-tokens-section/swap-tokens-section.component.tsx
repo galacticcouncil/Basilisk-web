@@ -16,7 +16,7 @@ const SwapTokensSection: React.FC = () => {
 				/>
 			</SectionIlu>
 
-			<SectionHeading variant="DEFAULT">Swap tokens</SectionHeading>
+			<SectionHeading variant="DEFAULT">DEFI features</SectionHeading>
 
 			<SectionContent
 				title="Buy and Sell Tokens"
