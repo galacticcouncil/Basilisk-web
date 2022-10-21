@@ -2,16 +2,16 @@
 import styled from "styled-components"
 
 // Components
-import Image from "../image/image.component"
+// import Image from "../image/image.component"
 import SectionHeading from "../section-heading/section-heading.component"
 import SectionContent from "../section-content/section-content.component"
 
 const EarnRewardsSection: React.FC = () => {
 	return (
 		<Section>
-			<SectionIlu>
+			{/* <SectionIlu>
 				<Image src="/assets/earn-rewards-section/left-ilu.svg" alt="left ilu" />
-			</SectionIlu>
+			</SectionIlu> */}
 
 			<SectionHeading variant="ORANGE">Earn rewards</SectionHeading>
 
@@ -69,18 +69,18 @@ const Section = styled.section`
 	}
 `
 
-const SectionIlu = styled.figure`
-	display: none;
-	visibility: hidden;
+// const SectionIlu = styled.figure`
+// 	display: none;
+// 	visibility: hidden;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			position: absolute;
-			top: -25rem;
-			left: 0;
-			display: block;
-			visibility: visible;
-			z-index: -1;
-		}
-	}
-`
+// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+// 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+// 			position: absolute;
+// 			top: -25rem;
+// 			left: 0;
+// 			display: block;
+// 			visibility: visible;
+// 			z-index: -1;
+// 		}
+// 	}
+// `

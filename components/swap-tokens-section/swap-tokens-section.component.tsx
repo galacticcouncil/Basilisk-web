@@ -35,6 +35,43 @@ const SwapTokensSection: React.FC = () => {
 					label: "OPEN SNEK SWAP",
 				}}
 			/>
+
+			<SectionContent
+				reverse
+				title="Help Raise Liquidity"
+				titleIcon={{
+					src: "/assets/icons/title-icon-white.svg",
+					alt: "white icon",
+				}}
+				description="Support young projects which want to distribute tokens to their community while bootstrapping liquidity."
+				image={{
+					src: "/assets/swap-tokens-section/lbp-tile.svg",
+					alt: "swap tokens ilu 2",
+				}}
+				cta={{
+					type: "link",
+					href: "https://docs.bsx.fi/product_snek_swap/",
+					label: "Snek LBP",
+				}}
+			/>
+
+			<SectionContent
+				title="Liquidity<br/> Mining"
+				titleIcon={{
+					src: "/assets/icons/title-icon-white.svg",
+					alt: "white icon",
+				}}
+				description="Provide liquidity to selected Snek pools and earn additional incentives on top of rewards from trading fees."
+				image={{
+					src: "/assets/earn-rewards-section/lbp-tile.svg",
+					alt: "earn rewards ilu",
+				}}
+				cta={{
+					type: "button",
+					label: "Coming soon",
+					disabled: true,
+				}}
+			/>
 		</Section>
 	)
 }

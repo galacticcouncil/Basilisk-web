@@ -36,15 +36,15 @@ const SwapTokensSection = dynamic(
 	// }
 )
 
-const SupportProjectsSection = dynamic(
-	() =>
-		import(
-			"../components/support-projects-section/support-projects-section.component"
-		)
-	// {
-	// 	suspense: true,
-	// }
-)
+// const SupportProjectsSection = dynamic(
+// 	() =>
+// 		import(
+// 			"../components/support-projects-section/support-projects-section.component"
+// 		)
+// 	// {
+// 	// 	suspense: true,
+// 	// }
+// )
 
 const NftSection = dynamic(
 	() => import("../components/nft-section/nft-section.component")
@@ -61,15 +61,15 @@ const EarnRewardsSection = dynamic(
 	// }
 )
 
-const PermissionlesSection = dynamic(
-	() =>
-		import(
-			"../components/permissionless-section/permissionless-section.component"
-		)
-	// {
-	// 	suspense: true,
-	// }
-)
+// const PermissionlesSection = dynamic(
+// 	() =>
+// 		import(
+// 			"../components/permissionless-section/permissionless-section.component"
+// 		)
+// 	// {
+// 	// 	suspense: true,
+// 	// }
+// )
 
 const SupportSection = dynamic(
 	() => import("../components/support-section/support-section.component")
@@ -133,11 +133,11 @@ const Home = () => {
 			<OnChainSection />
 			<Suspense fallback={"loading..."}>
 				<SwapTokensSection />
-				<SupportProjectsSection />
+				{/* <SupportProjectsSection /> */}
 				<NftSection />
-				<EarnRewardsSection />
-				<PermissionlesSection />
+				{/* <PermissionlesSection /> */}
 				<SupportSection />
+				<EarnRewardsSection />
 				<RoadmapSection />
 				<LearnMoreSection />
 			</Suspense>
