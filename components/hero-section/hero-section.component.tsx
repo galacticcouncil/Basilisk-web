@@ -132,24 +132,11 @@ const HeroSection: React.FC = () => {
 							Support young projects. Swap tokens or flip NFTs and earn rewards.
 						</motion.span>
 					</Description>
-					<CtaContainer
-					// variants={titleVariants}
-					>
-						<ButtonLink
-							variants={titleVariants}
-							rounded
-							variant="GREEN"
-							display="inline-flex"
-							href="#"
-						>
+					<CtaContainer variants={titleVariants}>
+						<ButtonLink rounded variant="GREEN" display="inline-flex" href="#">
 							NFT
 						</ButtonLink>
-						<ButtonLink
-							variants={titleVariants}
-							rounded
-							display="inline-flex"
-							href="#"
-						>
+						<ButtonLink rounded display="inline-flex" href="#">
 							bsx finance
 						</ButtonLink>
 					</CtaContainer>
