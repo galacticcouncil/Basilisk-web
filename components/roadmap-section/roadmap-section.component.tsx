@@ -143,25 +143,13 @@ const RoadmapSection: React.FC = () => {
 
 	return (
 		<Section>
-			<SectionHeading variant="GREEN">The roadmap</SectionHeading>
-
+			<SectionHeading variant="GREEN">Road of Snek</SectionHeading>
+			{/* 
 			<Description>
 				Basilisk is a decentralized protocol with a community-first approach.
 				All decisions affecting the protocol are adopted in a democratic
 				process.
-			</Description>
-			<Button
-				variant="GREEN"
-				icon={{
-					src: "/assets/icons/roadmap-icon.svg",
-					alt: "roadmap icon",
-				}}
-				rounded
-				left="auto"
-				right="auto"
-			>
-				Check live roadmap
-			</Button>
+			</Description> */}
 
 			<RoadmapContainer>
 				<Border />
@@ -206,6 +194,19 @@ const RoadmapSection: React.FC = () => {
 					/>
 				))}
 			</RoadmapContainer>
+
+			<Button
+				variant="GREEN"
+				icon={{
+					src: "/assets/icons/roadmap-icon.svg",
+					alt: "roadmap icon",
+				}}
+				rounded
+				left="auto"
+				right="auto"
+			>
+				Check live roadmap
+			</Button>
 		</Section>
 	)
 }
@@ -235,28 +236,28 @@ const Section = styled.section`
 	}
 `
 
-const Description = styled.p`
-	font-size: 1.6rem;
-	line-height: 2.28rem;
-	font-weight: 500;
-	text-align: center;
-	margin-bottom: 2.8rem;
-	color: ${({ theme }) => theme.roadmapSection.color};
+// const Description = styled.p`
+// 	font-size: 1.6rem;
+// 	line-height: 2.28rem;
+// 	font-weight: 500;
+// 	text-align: center;
+// 	margin-bottom: 2.8rem;
+// 	color: ${({ theme }) => theme.roadmapSection.color};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		font-size: 1.68rem;
-		max-width: 64.98rem;
-		margin: 0 auto 2.4rem;
-		line-height: 2.352rem;
+// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+// 		font-size: 1.68rem;
+// 		max-width: 64.98rem;
+// 		margin: 0 auto 2.4rem;
+// 		line-height: 2.352rem;
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			font-size: 2.8rem;
-			max-width: 108.3rem;
-			margin: 0 auto 4rem;
-			line-height: 3.92rem;
-		}
-	}
-`
+// 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+// 			font-size: 2.8rem;
+// 			max-width: 108.3rem;
+// 			margin: 0 auto 4rem;
+// 			line-height: 3.92rem;
+// 		}
+// 	}
+// `
 
 const RoadmapContainer = styled.div`
 	position: relative;
@@ -264,12 +265,13 @@ const RoadmapContainer = styled.div`
 	/* padding-top: 2rem; */
 	/* border: 1px solid red; */
 	max-width: 121.6rem;
-	margin: 6.075rem auto 0;
+	margin: 6.075rem auto 2.8rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin: 2.5rem auto 0;
+		margin: 2.5rem auto 2.8rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 4.3rem auto 11.5rem;
+			/* margin: 4.3rem auto 11.5rem; */
+			margin: 4.3rem auto 2.8rem;
 		}
 	}
 `
@@ -282,12 +284,12 @@ const IconFigure = styled.figure`
 		display: block;
 		visibility: visible;
 		position: absolute;
-		top: 2rem;
+		top: 0.7rem;
 		right: 0;
 		width: 0.527rem;
 		height: 0.534rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			top: 2.5rem;
+			top: 0.9rem;
 			width: 0.877rem;
 			height: 0.89rem;
 		}

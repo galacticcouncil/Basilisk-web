@@ -52,22 +52,7 @@ const SupportSection: React.FC = () => {
 				viewport={{ once: true }}
 			>
 				<Col variants={itemVariants}>
-					<Title>
-						Web
-						<br />
-						<br />
-					</Title>
-
-					<PartnersDirectory>
-						<Image
-							src="/assets/support-section/nova.png"
-							alt="Nova"
-							height={"100%"}
-						/>
-					</PartnersDirectory>
-				</Col>
-				<Col variants={itemVariants}>
-					<Title>Web put first (before mobile)</Title>
+					<Title>Web Wallets:</Title>
 
 					<PartnersDirectory>
 						<Image
@@ -78,6 +63,19 @@ const SupportSection: React.FC = () => {
 						<Image
 							src="/assets/support-section/polkadot.svg"
 							alt="polkadot"
+							height={"100%"}
+						/>
+					</PartnersDirectory>
+				</Col>
+				<Col variants={itemVariants}>
+					<Title>
+					Mobile Wallets:
+					</Title>
+
+					<PartnersDirectory>
+						<Image
+							src="/assets/support-section/nova.png"
+							alt="Nova"
 							height={"100%"}
 						/>
 					</PartnersDirectory>

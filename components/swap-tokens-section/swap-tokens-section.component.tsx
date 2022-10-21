@@ -35,6 +35,43 @@ const SwapTokensSection: React.FC = () => {
 					label: "OPEN SNEK SWAP",
 				}}
 			/>
+
+			<SectionContent
+				reverse
+				title="Support projects with Snek LBP."
+				titleIcon={{
+					src: "/assets/icons/title-icon-white.svg",
+					alt: "white icon",
+				}}
+				description="Support young projects which want to distribute tokens to their community while bootstrapping liquidity."
+				image={{
+					src: "/assets/swap-tokens-section/lbp-tile.svg",
+					alt: "swap tokens ilu 2",
+				}}
+				cta={{
+					type: "link",
+					href: "https://app.basilisk.cloud/#/lbp",
+					label: "Snek LBP",
+				}}
+			/>
+
+			<SectionContent
+				title="Earn rewards from Snek Farms."
+				titleIcon={{
+					src: "/assets/icons/title-icon-white.svg",
+					alt: "white icon",
+				}}
+				description="Provide liquidity to selected Snek Swap pools and earn additional incentives on top of rewards from trading fees."
+				image={{
+					src: "/assets/swap-tokens-section/tmp-third-ilu.svg",
+					alt: "earn rewards third ilu",
+				}}
+				cta={{
+					type: "link",
+					href: "https://app.basilisk.cloud/#/lbp",
+					label: "LEARN MORE",
+				}}
+			/>
 		</Section>
 	)
 }

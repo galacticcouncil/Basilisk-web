@@ -7,6 +7,7 @@ import Image from "../image/image.component"
 import Link from "next/link"
 import { ButtonLink } from "../button/button.component"
 import HamMenuButton from "../ham-menu-button/ham-menu-button.component"
+import FlexContainer from "../flex-container/flex-container.component"
 
 // Hooks
 import { useRef } from "react"
@@ -173,73 +174,75 @@ const Header: React.FC = () => {
 				animate="visible"
 			>
 				<Container>
-					<Link href="/" passHref>
-						<a>
-							<Logo>
-								<Image src="/assets/logo-v1.svg" alt="logo" />
-							</Logo>
-						</a>
-					</Link>
-					<MobileLogo>
-						<Image src="/assets/logo-mobile-v1.svg" alt="logo" />
-					</MobileLogo>
+					<FlexContainer height="100%" alignItems="center" gap="2rem">
+						<Link href="/" passHref>
+							<a style={{ display: "block" }}>
+								<Logo>
+									<Image src="/assets/logo-v1.svg" alt="logo" />
+								</Logo>
+							</a>
+						</Link>
+						<MobileLogo>
+							<Image src="/assets/logo-mobile-v1.svg" alt="logo" />
+						</MobileLogo>
 
-					<Nav>
-						<NavList>
-							{NAV_ITEMS.map((item, index) => (
-								<NavItem key={index}>
-									{item.href && <Link href={item.href}>{item.label}</Link>}
-									{item.list && (
-										<DropdownButton ref={item.ref}>
-											<span>{item.label}</span>
-											<span>
-												<HiChevronDown />
-											</span>
-											<AnimatePresence>
-												{item.isHovered && (
-													<DropdownMenu
-														initial={{ opacity: 0 }}
-														animate={{ opacity: 1 }}
-														exit={{ opacity: 0 }}
-														transition={{ duration: 0.3, ease: "easeIn" }}
-													>
-														{item.list.map((listItem, index) => (
-															<DropdownMenuItem key={index}>
-																<Link href={listItem.href} passHref>
-																	<a>
-																		<Image
-																			src={listItem.icon.src}
-																			alt={listItem.icon.alt}
-																			effect="blur"
-																			width={20}
-																			height={listItem.icon.height || 24}
-																			style={{
-																				objectFit: "contain",
-																				objectPosition: "center",
-																			}}
-																		/>
-																		{/* <listItem.Icon /> */}
-																		<span>{listItem.label}</span>
-																	</a>
-																</Link>
-															</DropdownMenuItem>
-														))}
-													</DropdownMenu>
-												)}
-											</AnimatePresence>
-										</DropdownButton>
-									)}
-								</NavItem>
-							))}
-						</NavList>
-					</Nav>
+						<Nav>
+							<NavList>
+								{NAV_ITEMS.map((item, index) => (
+									<NavItem key={index}>
+										{item.href && <Link href={item.href}>{item.label}</Link>}
+										{item.list && (
+											<DropdownButton ref={item.ref}>
+												<span>{item.label}</span>
+												<span>
+													<HiChevronDown />
+												</span>
+												<AnimatePresence>
+													{item.isHovered && (
+														<DropdownMenu
+															initial={{ opacity: 0 }}
+															animate={{ opacity: 1 }}
+															exit={{ opacity: 0 }}
+															transition={{ duration: 0.3, ease: "easeIn" }}
+														>
+															{item.list.map((listItem, index) => (
+																<DropdownMenuItem key={index}>
+																	<Link href={listItem.href} passHref>
+																		<a>
+																			<Image
+																				src={listItem.icon.src}
+																				alt={listItem.icon.alt}
+																				effect="blur"
+																				width={20}
+																				height={listItem.icon.height || 24}
+																				style={{
+																					objectFit: "contain",
+																					objectPosition: "center",
+																				}}
+																			/>
+																			{/* <listItem.Icon /> */}
+																			<span>{listItem.label}</span>
+																		</a>
+																	</Link>
+																</DropdownMenuItem>
+															))}
+														</DropdownMenu>
+													)}
+												</AnimatePresence>
+											</DropdownButton>
+										)}
+									</NavItem>
+								))}
+							</NavList>
+						</Nav>
+					</FlexContainer>
 
 					<CTAContainer>
-						<ButtonLink rounded href="#">
+						<ButtonLink variant="GREEN" rounded href="#">
 							DeFi
 						</ButtonLink>
-						<ButtonLink variant="GREEN" rounded href="#">
-							NFT
+						<ButtonLink rounded href="#">
+							bsx finance
 						</ButtonLink>
 					</CTAContainer>
 					<HamMenuButton isOpen={isMenuOpen} onClick={() => toggleMenu()} />
@@ -386,14 +389,15 @@ const Logo = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			display: block;
+			display: flex;
 			visibility: visible;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 `
 
 const MobileLogo = styled.div`
-	justify-self: start;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: none;
@@ -410,6 +414,9 @@ const Nav = styled.nav`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: block;
 			visibility: visible;
+			@media all and (min-width: 1107px) {
+				margin-left: 4rem;
+			}
 		}
 	}
 `
