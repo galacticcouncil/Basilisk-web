@@ -138,19 +138,19 @@ const HeroSection: React.FC = () => {
 						<ButtonLink
 							variants={titleVariants}
 							rounded
-							display="inline-flex"
-							href="#"
-						>
-							DeFi
-						</ButtonLink>
-						<ButtonLink
-							variants={titleVariants}
-							rounded
 							variant="GREEN"
 							display="inline-flex"
 							href="#"
 						>
 							NFT
+						</ButtonLink>
+						<ButtonLink
+							variants={titleVariants}
+							rounded
+							display="inline-flex"
+							href="#"
+						>
+							bsx finance
 						</ButtonLink>
 					</CtaContainer>
 					<IluFigure
