@@ -58,7 +58,11 @@ const RoadmapItem: React.FC<IProps> = ({
 			</Item>
 			<MobileContent>
 				<Title>{title}</Title>
-				<Status>{status}</Status>
+				<Status
+					dangerouslySetInnerHTML={{
+						__html: status,
+					}}
+				></Status>
 			</MobileContent>
 		</>
 	)

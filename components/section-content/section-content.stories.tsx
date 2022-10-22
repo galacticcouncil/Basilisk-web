@@ -19,7 +19,15 @@ Default.args = {
 	title: "Title",
 	description:
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel tincidunt luctus, nisl nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nisl vel tincidunt luctus, nisl nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
+	bgImage: {
+		src: "/assets/swap-tokens-section/swap-okens-ile.svg",
+		alt: "ilu",
+	},
 	image: {
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0,
 		src: "/assets/swap-tokens-section/swap-okens-ile.svg",
 		alt: "ilu",
 	},

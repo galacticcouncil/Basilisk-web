@@ -23,7 +23,15 @@ const EarnRewardsSection: React.FC = () => {
 					alt: "orange icon",
 				}}
 				description="Basilisk is a decentralized protocol with a community-first approach. All decisions affecting the protocol are adopted in a democratic process."
+				bgImage={{
+					src: "/assets/earn-rewards-section/content-bg-ilu.svg",
+					alt: "earn rewards ilu",
+				}}
 				image={{
+					top: "2rem",
+					left: "-1rem",
+					right: "0rem",
+					bottom: "-6rem",
 					src: "/assets/earn-rewards-section/lbp-tile.svg",
 					alt: "earn rewards ilu",
 				}}
@@ -63,9 +71,9 @@ const Section = styled.section`
 	padding: 7.803rem 2rem 0;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		padding: 6rem 4rem 0;
+		padding: 9rem 4rem 0;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			padding: 10rem 2rem;
+			padding: 13.7rem 2rem 0;
 		}
 	}
 `

@@ -25,8 +25,16 @@ const SwapTokensSection: React.FC = () => {
 					alt: "white icon",
 				}}
 				description="Permissionless and without relying on centralized exchanges or other intermediaries."
+				bgImage={{
+					src: "/assets/swap-tokens-section/content-bg-ilu.svg",
+					alt: "swap tokens ilu",
+				}}
 				image={{
-					src: "/assets/swap-tokens-section/first-ilu-v2.svg",
+					top: "5rem",
+					left: 0,
+					right: 0,
+					bottom: "-11rem",
+					src: "/assets/swap-tokens-section/first-ilu-content.svg",
 					alt: "swap tokens ilu",
 				}}
 				cta={{
@@ -44,8 +52,16 @@ const SwapTokensSection: React.FC = () => {
 					alt: "white icon",
 				}}
 				description="Support young projects which want to distribute tokens to their community while bootstrapping liquidity."
+				bgImage={{
+					src: "/assets/swap-tokens-section/content-bg-ilu.svg",
+					alt: "swap tokens ilu 2",
+				}}
 				image={{
-					src: "/assets/swap-tokens-section/lbp-tile.svg",
+					top: "4rem",
+					left: "0",
+					right: "-19rem",
+					bottom: "-15rem",
+					src: "/assets/swap-tokens-section/second-ilu-content.svg",
 					alt: "swap tokens ilu 2",
 				}}
 				cta={{
@@ -62,8 +78,16 @@ const SwapTokensSection: React.FC = () => {
 					alt: "white icon",
 				}}
 				description="Provide liquidity to selected Snek Swap pools and earn additional incentives on top of rewards from trading fees."
+				bgImage={{
+					src: "/assets/swap-tokens-section/content-bg-ilu.svg",
+					alt: "earn rewards third ilu",
+				}}
 				image={{
-					src: "/assets/swap-tokens-section/tmp-third-ilu.svg",
+					top: "2rem",
+					left: "-1rem",
+					right: "0rem",
+					bottom: "-6rem",
+					src: "/assets/swap-tokens-section/third-ilu-content.svg",
 					alt: "earn rewards third ilu",
 				}}
 				cta={{

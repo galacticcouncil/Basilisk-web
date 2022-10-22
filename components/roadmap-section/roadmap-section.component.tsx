@@ -227,7 +227,7 @@ const Section = styled.section`
 			margin-bottom: 0.6rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			padding: 14.65rem 2.5rem 0;
+			padding: 17.9rem 2.5rem 0;
 
 			h2 {
 				margin-bottom: 1rem;
@@ -277,12 +277,17 @@ const RoadmapContainer = styled.div`
 `
 
 const IconFigure = styled.figure`
-	display: none;
-	visibility: hidden;
+	/* display: none;
+	visibility: hidden; */
+	position: absolute;
+	top: 1.9rem;
+	right: 0;
+	width: 0.527rem;
+	height: 0.534rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		display: block;
-		visibility: visible;
+		/* display: block;
+		visibility: visible; */
 		position: absolute;
 		top: 0.7rem;
 		right: 0;

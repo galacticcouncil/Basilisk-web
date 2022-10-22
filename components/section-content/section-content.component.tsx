@@ -17,7 +17,15 @@ export interface IProps extends IRowProps {
 		alt: string
 	}
 	description: string
+	bgImage: {
+		src: string
+		alt: string
+	}
 	image: {
+		top: number | string
+		left: number | string
+		right: number | string
+		bottom: number | string
 		src: string
 		alt: string
 	}
@@ -34,6 +42,7 @@ const SectionContent: React.FC<IProps> = ({
 	titleIcon,
 	description,
 	image,
+	bgImage,
 	cta,
 	reverse,
 }) => {
@@ -49,6 +58,21 @@ const SectionContent: React.FC<IProps> = ({
 				// delay: 0.3,
 				// delayChildren: 0.1,
 				staggerChildren: 0.08,
+			},
+		},
+	}
+	const iluVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 100,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				// delay: 0.3,
+				delayChildren: 0.1,
+				staggerChildren: 0.2,
 			},
 		},
 	}
@@ -73,17 +97,51 @@ const SectionContent: React.FC<IProps> = ({
 	return (
 		<Row
 			reverse={reverse}
-			variants={variants}
-			initial="hidden"
-			whileInView="visible"
-			viewport={{ once: true }}
 
 			// exit="hidden"
 		>
-			<Col variants={titleVariants}>
-				<Image src={image.src} alt={image.alt} width="100%" effect="blur" />
-			</Col>
 			<Col>
+				<ImageContainer
+					variants={iluVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<BGFigure variants={titleVariants}>
+						<Image
+							src={bgImage.src}
+							alt={bgImage.alt}
+							width="100%"
+							height="100%"
+							effect="blur"
+						/>
+					</BGFigure>
+					<IluFigure
+						top={image.top}
+						left={image.left}
+						right={image.right}
+						bottom={image.bottom}
+						variants={titleVariants}
+					>
+						<Image
+							src={image.src}
+							alt={image.alt}
+							width="100%"
+							height="100%"
+							effect="blur"
+							style={{
+								objectFit: "contain",
+							}}
+						/>
+					</IluFigure>
+				</ImageContainer>
+			</Col>
+			<Col
+				variants={variants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+			>
 				<ContentTitle
 					variants={titleVariants}
 					dangerouslySetInnerHTML={{
@@ -103,7 +161,7 @@ const SectionContent: React.FC<IProps> = ({
 				<ContentDescription variants={titleVariants}>
 					{description}
 				</ContentDescription>
-				<motion.div variants={titleVariants}>
+				<ButtonsContainer variants={titleVariants}>
 					{cta.type === "button" && (
 						<Button variant="GREEN" disabled={cta.disabled} rounded>
 							{cta.label}
@@ -119,7 +177,7 @@ const SectionContent: React.FC<IProps> = ({
 							{cta.label}
 						</ButtonLink>
 					)}
-				</motion.div>
+				</ButtonsContainer>
 			</Col>
 		</Row>
 	)
@@ -131,7 +189,7 @@ const Row = styled(motion.div)<IRowProps>`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: start;
+	align-items: center;
 	gap: 4.097rem;
 
 	&:not(:last-child) {
@@ -243,4 +301,60 @@ const ContentDescription = styled(motion.p)`
 			line-height: 36px;
 		}
 	}
+`
+
+const ButtonsContainer = styled(motion.div)`
+	display: flex;
+	justify-content: center;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		justify-content: start;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		}
+	}
+`
+
+const ImageContainer = styled(motion.div)`
+	position: relative;
+	max-width: 54.8rem;
+	width: 100%;
+	/* height: 100%; */
+	overflow: hidden;
+	border-radius: 3.7rem;
+
+	/* 297.6px */
+	height: 31.4rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		height: 29.76rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			height: 49.9rem;
+		}
+	}
+`
+
+const BGFigure = styled(motion.figure)`
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+`
+
+interface IIluProps {
+	top: number | string
+	left: number | string
+	right: number | string
+	bottom: number | string
+}
+
+const IluFigure = styled(motion.figure)<IIluProps>`
+	position: absolute;
+	top: ${({ top }) => top};
+	left: ${({ left }) => left};
+	right: ${({ right }) => right};
+	bottom: ${({ bottom }) => bottom};
 `

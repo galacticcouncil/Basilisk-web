@@ -68,9 +68,7 @@ const SupportSection: React.FC = () => {
 					</PartnersDirectory>
 				</Col>
 				<Col variants={itemVariants}>
-					<Title>
-					Mobile Wallets:
-					</Title>
+					<Title>Mobile Wallets:</Title>
 
 					<PartnersDirectory>
 						<Image
@@ -95,12 +93,14 @@ const Section = styled.section`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		padding: 16.9rem 4rem 0;
+		padding: 14.2rem 4rem 0;
 
 		h2 {
 			margin-bottom: 2.4rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			padding: 18rem 2rem 0;
+
 			h2 {
 				margin-bottom: 4.5rem;
 			}

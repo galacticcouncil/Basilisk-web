@@ -19,7 +19,15 @@ const SupportProjectsSection: React.FC = () => {
 					alt: "white icon",
 				}}
 				description="Support young projects which want to distribute tokens to their community while bootstrapping liquidity."
+				bgImage={{
+					src: "/assets/swap-tokens-section/lbp-tile.svg",
+					alt: "swap tokens ilu 2",
+				}}
 				image={{
+					top: 0,
+					left: 0,
+					right: 0,
+					bottom: 0,
 					src: "/assets/swap-tokens-section/lbp-tile.svg",
 					alt: "swap tokens ilu 2",
 				}}
