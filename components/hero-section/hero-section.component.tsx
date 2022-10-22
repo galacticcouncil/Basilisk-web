@@ -352,10 +352,20 @@ const CtaContainer = styled(motion.div)`
 	margin-bottom: 6.4rem;
 	gap: 2.5rem;
 
+	a {
+		width: 100%;
+		max-width: 18.3rem;
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-bottom: 5.7rem;
 		flex-direction: row;
-		/* margin-bottom: 2rem; */
+
+		a {
+			width: unset;
+			max-width: unset;
+		}
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-bottom: 4.4rem;
 		}

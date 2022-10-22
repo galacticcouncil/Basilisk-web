@@ -18,7 +18,15 @@ const PermissionlessSection: React.FC = () => {
 					alt: "orange icon",
 				}}
 				description="Basilisk is a decentralized protocol with a community-first approach. All decisions affecting the protocol are adopted in a democratic process."
+				bgImage={{
+					src: "/assets/earn-rewards-section/ilu-2-v2.svg",
+					alt: "earn rewards ilu 2",
+				}}
 				image={{
+					top: 0,
+					left: 0,
+					right: 0,
+					bottom: 0,
 					src: "/assets/earn-rewards-section/ilu-2-v2.svg",
 					alt: "earn rewards ilu 2",
 				}}

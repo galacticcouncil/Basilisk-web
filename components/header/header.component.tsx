@@ -239,7 +239,7 @@ const Header: React.FC = () => {
 
 					<CTAContainer>
 						<ButtonLink variant="GREEN" rounded href="#">
-							DeFi
+							NFT
 						</ButtonLink>
 						<ButtonLink rounded href="#">
 							bsx finance

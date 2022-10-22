@@ -22,7 +22,15 @@ const NftSection: React.FC = () => {
 					alt: "blue icon",
 				}}
 				description="Buy and sell your favorite NFTs. Make offers for unlisted NFTs or set royalty fees to support the artist."
+				bgImage={{
+					src: "/assets/ntf-section/content-bg-ilu.svg",
+					alt: "bg ilu",
+				}}
 				image={{
+					top: 0,
+					left: 0,
+					right: 0,
+					bottom: 0,
 					src: "/assets/ntf-section/lbp-tile.png",
 					alt: "nft ilu",
 				}}
@@ -41,7 +49,15 @@ const NftSection: React.FC = () => {
 					alt: "blue icon",
 				}}
 				description="Flip your jpegs with style. English, Top Up and Candle auctions - just choose your mode and let the luckiest bidder win."
+				bgImage={{
+					src: "/assets/ntf-section/content-bg-ilu.svg",
+					alt: "bg ilu",
+				}}
 				image={{
+					top: 0,
+					left: 0,
+					right: 0,
+					bottom: 0,
 					src: "/assets/ntf-section/swap-okens-ile.svg",
 					alt: "nft ilu 2",
 				}}
@@ -65,7 +81,7 @@ const Section = styled.section`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		padding: 9rem 4rem 0;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			padding: 10rem 2rem;
+			padding: 10rem 2rem 0;
 		}
 	}
 `
