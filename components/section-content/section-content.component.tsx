@@ -71,7 +71,7 @@ const SectionContent: React.FC<IProps> = ({
 			// y: 0,
 			transition: {
 				// delay: 0.3,
-				delayChildren: 0.1,
+				delayChildren: 0.2,
 				staggerChildren: 0.2,
 			},
 		},
@@ -94,6 +94,27 @@ const SectionContent: React.FC<IProps> = ({
 		},
 	}
 
+	const bgVariants: Variants = {
+		hidden: {
+			rotateX: "-20deg",
+			opacity: 0,
+			y: 75,
+		},
+		visible: {
+			rotateX: "0deg",
+			opacity: 1,
+			y: 0,
+			transition: {
+				type: "spring",
+				mass: 1,
+				stiffness: 115,
+				damping: 30,
+				delayChildren: 0.2,
+				staggerChildren: 0.2,
+			},
+		},
+	}
+
 	return (
 		<Row
 			reverse={reverse}
@@ -102,7 +123,7 @@ const SectionContent: React.FC<IProps> = ({
 		>
 			<Col>
 				<ImageContainer
-					variants={iluVariants}
+					variants={bgVariants}
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true }}
@@ -219,6 +240,7 @@ const Col = styled(motion.div)`
 	&:nth-child(1) {
 		max-width: 54.7rem;
 		width: 100%;
+		perspective: 120rem;
 	}
 	&:nth-child(2) {
 		max-width: 64rem;
@@ -322,6 +344,9 @@ const ImageContainer = styled(motion.div)`
 	/* height: 100%; */
 	overflow: hidden;
 	border-radius: 3.7rem;
+	perspective: 120rem;
+	transform-style: preserve-3d;
+	/* transform: rotateX(-20deg); */
 
 	/* 297.6px */
 	height: 31.4rem;

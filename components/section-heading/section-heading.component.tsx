@@ -1,5 +1,6 @@
 // Utils
 import styled, { css } from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // Components
 import FlexContainer from "../flex-container/flex-container.component"
@@ -18,9 +19,34 @@ export interface IProps extends IHeadingProps {
 }
 
 const SectionHeading: React.FC<IProps> = ({ children, ...props }) => {
+	const titleVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 75,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				type: "spring",
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
+			},
+		},
+	}
+
 	return (
 		<FlexContainer justifyContent="center" alignItems="center">
-			<Heading {...props}>{children}</Heading>
+			<Heading
+				variants={titleVariants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				{...props}
+			>
+				{children}
+			</Heading>
 			{props.icon && (
 				<IconSpan>
 					<Image src={props.icon.src} alt={props.icon.alt} width="100%" />
@@ -45,7 +71,7 @@ const greenStyles = css`
 	background: ${({ theme }) => theme.sectionHeading.green};
 `
 
-const Heading = styled.h2<IHeadingProps>`
+const Heading = styled(motion.h2)<IHeadingProps>`
 	display: inline-block;
 	text-align: center;
 	font-size: 3.2rem;

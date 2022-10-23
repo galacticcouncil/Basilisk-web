@@ -1,16 +1,10 @@
 // Utils
 import styled from "styled-components"
-import { motion, Variants } from "framer-motion"
-import dynamic from "next/dynamic"
+import { motion, Variants, animate } from "framer-motion"
 
 // Compoments
 import Image from "../image/image.component"
-
-// @ts-ignore
-// const Odometer = dynamic(import("react-odometerjs"), {
-// 	ssr: false,
-// 	// loading: () => "0",
-// })
+import Counter from "../counter/counter-component"
 
 const OnChainSection: React.FC = () => {
 	const data = [
@@ -101,9 +95,9 @@ const OnChainSection: React.FC = () => {
 							<span>{item.label}</span>
 						</ItemLabel>
 						<ItemValue>
-							{/* @ts-ignore */}
-							{/* <Odometer value={item.value} format="(.ddd),dd" /> */}
-							{item.pre + item.value + item.after}
+							<span>{item.pre}</span>
+							<Counter from={0} to={item.value} />
+							<span>{item.after}</span>
 						</ItemValue>
 					</Item>
 				))}
@@ -265,6 +259,8 @@ const ItemLabel = styled.h2`
 const ItemValue = styled.div`
 	font-weight: 900;
 	font-size: 3.4rem;
+	display: flex;
+	justify-content: center;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 3.867rem;

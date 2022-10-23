@@ -1,14 +1,58 @@
 // Utils
 import styled from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // Compoments
 import Image from "../image/image.component"
 import { ButtonLink } from "../button/button.component"
 
 const LearnMoreSection: React.FC = () => {
+	const variants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 100,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				// delay: 0.3,
+				// delayChildren: 0.1,
+				staggerChildren: 0.08,
+			},
+		},
+	}
+
+	const titleVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 75,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				type: "spring",
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
+			},
+		},
+	}
+
 	return (
-		<Section>
-			<Container>
+		<Section
+			variants={variants}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
+		>
+			<Container
+				variants={variants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+			>
 				<MobileLeftIlu>
 					<Image
 						src="/assets/learn-more-section/top-left.svg"
@@ -45,11 +89,11 @@ const LearnMoreSection: React.FC = () => {
 					/>
 				</DesktopRightIlu>
 
-				<Title>
+				<Title variants={titleVariants}>
 					Learn more
 					<br /> about Basilisk
 				</Title>
-				<ButtonsContainer>
+				<ButtonsContainer variants={titleVariants}>
 					<ButtonLink variant="GREEN_BLACK" rounded href="/">
 						Tokenomics
 					</ButtonLink>
@@ -64,7 +108,7 @@ const LearnMoreSection: React.FC = () => {
 
 export default LearnMoreSection
 
-const Section = styled.section`
+const Section = styled(motion.section)`
 	margin: 7.925rem auto 0;
 
 	padding: 0 2rem;
@@ -130,7 +174,7 @@ const DesktopRightIlu = styled.figure`
 	}
 `
 
-const Container = styled.div`
+const Container = styled(motion.div)`
 	overflow: hidden;
 	position: relative;
 	max-width: 145rem;
@@ -149,7 +193,7 @@ const Container = styled.div`
 	}
 `
 
-const Title = styled.h2`
+const Title = styled(motion.h2)`
 	position: relative;
 	z-index: 1;
 	font-weight: 900;
@@ -174,7 +218,7 @@ const Title = styled.h2`
 	}
 `
 
-const ButtonsContainer = styled.div`
+const ButtonsContainer = styled(motion.div)`
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;

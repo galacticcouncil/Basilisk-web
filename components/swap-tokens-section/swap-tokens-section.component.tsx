@@ -34,7 +34,7 @@ const SwapTokensSection: React.FC = () => {
 					left: 0,
 					right: 0,
 					bottom: "-11rem",
-					src: "/assets/swap-tokens-section/first-ilu-content.svg",
+					src: "/assets/swap-tokens-section/first-ilu-content-v2.svg",
 					alt: "swap tokens ilu",
 				}}
 				cta={{
