@@ -1,5 +1,6 @@
 // Utils
 import styled from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // Components
 import SectionHeading from "../section-heading/section-heading.component"
@@ -141,6 +142,39 @@ const RoadmapSection: React.FC = () => {
 		},
 	]
 
+	const variants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 100,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				// delay: 0.3,
+				// delayChildren: 0.1,
+				staggerChildren: 0.08,
+			},
+		},
+	}
+
+	const titleVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 75,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				type: "spring",
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
+			},
+		},
+	}
+
 	return (
 		<Section>
 			<SectionHeading variant="GREEN">Road of Snek</SectionHeading>
@@ -151,7 +185,12 @@ const RoadmapSection: React.FC = () => {
 				process.
 			</Description> */}
 
-			<RoadmapContainer>
+			<RoadmapContainer
+				variants={variants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+			>
 				<Border />
 				{/* <LineFigure>
 					<Image
@@ -186,6 +225,7 @@ const RoadmapSection: React.FC = () => {
 				{roadmapItems.map((item, index) => (
 					<RoadmapItem
 						key={index}
+						variants={titleVariants}
 						title={item.title}
 						status={item.status}
 						icon={item.icon}
@@ -195,18 +235,20 @@ const RoadmapSection: React.FC = () => {
 				))}
 			</RoadmapContainer>
 
-			<Button
-				variant="GREEN"
-				icon={{
-					src: "/assets/icons/roadmap-icon.svg",
-					alt: "roadmap icon",
-				}}
-				rounded
-				left="auto"
-				right="auto"
-			>
-				Check live roadmap
-			</Button>
+			<motion.div variants={titleVariants}>
+				<Button
+					variant="GREEN"
+					icon={{
+						src: "/assets/icons/roadmap-icon.svg",
+						alt: "roadmap icon",
+					}}
+					rounded
+					left="auto"
+					right="auto"
+				>
+					Check live roadmap
+				</Button>
+			</motion.div>
 		</Section>
 	)
 }
@@ -259,7 +301,7 @@ const Section = styled.section`
 // 	}
 // `
 
-const RoadmapContainer = styled.div`
+const RoadmapContainer = styled(motion.div)`
 	position: relative;
 	padding: 2rem 0;
 	/* padding-top: 2rem; */

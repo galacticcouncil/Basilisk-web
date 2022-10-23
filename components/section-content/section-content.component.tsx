@@ -322,6 +322,7 @@ const ImageContainer = styled(motion.div)`
 	/* height: 100%; */
 	overflow: hidden;
 	border-radius: 3.7rem;
+	perspective: 120rem;
 
 	/* 297.6px */
 	height: 31.4rem;
@@ -342,6 +343,7 @@ const BGFigure = styled(motion.figure)`
 	left: 0;
 	right: 0;
 	bottom: 0;
+	transform: rotateX(2rem);
 `
 
 interface IIluProps {

@@ -1,5 +1,6 @@
 // Utils
 import styled, { css } from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // Components
 import Image from "../image/image.component"
@@ -12,6 +13,7 @@ interface IItemProps {
 }
 
 export interface IProps extends IItemProps {
+	variants?: Variants
 	title: string
 	status: string
 	icon: {
@@ -21,6 +23,7 @@ export interface IProps extends IItemProps {
 }
 
 const RoadmapItem: React.FC<IProps> = ({
+	variants,
 	title,
 	status,
 	icon,
@@ -36,7 +39,7 @@ const RoadmapItem: React.FC<IProps> = ({
 					width={"100%"}
 				/>
 			</LineFigure>
-			<Item process={process} variant={variant}>
+			<Item variants={variants} process={process} variant={variant}>
 				<FlexContainer alignItems="center">
 					<Content>
 						<Title>{title}</Title>
@@ -56,7 +59,7 @@ const RoadmapItem: React.FC<IProps> = ({
 					</ItemIcon>
 				</FlexContainer>
 			</Item>
-			<MobileContent>
+			<MobileContent variants={variants}>
 				<Title>{title}</Title>
 				<Status
 					dangerouslySetInnerHTML={{
@@ -71,8 +74,6 @@ const RoadmapItem: React.FC<IProps> = ({
 export default RoadmapItem
 
 const greenStyles = css<IItemProps>`
-	background: ${({ theme }) => theme.roadmapSection.greenRow};
-
 	&:before {
 		content: "";
 		position: absolute;
@@ -84,10 +85,20 @@ const greenStyles = css<IItemProps>`
 		z-index: -100;
 		background: ${({ theme }) => theme.roadmapSection.greenBorder};
 	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+		right: 0rem;
+		bottom: 0rem;
+		border-radius: 1rem;
+		z-index: -99;
+		background: ${({ theme }) => theme.roadmapSection.greenRow};
+	}
 `
 const blueStyles = css<IItemProps>`
-	background: ${({ theme }) => theme.roadmapSection.blueRow};
-
 	&:before {
 		content: "";
 		position: absolute;
@@ -99,10 +110,20 @@ const blueStyles = css<IItemProps>`
 		z-index: -100;
 		background: ${({ theme }) => theme.roadmapSection.blueBorder};
 	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+		right: 0rem;
+		bottom: 0rem;
+		border-radius: 1rem;
+		z-index: -99;
+		background: ${({ theme }) => theme.roadmapSection.blueRow};
+	}
 `
 const yellowStyles = css<IItemProps>`
-	background: ${({ theme }) => theme.roadmapSection.yellowRow};
-
 	&:before {
 		content: "";
 		position: absolute;
@@ -114,10 +135,20 @@ const yellowStyles = css<IItemProps>`
 		z-index: -100;
 		background: ${({ theme }) => theme.roadmapSection.yellowBorder};
 	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+		right: 0rem;
+		bottom: 0rem;
+		border-radius: 1rem;
+		z-index: -99;
+		background: ${({ theme }) => theme.roadmapSection.yellowRow};
+	}
 `
 const orangeStyles = css<IItemProps>`
-	background: ${({ theme }) => theme.roadmapSection.orangeRow};
-
 	&:before {
 		content: "";
 		position: absolute;
@@ -128,6 +159,18 @@ const orangeStyles = css<IItemProps>`
 		border-radius: 1rem;
 		z-index: -100;
 		background: ${({ theme }) => theme.roadmapSection.orangeBorder};
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+		right: 0rem;
+		bottom: 0rem;
+		border-radius: 1rem;
+		z-index: -99;
+		background: ${({ theme }) => theme.roadmapSection.orangeRow};
 	}
 `
 
@@ -143,12 +186,13 @@ const LineFigure = styled.figure`
 	}
 `
 
-const Item = styled.div<IItemProps>`
+const Item = styled(motion.div)<IItemProps>`
 	position: relative;
 	width: ${({ process }) => process};
 	border-radius: 1rem;
 	padding: 0.573rem 1rem;
 	margin-bottom: 0.8rem;
+	/* z-index: -1; */
 
 	${({ variant }) => {
 		switch (variant) {
@@ -188,7 +232,7 @@ const Content = styled.div`
 	}
 `
 
-const MobileContent = styled.div`
+const MobileContent = styled(motion.div)`
 	margin-bottom: 2.04rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
