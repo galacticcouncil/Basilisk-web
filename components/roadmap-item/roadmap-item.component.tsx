@@ -233,6 +233,7 @@ const Content = styled.div`
 
 const MobileContent = styled(motion.div)`
 	margin-bottom: 2.04rem;
+	white-space: nowrap;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		display: none !important;
