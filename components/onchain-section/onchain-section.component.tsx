@@ -1,12 +1,18 @@
 // Utils
 import styled from "styled-components"
-import { motion, Variants, animate } from "framer-motion"
+import { motion, Variants, useInView } from "framer-motion"
 
 // Compoments
 import Image from "../image/image.component"
 import Counter from "../counter/counter-component"
 
+// Hooks
+import { useRef } from "react"
+
 const OnChainSection: React.FC = () => {
+	const ref = useRef<HTMLDivElement>(null)
+	const isInView = useInView(ref)
+
 	const data = [
 		{
 			label: "TVL",
@@ -76,6 +82,7 @@ const OnChainSection: React.FC = () => {
 	return (
 		<SectionContainer>
 			<Container
+				ref={ref}
 				variants={variants}
 				initial="hidden"
 				whileInView="visible"
@@ -96,7 +103,7 @@ const OnChainSection: React.FC = () => {
 						</ItemLabel>
 						<ItemValue>
 							<span>{item.pre}</span>
-							<Counter from={0} to={item.value} />
+							{isInView && <Counter from={0} to={item.value} />}
 							<span>{item.after}</span>
 						</ItemValue>
 					</Item>

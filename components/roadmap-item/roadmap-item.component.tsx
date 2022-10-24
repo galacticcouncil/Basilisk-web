@@ -4,7 +4,7 @@ import { motion, Variants } from "framer-motion"
 
 // Components
 import Image from "../image/image.component"
-import FlexContainer from "../flex-container/flex-container.component"
+// import FlexContainer from "../flex-container/flex-container.component"
 
 // Types
 interface IItemProps {
@@ -39,7 +39,14 @@ const RoadmapItem: React.FC<IProps> = ({
 					width={"100%"}
 				/>
 			</LineFigure>
-			<Item variants={variants} process={process} variant={variant}>
+			<Item
+				variants={variants}
+				process={process}
+				variant={variant}
+				initial={"hidden"}
+				whileInView={"visible"}
+				viewport={{ once: true }}
+			>
 				{/* <FlexContainer alignItems="center" wrap="nowrap"> */}
 				<Content>
 					<Title>{title}</Title>
