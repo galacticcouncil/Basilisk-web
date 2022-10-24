@@ -237,7 +237,7 @@ const SectionContainer = styled(motion.section)`
 	/* margin-top: 12.4rem; */
 	margin-bottom: -15rem;
 	z-index: 2;
-	min-height: 130rem;
+	min-height: 90rem;
 
 	&::before {
 		content: "";
