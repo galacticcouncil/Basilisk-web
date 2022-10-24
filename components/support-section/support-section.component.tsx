@@ -56,12 +56,12 @@ const SupportSection: React.FC = () => {
 
 					<PartnersDirectory>
 						<Image
-							src="/assets/support-section/talisman.svg"
+							src="/assets/support-section/talisman-v2.svg"
 							alt="talisman"
 							height={"100%"}
 						/>
 						<Image
-							src="/assets/support-section/polkadot.svg"
+							src="/assets/support-section/polkadot-v2.svg"
 							alt="polkadot"
 							height={"100%"}
 						/>

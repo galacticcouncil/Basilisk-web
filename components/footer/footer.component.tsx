@@ -32,6 +32,14 @@ const Footer: React.FC = () => {
 			},
 		},
 		{
+			label: "Github",
+			slug: "/",
+			icon: {
+				src: "/assets/icons/github.svg",
+				alt: "github",
+			},
+		},
+		{
 			label: "Twitter",
 			slug: "/",
 			icon: {

@@ -57,25 +57,25 @@ const SectionContent: React.FC<IProps> = ({
 			transition: {
 				// delay: 0.3,
 				// delayChildren: 0.1,
-				staggerChildren: 0.08,
+				staggerChildren: 0.18,
 			},
 		},
 	}
-	const iluVariants: Variants = {
-		hidden: {
-			opacity: 0,
-			// y: 100,
-		},
-		visible: {
-			opacity: 1,
-			// y: 0,
-			transition: {
-				// delay: 0.3,
-				delayChildren: 0.2,
-				staggerChildren: 0.2,
-			},
-		},
-	}
+	// const iluVariants: Variants = {
+	// 	hidden: {
+	// 		opacity: 0,
+	// 		// y: 100,
+	// 	},
+	// 	visible: {
+	// 		opacity: 1,
+	// 		// y: 0,
+	// 		transition: {
+	// 			// delay: 0.3,
+	// 			delayChildren: 0.2,
+	// 			staggerChildren: 0.2,
+	// 		},
+	// 	},
+	// }
 
 	const titleVariants: Variants = {
 		hidden: {
@@ -98,7 +98,7 @@ const SectionContent: React.FC<IProps> = ({
 		hidden: {
 			rotateX: "-20deg",
 			opacity: 0,
-			y: 75,
+			y: -20,
 		},
 		visible: {
 			rotateX: "0deg",
@@ -128,13 +128,16 @@ const SectionContent: React.FC<IProps> = ({
 					whileInView="visible"
 					viewport={{ once: true }}
 				>
-					<BGFigure variants={titleVariants}>
+					<BGFigure
+					// variants={titleVariants}
+					>
 						<Image
 							src={bgImage.src}
 							alt={bgImage.alt}
 							width="100%"
 							height="100%"
 							effect="blur"
+							style={{ objectFit: "cover" }}
 						/>
 					</BGFigure>
 					<IluFigure
@@ -275,6 +278,14 @@ const ContentTitle = styled(motion.h3)`
 		visibility: hidden;
 	}
 
+	.koda {
+		width: 100%;
+		max-width: 15rem;
+		/* height: 3rem; */
+		object-fit: contain;
+		/* border: 1px solid red; */
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		text-align: start;
 		font-size: 3.8rem;
@@ -321,6 +332,7 @@ const ContentDescription = styled(motion.p)`
 			font-size: 2.8rem;
 			margin-bottom: 6.7rem;
 			line-height: 36px;
+			max-width: 56.059rem;
 		}
 	}
 `
@@ -339,7 +351,6 @@ const ButtonsContainer = styled(motion.div)`
 
 const ImageContainer = styled(motion.div)`
 	position: relative;
-	max-width: 54.8rem;
 	width: 100%;
 	/* height: 100%; */
 	overflow: hidden;
@@ -350,10 +361,13 @@ const ImageContainer = styled(motion.div)`
 
 	/* 297.6px */
 	height: 31.4rem;
+	max-width: 34.692rem;
+	margin: 0 auto;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		height: 29.76rem;
+		height: 32.88rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			max-width: 54.8rem;
 			height: 49.9rem;
 		}
 	}

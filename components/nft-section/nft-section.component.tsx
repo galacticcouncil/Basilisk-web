@@ -16,7 +16,11 @@ const NftSection: React.FC = () => {
 			<SectionHeading variant="BLUE">NFT Features</SectionHeading>
 
 			<SectionContent
-				title="Trade on Basilisk NFT Marketplace."
+				title="Trade on Basilisk NFT Marketplace. <img 
+					class='koda'
+					src='/assets/ntf-section/koda-logo.png'
+					alt='koda logo'
+				/>"
 				titleIcon={{
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",
@@ -27,11 +31,11 @@ const NftSection: React.FC = () => {
 					alt: "bg ilu",
 				}}
 				image={{
-					top: 0,
-					left: 0,
-					right: 0,
-					bottom: 0,
-					src: "/assets/ntf-section/lbp-tile.png",
+					top: "1rem",
+					left: "-3rem",
+					right: "-19rem",
+					bottom: "-12rem",
+					src: "/assets/ntf-section/first-content-ilu-v2.png",
 					alt: "nft ilu",
 				}}
 				cta={{
@@ -43,7 +47,7 @@ const NftSection: React.FC = () => {
 
 			<SectionContent
 				reverse
-				title="Participate in NFT Auctions."
+				title="Participate in<br/> NFT Auctions."
 				titleIcon={{
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",
@@ -54,17 +58,17 @@ const NftSection: React.FC = () => {
 					alt: "bg ilu",
 				}}
 				image={{
-					top: 0,
+					top: "6rem",
 					left: 0,
 					right: 0,
 					bottom: 0,
-					src: "/assets/ntf-section/swap-okens-ile.svg",
+					src: "/assets/ntf-section/second-content-ilu.svg",
 					alt: "nft ilu 2",
 				}}
 				cta={{
 					type: "button",
-					label: "Coming soon",
-					disabled: true,
+					label: "OPEN SNEK SWAP",
+					// disabled: true,
 				}}
 			/>
 		</Section>

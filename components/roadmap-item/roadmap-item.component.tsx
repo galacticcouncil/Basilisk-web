@@ -40,24 +40,19 @@ const RoadmapItem: React.FC<IProps> = ({
 				/>
 			</LineFigure>
 			<Item variants={variants} process={process} variant={variant}>
-				<FlexContainer alignItems="center">
-					<Content>
-						<Title>{title}</Title>
-						<Status
-							dangerouslySetInnerHTML={{
-								__html: status,
-							}}
-						/>
-					</Content>
-					<ItemIcon>
-						<Image
-							src={icon.src}
-							alt={icon.alt}
-							width={"100%"}
-							height={"100%"}
-						/>
-					</ItemIcon>
-				</FlexContainer>
+				{/* <FlexContainer alignItems="center" wrap="nowrap"> */}
+				<Content>
+					<Title>{title}</Title>
+					<Status
+						dangerouslySetInnerHTML={{
+							__html: status,
+						}}
+					/>
+				</Content>
+				<ItemIcon>
+					<Image src={icon.src} alt={icon.alt} width={"100%"} height={"100%"} />
+				</ItemIcon>
+				{/* </FlexContainer> */}
 			</Item>
 			<MobileContent variants={variants}>
 				<Title>{title}</Title>
@@ -188,11 +183,15 @@ const LineFigure = styled.figure`
 
 const Item = styled(motion.div)<IItemProps>`
 	position: relative;
-	width: ${({ process }) => process};
+	/* width: ${({ process }) => process}; */
 	border-radius: 1rem;
 	padding: 0.573rem 1rem;
 	margin-bottom: 0.8rem;
 	/* z-index: -1; */
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
 	${({ variant }) => {
 		switch (variant) {
@@ -234,9 +233,10 @@ const Content = styled.div`
 
 const MobileContent = styled(motion.div)`
 	margin-bottom: 2.04rem;
+	white-space: nowrap;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		display: none;
+		display: none !important;
 		visibility: hidden;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		}

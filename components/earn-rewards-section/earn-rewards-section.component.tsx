@@ -28,16 +28,16 @@ const EarnRewardsSection: React.FC = () => {
 					alt: "earn rewards ilu",
 				}}
 				image={{
-					top: "2rem",
-					left: "-1rem",
+					top: "-1rem",
+					left: "0rem",
 					right: "0rem",
-					bottom: "-6rem",
-					src: "/assets/earn-rewards-section/lbp-tile.svg",
+					bottom: "-2rem",
+					src: "/assets/earn-rewards-section/first-content-ilu-v2.png",
 					alt: "earn rewards ilu",
 				}}
 				cta={{
 					type: "link",
-					href: "https://docs.bsx.fi/product_snek_swap/",
+					href: "/assets/swap-tokens-section/first-ilu-content-v2.svg",
 					label: "LEARN MORE",
 				}}
 			/>

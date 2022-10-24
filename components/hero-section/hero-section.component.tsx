@@ -134,10 +134,10 @@ const HeroSection: React.FC = () => {
 					</Description>
 					<CtaContainer variants={titleVariants}>
 						<ButtonLink rounded variant="GREEN" display="inline-flex" href="#">
-							NFT
+							GO NFT
 						</ButtonLink>
 						<ButtonLink rounded display="inline-flex" href="#">
-							bsx finance
+							ENTER DEFI
 						</ButtonLink>
 					</CtaContainer>
 					<IluFigure
@@ -350,7 +350,7 @@ const CtaContainer = styled(motion.div)`
 	align-items: center;
 	flex-direction: column;
 	margin-bottom: 6.4rem;
-	gap: 2.5rem;
+	gap: 1.2rem;
 
 	a {
 		width: 100%;
