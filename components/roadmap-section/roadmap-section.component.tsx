@@ -161,11 +161,11 @@ const RoadmapSection: React.FC = () => {
 	const titleVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			y: 75,
+			// y: 75,
+			width: "0%",
 		},
 		visible: {
 			opacity: 1,
-			y: 0,
 			transition: {
 				type: "spring",
 				mass: 0.1,
@@ -225,7 +225,20 @@ const RoadmapSection: React.FC = () => {
 				{roadmapItems.map((item, index) => (
 					<RoadmapItem
 						key={index}
-						variants={titleVariants}
+						variants={{
+							...titleVariants,
+							visible: {
+								opacity: 1,
+								width: item.process,
+								// y: 0,
+								transition: {
+									type: "spring",
+									mass: 0.1,
+									stiffness: 358,
+									damping: 60,
+								},
+							},
+						}}
 						title={item.title}
 						status={item.status}
 						icon={item.icon}
@@ -235,7 +248,7 @@ const RoadmapSection: React.FC = () => {
 				))}
 			</RoadmapContainer>
 
-			<motion.div variants={titleVariants}>
+			<motion.div>
 				<Button
 					variant="GREEN"
 					icon={{

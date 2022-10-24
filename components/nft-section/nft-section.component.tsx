@@ -27,11 +27,11 @@ const NftSection: React.FC = () => {
 					alt: "bg ilu",
 				}}
 				image={{
-					top: 0,
-					left: 0,
-					right: 0,
-					bottom: 0,
-					src: "/assets/ntf-section/lbp-tile.png",
+					top: "8rem",
+					left: "-3rem",
+					right: "-19rem",
+					bottom: "-12rem",
+					src: "/assets/ntf-section/first-content-ilu.svg",
 					alt: "nft ilu",
 				}}
 				cta={{
@@ -54,11 +54,11 @@ const NftSection: React.FC = () => {
 					alt: "bg ilu",
 				}}
 				image={{
-					top: 0,
+					top: "6rem",
 					left: 0,
 					right: 0,
 					bottom: 0,
-					src: "/assets/ntf-section/swap-okens-ile.svg",
+					src: "/assets/ntf-section/second-content-ilu.svg",
 					alt: "nft ilu 2",
 				}}
 				cta={{

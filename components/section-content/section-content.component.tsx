@@ -57,25 +57,25 @@ const SectionContent: React.FC<IProps> = ({
 			transition: {
 				// delay: 0.3,
 				// delayChildren: 0.1,
-				staggerChildren: 0.08,
+				staggerChildren: 0.18,
 			},
 		},
 	}
-	const iluVariants: Variants = {
-		hidden: {
-			opacity: 0,
-			// y: 100,
-		},
-		visible: {
-			opacity: 1,
-			// y: 0,
-			transition: {
-				// delay: 0.3,
-				delayChildren: 0.2,
-				staggerChildren: 0.2,
-			},
-		},
-	}
+	// const iluVariants: Variants = {
+	// 	hidden: {
+	// 		opacity: 0,
+	// 		// y: 100,
+	// 	},
+	// 	visible: {
+	// 		opacity: 1,
+	// 		// y: 0,
+	// 		transition: {
+	// 			// delay: 0.3,
+	// 			delayChildren: 0.2,
+	// 			staggerChildren: 0.2,
+	// 		},
+	// 	},
+	// }
 
 	const titleVariants: Variants = {
 		hidden: {
@@ -98,7 +98,7 @@ const SectionContent: React.FC<IProps> = ({
 		hidden: {
 			rotateX: "-20deg",
 			opacity: 0,
-			y: 75,
+			y: -20,
 		},
 		visible: {
 			rotateX: "0deg",
@@ -128,7 +128,9 @@ const SectionContent: React.FC<IProps> = ({
 					whileInView="visible"
 					viewport={{ once: true }}
 				>
-					<BGFigure variants={titleVariants}>
+					<BGFigure
+					// variants={titleVariants}
+					>
 						<Image
 							src={bgImage.src}
 							alt={bgImage.alt}

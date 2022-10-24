@@ -350,7 +350,7 @@ const CtaContainer = styled(motion.div)`
 	align-items: center;
 	flex-direction: column;
 	margin-bottom: 6.4rem;
-	gap: 2.5rem;
+	gap: 1.2rem;
 
 	a {
 		width: 100%;

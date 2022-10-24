@@ -366,7 +366,7 @@ const HeaderContainer = styled(motion.header)`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		border-radius: 1.2rem;
+		/* border-radius: 1.2rem; */
 		z-index: -100;
 
 		background-color: ${({ theme }) => theme.header.background};
@@ -523,7 +523,7 @@ const CTAContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			display: flex;
-			gap: 1.6rem;
+			gap: 1.2rem;
 			visibility: visible;
 		}
 	}
