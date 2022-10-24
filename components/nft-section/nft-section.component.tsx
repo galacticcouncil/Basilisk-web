@@ -16,7 +16,11 @@ const NftSection: React.FC = () => {
 			<SectionHeading variant="BLUE">NFT Features</SectionHeading>
 
 			<SectionContent
-				title="Trade on Basilisk NFT Marketplace."
+				title="Trade on Basilisk NFT Marketplace. <img 
+					class='koda'
+					src='/assets/ntf-section/koda-logo.png'
+					alt='koda logo'
+				/>"
 				titleIcon={{
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",
@@ -43,7 +47,7 @@ const NftSection: React.FC = () => {
 
 			<SectionContent
 				reverse
-				title="Participate in NFT Auctions."
+				title="Participate in<br/> NFT Auctions."
 				titleIcon={{
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",

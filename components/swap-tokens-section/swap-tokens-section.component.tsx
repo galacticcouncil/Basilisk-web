@@ -72,7 +72,7 @@ const SwapTokensSection: React.FC = () => {
 			/>
 
 			<SectionContent
-				title="Earn rewards from Snek Farms."
+				title="Earn rewards<br/> from Snek Farms."
 				titleIcon={{
 					src: "/assets/icons/title-icon-white.svg",
 					alt: "white icon",

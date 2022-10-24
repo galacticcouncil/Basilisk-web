@@ -22,7 +22,7 @@ const RoadmapSection: React.FC = () => {
 		},
 		{
 			title: "Liquidity Provisioning",
-			status: "Completed it mate",
+			status: "Snek did it",
 			icon: {
 				src: "/assets/roadmap-section/money-v2.png",
 				alt: "money",
@@ -32,7 +32,7 @@ const RoadmapSection: React.FC = () => {
 		},
 		{
 			title: "NFT Marketplace",
-			status: "Completed it mate",
+			status: "Snek did it",
 			icon: {
 				src: "/assets/roadmap-section/pallete-v2.png",
 				alt: "pallete",

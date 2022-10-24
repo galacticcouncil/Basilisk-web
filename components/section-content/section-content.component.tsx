@@ -278,6 +278,14 @@ const ContentTitle = styled(motion.h3)`
 		visibility: hidden;
 	}
 
+	.koda {
+		width: 100%;
+		max-width: 15rem;
+		/* height: 3rem; */
+		object-fit: contain;
+		/* border: 1px solid red; */
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		text-align: start;
 		font-size: 3.8rem;
@@ -324,6 +332,7 @@ const ContentDescription = styled(motion.p)`
 			font-size: 2.8rem;
 			margin-bottom: 6.7rem;
 			line-height: 36px;
+			max-width: 56.059rem;
 		}
 	}
 `
