@@ -86,6 +86,7 @@ const SectionContent: React.FC<IProps> = ({
 			opacity: 1,
 			y: 0,
 			transition: {
+				delay: 0.3,
 				type: "spring",
 				mass: 0.1,
 				stiffness: 358,
@@ -279,11 +280,11 @@ const ContentTitle = styled(motion.h3)`
 	}
 
 	.koda {
+		display: block;
 		width: 100%;
 		max-width: 15rem;
-		/* height: 3rem; */
 		object-fit: contain;
-		/* border: 1px solid red; */
+		margin: 1rem auto 0;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -301,6 +302,10 @@ const ContentTitle = styled(motion.h3)`
 			height: 2.25rem;
 		}
 
+		.koda {
+			margin: 1rem 0 0;
+		}
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			font-size: 6.4rem;
 			margin-bottom: 3.4rem;
@@ -309,6 +314,10 @@ const ContentTitle = styled(motion.h3)`
 				left: -3.8rem;
 				width: 3.7rem;
 				height: 3.7rem;
+			}
+
+			.koda {
+				margin: 0rem 0 0;
 			}
 		}
 	}

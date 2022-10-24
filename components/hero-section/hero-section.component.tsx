@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
 			opacity: 1,
 			// y: 0,
 			transition: {
-				staggerChildren: 0.03,
+				// staggerChildren: 0.03,
 			},
 		},
 	}
@@ -149,6 +149,11 @@ const HeroSection: React.FC = () => {
 							variants={iluVariants}
 							initial="hidden"
 							whileInView="visible"
+							viewport={{
+								// amount: 1,
+								margin: "100%",
+								amount: "all",
+							}}
 						>
 							<Image
 								className="mobile"
@@ -215,7 +220,7 @@ const HeroSection: React.FC = () => {
 						objectFit: "cover",
 					}}
 					visibleByDefault={true}
-					threshold={200}
+					// threshold={200}
 					// afterLoad={() => setTrue()}
 				/>
 			</BlurFigure>
@@ -232,7 +237,7 @@ const SectionContainer = styled(motion.section)`
 	/* margin-top: 12.4rem; */
 	margin-bottom: -15rem;
 	z-index: 2;
-	min-height: 90rem;
+	min-height: 130rem;
 
 	&::before {
 		content: "";

@@ -166,11 +166,17 @@ const RoadmapSection: React.FC = () => {
 		},
 		visible: {
 			opacity: 1,
+
 			transition: {
+				// mass: 0.1,
+				// stiffness: 358,
+				// damping: 60,
+				// ease: "linear",
 				type: "spring",
-				mass: 0.1,
-				stiffness: 358,
-				damping: 60,
+				delay: 2,
+				mass: 1,
+				stiffness: 115,
+				damping: 30,
 			},
 		},
 	}
@@ -232,10 +238,13 @@ const RoadmapSection: React.FC = () => {
 								width: item.process,
 								// y: 0,
 								transition: {
-									type: "spring",
-									mass: 0.1,
-									stiffness: 358,
-									damping: 60,
+									delay: 0.3,
+									ease: "easeOut",
+									duration: 1.5,
+									// type: "spring",
+									// mass: 1,
+									// stiffness: 115,
+									// damping: 30,
 								},
 							},
 						}}
