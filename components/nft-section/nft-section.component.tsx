@@ -27,11 +27,11 @@ const NftSection: React.FC = () => {
 					alt: "bg ilu",
 				}}
 				image={{
-					top: "8rem",
+					top: "1rem",
 					left: "-3rem",
 					right: "-19rem",
 					bottom: "-12rem",
-					src: "/assets/ntf-section/first-content-ilu.svg",
+					src: "/assets/ntf-section/first-content-ilu-v2.png",
 					alt: "nft ilu",
 				}}
 				cta={{
@@ -63,8 +63,8 @@ const NftSection: React.FC = () => {
 				}}
 				cta={{
 					type: "button",
-					label: "Coming soon",
-					disabled: true,
+					label: "OPEN SNEK SWAP",
+					// disabled: true,
 				}}
 			/>
 		</Section>

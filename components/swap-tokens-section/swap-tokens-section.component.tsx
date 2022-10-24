@@ -30,11 +30,11 @@ const SwapTokensSection: React.FC = () => {
 					alt: "swap tokens ilu",
 				}}
 				image={{
-					top: "5rem",
-					left: 0,
-					right: 0,
-					bottom: "-11rem",
-					src: "/assets/swap-tokens-section/first-ilu-content-v2.svg",
+					top: "-8rem",
+					left: "0",
+					right: "-6rem",
+					bottom: "-6rem",
+					src: "/assets/swap-tokens-section/first-ilu-content-v4.png",
 					alt: "swap tokens ilu",
 				}}
 				cta={{
@@ -57,17 +57,17 @@ const SwapTokensSection: React.FC = () => {
 					alt: "swap tokens ilu 2",
 				}}
 				image={{
-					top: "4rem",
+					top: "-22rem",
 					left: "0",
-					right: "-19rem",
-					bottom: "-15rem",
-					src: "/assets/swap-tokens-section/second-ilu-content.svg",
+					right: "-14rem",
+					bottom: "-19rem",
+					src: "/assets/swap-tokens-section/second-ilu-content-v2.png",
 					alt: "swap tokens ilu 2",
 				}}
 				cta={{
 					type: "link",
 					href: "https://app.basilisk.cloud/#/lbp",
-					label: "Snek LBP",
+					label: "GO TO LBP",
 				}}
 			/>
 
@@ -87,7 +87,7 @@ const SwapTokensSection: React.FC = () => {
 					left: "0rem",
 					right: "0rem",
 					bottom: "-6rem",
-					src: "/assets/swap-tokens-section/third-ilu-content.svg",
+					src: "/assets/swap-tokens-section/third-ilu-content-v2.png",
 					alt: "earn rewards third ilu",
 				}}
 				cta={{
