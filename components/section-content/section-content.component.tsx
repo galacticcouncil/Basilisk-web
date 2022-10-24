@@ -137,6 +137,7 @@ const SectionContent: React.FC<IProps> = ({
 							width="100%"
 							height="100%"
 							effect="blur"
+							style={{ objectFit: "cover" }}
 						/>
 					</BGFigure>
 					<IluFigure
@@ -341,7 +342,6 @@ const ButtonsContainer = styled(motion.div)`
 
 const ImageContainer = styled(motion.div)`
 	position: relative;
-	max-width: 54.8rem;
 	width: 100%;
 	/* height: 100%; */
 	overflow: hidden;
@@ -352,10 +352,13 @@ const ImageContainer = styled(motion.div)`
 
 	/* 297.6px */
 	height: 31.4rem;
+	max-width: 34.692rem;
+	margin: 0 auto;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		height: 29.76rem;
+		height: 32.88rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			max-width: 54.8rem;
 			height: 49.9rem;
 		}
 	}
