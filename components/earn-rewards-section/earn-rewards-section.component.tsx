@@ -28,11 +28,11 @@ const EarnRewardsSection: React.FC = () => {
 					alt: "earn rewards ilu",
 				}}
 				image={{
-					top: " 6rem",
-					left: " -5rem",
-					right: " -8rem",
-					bottom: " -34rem",
-					src: "/assets/earn-rewards-section/first-content-ilu.svg",
+					top: "-1rem",
+					left: "0rem",
+					right: "0rem",
+					bottom: "-2rem",
+					src: "/assets/earn-rewards-section/first-content-ilu-v2.png",
 					alt: "earn rewards ilu",
 				}}
 				cta={{
