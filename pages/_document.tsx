@@ -57,7 +57,7 @@ export default class MyDocument extends Document {
 						color="#5bbad5"
 					/>
 					<meta name="msapplication-TileColor" content="#603cba" />
-					<meta name="theme-color" content="#ffffff" />
+					<meta name="theme-color" content="#000000" />
 
 					<link
 						href="https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,500&display=swap"

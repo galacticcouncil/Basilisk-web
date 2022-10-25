@@ -354,7 +354,7 @@ const CtaContainer = styled(motion.div)`
 
 	a {
 		width: 100%;
-		max-width: 18.3rem;
+		max-width: unset;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
