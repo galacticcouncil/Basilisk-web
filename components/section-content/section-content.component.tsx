@@ -22,10 +22,12 @@ export interface IProps extends IRowProps {
 		alt: string
 	}
 	image: {
-		top: number | string
-		left: number | string
-		right: number | string
-		bottom: number | string
+		top?: number | string
+		left?: number | string
+		right?: number | string
+		bottom?: number | string
+		width?: number | string
+		height?: number | string
 		src: string
 		alt: string
 	}
@@ -147,6 +149,8 @@ const SectionContent: React.FC<IProps> = ({
 						left={image.left}
 						right={image.right}
 						bottom={image.bottom}
+						width={image.width}
+						height={image.height}
 						variants={titleVariants}
 					>
 						<Image
@@ -394,16 +398,21 @@ const BGFigure = styled(motion.figure)`
 `
 
 interface IIluProps {
-	top: number | string
-	left: number | string
-	right: number | string
-	bottom: number | string
+	top?: number | string
+	left?: number | string
+	right?: number | string
+	bottom?: number | string
+	width?: number | string
+	height?: number | string
 }
 
 const IluFigure = styled(motion.figure)<IIluProps>`
 	position: absolute;
-	top: ${({ top }) => top};
-	left: ${({ left }) => left};
-	right: ${({ right }) => right};
-	bottom: ${({ bottom }) => bottom};
+	top: ${({ top }) => top || "unset"};
+	left: ${({ left }) => left || "unset"};
+	right: ${({ right }) => right || "unset"};
+	bottom: ${({ bottom }) => bottom || "unset"};
+	width: ${({ width }) => width || "initial"};
+	height: ${({ height }) => height || "initial"};
+	/* border: 1px solid red; */
 `

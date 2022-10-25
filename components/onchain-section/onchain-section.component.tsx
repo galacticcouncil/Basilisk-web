@@ -41,7 +41,7 @@ const OnChainSection: React.FC = () => {
 		{
 			label: "CROSS-CHAIN CHANNELS",
 			pre: "",
-			value: 143,
+			value: 5,
 			after: "k",
 		},
 	]

@@ -175,20 +175,20 @@ const Header: React.FC = () => {
 			>
 				<Container>
 					<FlexContainer height="100%" alignItems="center" gap="2rem">
-						<Link href="/" passHref>
-							<a style={{ display: "block" }}>
-								<Logo>
+						<Logo>
+							<Link href="/" passHref>
+								<a style={{ display: "block" }}>
 									<Image src="/assets/logo-v1.svg" alt="logo" />
-								</Logo>
-							</a>
-						</Link>
-						<Link href="/" passHref>
-							<a style={{ display: "block" }}>
-								<MobileLogo>
+								</a>
+							</Link>
+						</Logo>
+						<MobileLogo>
+							<Link href="/" passHref>
+								<a style={{ display: "block" }}>
 									<Image src="/assets/logo-mobile-v1.svg" alt="logo" />
-								</MobileLogo>
-							</a>
-						</Link>
+								</a>
+							</Link>
+						</MobileLogo>
 
 						<Nav>
 							<NavList>
@@ -397,6 +397,7 @@ const Logo = styled.div`
 			visibility: visible;
 			align-items: center;
 			justify-content: center;
+			height: 100%;
 		}
 	}
 `
@@ -427,7 +428,7 @@ const Nav = styled.nav`
 
 const NavList = styled.ul`
 	display: flex;
-	gap: 4rem;
+	gap: 3.9rem;
 `
 
 const navLinksStyles = css`
