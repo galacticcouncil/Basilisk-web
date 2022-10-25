@@ -10,13 +10,13 @@ const LearnMoreSection: React.FC = () => {
 	const variants: Variants = {
 		hidden: {
 			opacity: 0,
-			// y: 100,
+			y: 50,
 		},
 		visible: {
 			opacity: 1,
-			// y: 0,
+			y: 0,
 			transition: {
-				// delay: 0.3,
+				delay: 0.5,
 				// delayChildren: 0.1,
 				staggerChildren: 0.08,
 			},

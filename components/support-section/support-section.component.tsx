@@ -16,7 +16,7 @@ const SupportSection: React.FC = () => {
 			opacity: 1,
 			// y: 0,
 			transition: {
-				// delay: 0.3,
+				delay: 0.5,
 				// delayChildren: 0.2,
 				staggerChildren: 0.08,
 			},

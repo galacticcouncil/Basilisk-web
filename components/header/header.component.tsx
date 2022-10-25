@@ -182,9 +182,13 @@ const Header: React.FC = () => {
 								</Logo>
 							</a>
 						</Link>
-						<MobileLogo>
-							<Image src="/assets/logo-mobile-v1.svg" alt="logo" />
-						</MobileLogo>
+						<Link href="/" passHref>
+							<a style={{ display: "block" }}>
+								<MobileLogo>
+									<Image src="/assets/logo-mobile-v1.svg" alt="logo" />
+								</MobileLogo>
+							</a>
+						</Link>
 
 						<Nav>
 							<NavList>
