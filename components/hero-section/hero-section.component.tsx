@@ -149,11 +149,6 @@ const HeroSection: React.FC = () => {
 							variants={iluVariants}
 							initial="hidden"
 							whileInView="visible"
-							viewport={{
-								// amount: 1,
-								margin: "100%",
-								amount: "all",
-							}}
 						>
 							<Image
 								className="mobile"
@@ -235,7 +230,7 @@ const SectionContainer = styled(motion.section)`
 	padding: 12.4rem 2rem 0;
 	overflow: hidden;
 	/* margin-top: 12.4rem; */
-	margin-bottom: -15rem;
+	margin-bottom: -22rem;
 	z-index: 2;
 	min-height: 90rem;
 
@@ -262,7 +257,7 @@ const SectionContainer = styled(motion.section)`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin-bottom: -25rem;
+		margin-bottom: -30rem;
 
 		.mobile {
 			display: none;
