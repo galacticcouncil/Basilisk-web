@@ -219,7 +219,7 @@ const Row = styled(motion.div)<IRowProps>`
 	gap: 4.097rem;
 
 	&:not(:last-child) {
-		margin-bottom: 3.803rem;
+		margin-bottom: 10rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

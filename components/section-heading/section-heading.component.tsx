@@ -77,7 +77,7 @@ const Heading = styled(motion.h2)<IHeadingProps>`
 	font-size: 3.2rem;
 	font-family: "FontOver", sans-serif;
 	letter-spacing: 0.03em;
-	margin-bottom: 3rem;
+	margin-bottom: 6rem;
 
 	${({ variant }) => {
 		switch (variant) {

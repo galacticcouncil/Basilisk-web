@@ -68,7 +68,7 @@ export default EarnRewardsSection
 
 const Section = styled.section`
 	position: relative;
-	padding: 7.803rem 2rem 0;
+	padding: 11.8rem 2rem 0;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		padding: 9rem 4rem 0;
