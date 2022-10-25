@@ -30,10 +30,11 @@ const SwapTokensSection: React.FC = () => {
 					alt: "swap tokens ilu",
 				}}
 				image={{
-					top: "-8rem",
-					left: "0",
+					top: "-5rem",
+					left: "2rem",
 					right: "-6rem",
 					bottom: "-6rem",
+					width: "100%",
 					src: "/assets/swap-tokens-section/first-ilu-content-v4.png",
 					alt: "swap tokens ilu",
 				}}
@@ -57,10 +58,11 @@ const SwapTokensSection: React.FC = () => {
 					alt: "swap tokens ilu 2",
 				}}
 				image={{
-					top: "-22rem",
-					left: "0",
+					top: "-20rem",
+					left: "4rem",
 					right: "-14rem",
 					bottom: "-19rem",
+					width: "100%",
 					src: "/assets/swap-tokens-section/second-ilu-content-v2.png",
 					alt: "swap tokens ilu 2",
 				}}
@@ -83,10 +85,11 @@ const SwapTokensSection: React.FC = () => {
 					alt: "earn rewards third ilu",
 				}}
 				image={{
-					top: "-2rem",
+					top: "0rem",
 					left: "0rem",
 					right: "0rem",
 					bottom: "-6rem",
+					width: "100%",
 					src: "/assets/swap-tokens-section/third-ilu-content-v2.png",
 					alt: "earn rewards third ilu",
 				}}
