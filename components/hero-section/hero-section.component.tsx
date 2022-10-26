@@ -62,6 +62,48 @@ const HeroSection: React.FC = () => {
 		},
 	}
 
+	const mobileLeftVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 150,
+			perspective: "1200px",
+			zIndex: -1,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			perspective: 0,
+			zIndex: -1,
+			transition: {
+				type: "spring",
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
+			},
+		},
+	}
+
+	const mobileRightVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 150,
+			perspective: "1200px",
+			zIndex: 1,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			perspective: 0,
+			zIndex: 1,
+			transition: {
+				type: "spring",
+				mass: 0.1,
+				stiffness: 358,
+				damping: 60,
+			},
+		},
+	}
+
 	const descVariants: Variants = {
 		hidden: {
 			opacity: 0,
@@ -157,7 +199,7 @@ const HeroSection: React.FC = () => {
 						>
 							<MobileContainer>
 								<motion.div
-									variants={titleVariants}
+									variants={mobileLeftVariants}
 									style={{
 										y: transformIlu2,
 									}}
@@ -174,7 +216,7 @@ const HeroSection: React.FC = () => {
 										}}
 									/>
 								</motion.div>
-								<motion.div variants={titleVariants}>
+								<motion.div variants={mobileRightVariants}>
 									<Image
 										className="mobile right"
 										src="/assets/hero-section/app_ilu_mobile-right.png"
