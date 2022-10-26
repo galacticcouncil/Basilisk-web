@@ -204,11 +204,18 @@ const Header: React.FC = () => {
 												<AnimatePresence>
 													{item.isHovered && (
 														<DropdownMenu
-															initial={{ opacity: 0 }}
-															animate={{ opacity: 1 }}
+															initial={{
+																opacity: 0,
+																backdropFilter: "blur(0px)",
+															}}
+															animate={{
+																opacity: 1,
+																backdropFilter: "blur(20px)",
+															}}
 															exit={{ opacity: 0 }}
 															transition={{ duration: 0.3, ease: "easeIn" }}
 														>
+															<DropdownBlurOverlay />
 															{item.list.map((listItem, index) => (
 																<DropdownMenuItem key={index}>
 																	<Link href={listItem.href} passHref>
@@ -481,7 +488,7 @@ const DropdownMenu = styled(motion.div)`
 
 	box-shadow: ${({ theme }) => theme.header.dropdownMenu.boxShadow};
 
-	&:before {
+	/* &:before {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -490,13 +497,33 @@ const DropdownMenu = styled(motion.div)`
 		height: 100%;
 		border-radius: 1.2rem;
 		z-index: -100;
-		background-color: ${({ theme }) =>
-			theme.header.dropdownMenu.beforeBackground};
+		background-color: ${({ theme }) => theme.header.dropdownMenu.beforeBackground};
 		backdrop-filter: blur(20px);
-	}
+	} */
+`
+
+const DropdownBlurOverlay = styled(motion.div)`
+	overflow: hidden;
+
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 1.2rem;
+	z-index: -100;
+	background-color: ${({ theme }) =>
+		theme.header.dropdownMenu.beforeBackground};
+	backdrop-filter: blur(20px);
 `
 
 const DropdownMenuItem = styled(motion.div)`
+	position: relative;
+	z-index: 101;
+
 	a {
 		padding: 1.7rem 2.4rem;
 		display: flex;

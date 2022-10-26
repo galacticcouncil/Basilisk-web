@@ -149,6 +149,10 @@ const HeroSection: React.FC = () => {
 							variants={iluVariants}
 							initial="hidden"
 							whileInView="visible"
+							viewport={{
+								once: true,
+								amount: 0.5,
+							}}
 						>
 							<Image
 								className="mobile"
@@ -156,6 +160,9 @@ const HeroSection: React.FC = () => {
 								alt="app ilu"
 								width={"100%"}
 								effect="blur"
+								style={{
+									objectFit: "contain",
+								}}
 							/>
 							<Image
 								className="tablet"
@@ -163,6 +170,9 @@ const HeroSection: React.FC = () => {
 								alt="app ilu"
 								width={"100%"}
 								effect="blur"
+								style={{
+									objectFit: "contain",
+								}}
 							/>
 							<Image
 								className="desktop"
@@ -170,6 +180,9 @@ const HeroSection: React.FC = () => {
 								alt="app ilu"
 								width={"100%"}
 								effect="blur"
+								style={{
+									objectFit: "contain",
+								}}
 							/>
 						</IluContainer>
 					</IluFigure>
@@ -230,7 +243,7 @@ const SectionContainer = styled(motion.section)`
 	padding: 12.4rem 2rem 0;
 	overflow: hidden;
 	/* margin-top: 12.4rem; */
-	margin-bottom: -16rem;
+	margin-bottom: -16.5rem;
 	z-index: 2;
 	min-height: 90rem;
 
@@ -376,6 +389,34 @@ const IluFigure = styled(motion.figure)`
 	max-width: 116.578rem;
 	margin: 0 auto;
 	perspective: 120rem;
+
+	.mobile {
+		height: 36rem;
+	}
+	.tablet {
+	}
+	.desktop {
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		.mobile {
+		}
+		.tablet {
+			height: 58rem;
+		}
+		.desktop {
+		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			.mobile {
+			}
+			.tablet {
+			}
+			.desktop {
+				height: 80rem;
+			}
+		}
+	}
 `
 
 const IluContainer = styled(motion.div)`
