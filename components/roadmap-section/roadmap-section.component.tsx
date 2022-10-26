@@ -1,6 +1,7 @@
 // Utils
 import styled from "styled-components"
 import { motion, Variants } from "framer-motion"
+import { isMobile } from "react-device-detect"
 
 // Components
 import SectionHeading from "../section-heading/section-heading.component"
@@ -240,7 +241,7 @@ const RoadmapSection: React.FC = () => {
 								transition: {
 									delay: 0.3,
 									ease: "easeOut",
-									duration: 1.2,
+									duration: isMobile ? 1 : 1.5,
 									// type: "spring",
 									// mass: 1,
 									// stiffness: 115,

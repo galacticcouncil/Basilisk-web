@@ -1,6 +1,7 @@
 // Utils
 import styled from "styled-components"
 import { motion, Variants } from "framer-motion"
+import { isMobile } from "react-device-detect"
 
 // Components
 import Image from "../../components/image/image.component"
@@ -88,7 +89,7 @@ const SectionContent: React.FC<IProps> = ({
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: 0.5,
+				delay: isMobile ? 0.4 : 0.6,
 				type: "spring",
 				mass: 0.1,
 				stiffness: 358,
@@ -108,7 +109,7 @@ const SectionContent: React.FC<IProps> = ({
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: 0.3,
+				delay: isMobile ? 0.2 : 0.4,
 				type: "spring",
 				mass: 1,
 				stiffness: 115,

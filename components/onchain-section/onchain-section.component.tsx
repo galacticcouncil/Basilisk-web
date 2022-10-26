@@ -1,6 +1,7 @@
 // Utils
 import styled from "styled-components"
 import { motion, Variants, useInView } from "framer-motion"
+import { isMobile } from "react-device-detect"
 
 // Compoments
 import Image from "../image/image.component"
@@ -81,7 +82,7 @@ const OnChainSection: React.FC = () => {
 
 	return (
 		<SectionContainer
-			variants={variants}
+			variants={isMobile ? {} : variants}
 			initial="hidden"
 			whileInView="visible"
 			exit="hidden"

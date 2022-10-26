@@ -156,32 +156,20 @@ const HeroSection: React.FC = () => {
 							}}
 						>
 							<MobileContainer>
-								<motion.div
-									variants={titleVariants}
-									transition={{
-										delay: 0.5,
-									}}
-									style={{
-										y: transformIlu2,
-									}}
-								>
+								<motion.div variants={titleVariants}>
 									<Image
 										className="mobile left"
 										src="/assets/hero-section/app_ilu_mobile-left.png"
 										alt="app ilu"
 										width={"100%"}
+										height={"100%"}
 										effect="blur"
 										style={{
 											objectFit: "contain",
 										}}
 									/>
 								</motion.div>
-								<motion.div
-									variants={titleVariants}
-									transition={{
-										delay: 0.2,
-									}}
-								>
+								<motion.div variants={titleVariants}>
 									<Image
 										className="mobile right"
 										src="/assets/hero-section/app_ilu_mobile-right.png"
@@ -462,15 +450,18 @@ const MobileContainer = styled(motion.div)`
 
 	.left {
 		position: absolute;
-		left: -3.6rem;
+		left: -6rem;
 		top: 3rem;
 		z-index: 1;
+		width: 100%;
+		height: 46rem;
 	}
 	.right {
 		position: absolute;
-		top: -4rem;
+		top: -6rem;
 		right: -3.6rem;
-		z-index: 2;
+		z-index: 20;
+		height: 46rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

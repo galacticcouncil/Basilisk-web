@@ -58,7 +58,7 @@ const SwapTokensSection: React.FC = () => {
 					alt: "swap tokens ilu 2",
 				}}
 				image={{
-					top: "-20rem",
+					top: "-22rem",
 					left: "1rem",
 					right: "-10rem",
 					bottom: "-19rem",
@@ -85,7 +85,7 @@ const SwapTokensSection: React.FC = () => {
 					alt: "earn rewards third ilu",
 				}}
 				image={{
-					top: "0rem",
+					top: "-2rem",
 					left: "0rem",
 					right: "0rem",
 					bottom: "-6rem",
