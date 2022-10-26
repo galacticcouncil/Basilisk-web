@@ -54,7 +54,7 @@ const Header: React.FC = () => {
 			list: [
 				{
 					label: "Documentation",
-					href: "/",
+					href: "https://docs.bsx.fi/",
 					icon: {
 						src: "/assets/icons/docs.svg",
 						alt: "documantation",
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
 			list: [
 				{
 					label: "Discord",
-					href: "/",
+					href: "https://discord.com/invite/S8YZj5aXR6",
 					icon: {
 						src: "/assets/icons/discord.svg",
 						alt: "discord",
@@ -101,7 +101,7 @@ const Header: React.FC = () => {
 				},
 				{
 					label: "Twitter",
-					href: "/",
+					href: "https://twitter.com/bsx_finance",
 					icon: {
 						src: "/assets/icons/twitter.svg",
 						alt: "twitter",
@@ -110,7 +110,7 @@ const Header: React.FC = () => {
 				},
 				{
 					label: "Telegram",
-					href: "/",
+					href: "https://t.me/bsx_fi",
 					icon: {
 						src: "/assets/icons/telegram.svg",
 						alt: "telegram",
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
 				},
 				{
 					label: "Substack",
-					href: "/",
+					href: "https://basiliskfi.substack.com/",
 					icon: {
 						src: "/assets/icons/substack.svg",
 						alt: "substack",
@@ -143,7 +143,7 @@ const Header: React.FC = () => {
 		},
 		{
 			label: "Github",
-			href: "/",
+			href: "https://github.com/galacticcouncil",
 		},
 	]
 

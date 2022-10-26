@@ -37,7 +37,7 @@ const EarnRewardsSection: React.FC = () => {
 				}}
 				cta={{
 					type: "link",
-					href: "/assets/swap-tokens-section/first-ilu-content-v2.svg",
+					href: "https://docs.bsx.fi/learn_democracy_intro/",
 					label: "LEARN MORE",
 				}}
 			/>

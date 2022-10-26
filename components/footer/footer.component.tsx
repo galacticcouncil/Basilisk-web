@@ -18,14 +18,14 @@ const Footer: React.FC = () => {
 		},
 		{
 			label: "Documentation",
-			slug: "/",
+			slug: "https://docs.bsx.fi/",
 		},
 	]
 
 	const socialsItems = [
 		{
 			label: "Discord",
-			slug: "/",
+			slug: "https://discord.com/invite/S8YZj5aXR6",
 			icon: {
 				src: "/assets/icons/discord.svg",
 				alt: "discord",
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
 		},
 		{
 			label: "Github",
-			slug: "/",
+			slug: "https://github.com/galacticcouncil",
 			icon: {
 				src: "/assets/icons/github.svg",
 				alt: "github",
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
 		},
 		{
 			label: "Twitter",
-			slug: "/",
+			slug: "https://twitter.com/bsx_finance",
 			icon: {
 				src: "/assets/icons/twitter.svg",
 				alt: "twitter",
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
 		},
 		{
 			label: "Telegram",
-			slug: "/",
+			slug: "https://t.me/bsx_fi",
 			icon: {
 				src: "/assets/icons/telegram.svg",
 				alt: "telegram",
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
 		},
 		{
 			label: "Substack",
-			slug: "/",
+			slug: "https://basiliskfi.substack.com/",
 			icon: {
 				src: "/assets/icons/substack.svg",
 				alt: "substack",
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
 						<NavList className="divider">
 							{aboutItems.map((item, index) => (
 								<NavItem key={index}>
-									<Link href={item.slug}>
+									<Link href={item.slug} passHref>
 										<LabelA>
 											<LabelSpan>{item.label}</LabelSpan>
 										</LabelA>
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
 						<NavList className="divider">
 							{socialsItems.map((item, index) => (
 								<NavItem key={index}>
-									<Link href={item.slug}>
+									<Link href={item.slug} passHref>
 										<LabelA>
 											<LabelSpan>{item.label}</LabelSpan>
 										</LabelA>
