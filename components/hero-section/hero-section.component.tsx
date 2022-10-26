@@ -464,11 +464,13 @@ const MobileContainer = styled(motion.div)`
 		position: absolute;
 		left: -3.6rem;
 		top: 3rem;
+		z-index: 1;
 	}
 	.right {
 		position: absolute;
 		top: -4rem;
 		right: -3.6rem;
+		z-index: 2;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
