@@ -63,6 +63,22 @@ const OnChainSection: React.FC = () => {
 		},
 	}
 
+	const mobileVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 100,
+		},
+		visible: {
+			opacity: 1,
+			// y: 0,
+			transition: {
+				// delay: 0.3,
+				// delayChildren: 0.2,
+				staggerChildren: 0.08,
+			},
+		},
+	}
+
 	const itemVariants: Variants = {
 		hidden: {
 			opacity: 0,
@@ -82,7 +98,7 @@ const OnChainSection: React.FC = () => {
 
 	return (
 		<SectionContainer
-			variants={isMobile ? {} : variants}
+			variants={isMobile ? mobileVariants : variants}
 			initial="hidden"
 			whileInView="visible"
 			exit="hidden"

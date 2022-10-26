@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
 	// console.log(scrollYProgress)
 
 	const transformIlu = useTransform(scrollYProgress, [0, 0.1], [0, -100])
-	const transformIlu2 = useTransform(scrollYProgress, [0, 0.1], [0, -50])
+	// const transformIlu2 = useTransform(scrollYProgress, [0, 0.1], [0, -50])
 	// console.log(transformIlu)
 
 	const variants: Variants = {
@@ -446,21 +446,21 @@ const IluContainer = styled(motion.div)`
 const MobileContainer = styled(motion.div)`
 	position: relative;
 	/* border: 1px solid red; */
-	height: 36rem;
+	height: 38rem;
 
 	.left {
 		position: absolute;
 		left: -6rem;
-		top: 3rem;
-		z-index: 1;
+		top: 5rem;
+		z-index: -1;
 		width: 100%;
 		height: 46rem;
 	}
 	.right {
 		position: absolute;
-		top: -6rem;
+		top: -4rem;
 		right: -3.6rem;
-		z-index: 20;
+		z-index: 200;
 		height: 46rem;
 	}
 
