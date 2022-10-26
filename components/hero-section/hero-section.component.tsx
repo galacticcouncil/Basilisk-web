@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
 	// console.log(scrollYProgress)
 
 	const transformIlu = useTransform(scrollYProgress, [0, 0.1], [0, -100])
-	// const transformIlu2 = useTransform(scrollYProgress, [0, 0.1], [0, -50])
+	const transformIlu2 = useTransform(scrollYProgress, [0, 0.1], [0, -50])
 	// console.log(transformIlu)
 
 	const variants: Variants = {
@@ -156,7 +156,12 @@ const HeroSection: React.FC = () => {
 							}}
 						>
 							<MobileContainer>
-								<motion.div variants={titleVariants}>
+								<motion.div
+									variants={titleVariants}
+									style={{
+										y: transformIlu2,
+									}}
+								>
 									<Image
 										className="mobile left"
 										src="/assets/hero-section/app_ilu_mobile-left.png"
