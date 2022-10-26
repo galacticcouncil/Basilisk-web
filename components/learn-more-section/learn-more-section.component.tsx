@@ -16,7 +16,7 @@ const LearnMoreSection: React.FC = () => {
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: 0.5,
+				delay: 0.6,
 				// delayChildren: 0.1,
 				staggerChildren: 0.08,
 			},

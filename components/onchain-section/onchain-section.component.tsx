@@ -80,7 +80,13 @@ const OnChainSection: React.FC = () => {
 	}
 
 	return (
-		<SectionContainer>
+		<SectionContainer
+			variants={variants}
+			initial="hidden"
+			whileInView="visible"
+			exit="hidden"
+			viewport={{ once: true }}
+		>
 			<Container
 				ref={ref}
 				variants={variants}
@@ -115,7 +121,7 @@ const OnChainSection: React.FC = () => {
 
 export default OnChainSection
 
-const SectionContainer = styled.section`
+const SectionContainer = styled(motion.section)`
 	position: relative;
 	z-index: 2;
 	padding: 6rem 2rem;
