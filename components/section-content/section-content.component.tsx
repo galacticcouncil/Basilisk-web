@@ -88,7 +88,7 @@ const SectionContent: React.FC<IProps> = ({
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: 0.7,
+				delay: 0.6,
 				type: "spring",
 				mass: 0.1,
 				stiffness: 358,

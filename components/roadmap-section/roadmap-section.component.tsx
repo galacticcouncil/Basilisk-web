@@ -286,7 +286,7 @@ const Section = styled.section`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		padding: 8.79rem 4rem 0;
+		padding: 8.79rem 2rem 0;
 		h2 {
 			margin-bottom: 0.6rem;
 		}

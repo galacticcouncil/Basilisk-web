@@ -217,7 +217,7 @@ const Item = styled(motion.div)<IItemProps>`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-bottom: 2.04rem;
-		padding: 0.6rem 2.5rem;
+		padding: 0.6rem 0.8rem 0.6rem 1.5rem;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 1rem 2.5rem;
