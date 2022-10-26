@@ -65,7 +65,7 @@ const OnChainSection: React.FC = () => {
 
 	const mobileVariants: Variants = {
 		hidden: {
-			opacity: 0,
+			opacity: 1,
 			// y: 100,
 		},
 		visible: {
