@@ -39,6 +39,7 @@ const ToggleButton = styled.button`
 const Label = styled.p`
 	color: ${({ theme }) => theme.hamMenu.color};
 	font-weight: 500;
+	font-size: 1.6rem;
 	/* margin-bottom: 0.2rem; */
 `
 

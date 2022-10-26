@@ -56,8 +56,8 @@ export default class MyDocument extends Document {
 						href="/favicon/safari-pinned-tab.svg"
 						color="#5bbad5"
 					/>
-					<meta name="msapplication-TileColor" content="#603cba" />
-					<meta name="theme-color" content="#000000" />
+					<meta name="msapplication-TileColor" content="#17181A" />
+					<meta name="theme-color" content="#17181A" />
 
 					<link
 						href="https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,500&display=swap"

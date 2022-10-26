@@ -31,8 +31,8 @@ const SwapTokensSection: React.FC = () => {
 				}}
 				image={{
 					top: "-5rem",
-					left: "2rem",
-					right: "-6rem",
+					left: "0",
+					right: "0",
 					bottom: "-6rem",
 					width: "100%",
 					src: "/assets/swap-tokens-section/first-ilu-content-v4.png",
@@ -59,7 +59,7 @@ const SwapTokensSection: React.FC = () => {
 				}}
 				image={{
 					top: "-20rem",
-					left: "4rem",
+					left: "3rem",
 					right: "-14rem",
 					bottom: "-19rem",
 					width: "100%",

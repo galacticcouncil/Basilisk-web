@@ -31,7 +31,7 @@ const NftSection: React.FC = () => {
 					alt: "bg ilu",
 				}}
 				image={{
-					top: "1rem",
+					top: ".5rem",
 					left: "1rem",
 					right: "-22rem",
 					bottom: "-12rem",
