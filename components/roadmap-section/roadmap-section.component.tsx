@@ -240,7 +240,7 @@ const RoadmapSection: React.FC = () => {
 								transition: {
 									delay: 0.3,
 									ease: "easeOut",
-									duration: 1.5,
+									duration: 1.2,
 									// type: "spring",
 									// mass: 1,
 									// stiffness: 115,

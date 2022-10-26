@@ -287,7 +287,10 @@ const Header: React.FC = () => {
 									<MobileNavItem key={index}>
 										{item.href && <Link href={item.href}>{item.label}</Link>}
 										{item.list && (
-											<MobileDropdownButton onClick={() => item.toggle()}>
+											<MobileDropdownButton
+												isOpen={item.isOpen}
+												onClick={() => item.toggle()}
+											>
 												<span>{item.label}</span>
 												<IconSpan
 													isOpen={item.isOpen}
@@ -606,7 +609,7 @@ const MobileNavItem = styled.li`
 	}
 `
 
-const MobileDropdownButton = styled.button`
+const MobileDropdownButton = styled.button<{ isOpen: boolean }>`
 	${navLinksStyles};
 	background-color: transparent;
 	outline: none;
@@ -623,6 +626,8 @@ const MobileDropdownButton = styled.button`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		color: ${({ isOpen, theme }) =>
+			isOpen ? theme.colors.secondary : theme.header.navItemColor};
 	}
 `
 

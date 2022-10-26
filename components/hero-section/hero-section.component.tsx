@@ -26,6 +26,7 @@ const HeroSection: React.FC = () => {
 	// console.log(scrollYProgress)
 
 	const transformIlu = useTransform(scrollYProgress, [0, 0.1], [0, -100])
+	const transformIlu2 = useTransform(scrollYProgress, [0, 0.1], [0, -50])
 	// console.log(transformIlu)
 
 	const variants: Variants = {
@@ -154,16 +155,45 @@ const HeroSection: React.FC = () => {
 								amount: 0.5,
 							}}
 						>
-							<Image
-								className="mobile"
-								src="/assets/hero-section/app_ilu_mobile_v2.png"
-								alt="app ilu"
-								width={"100%"}
-								effect="blur"
-								style={{
-									objectFit: "contain",
-								}}
-							/>
+							<MobileContainer>
+								<motion.div
+									variants={titleVariants}
+									transition={{
+										delay: 0.5,
+									}}
+									style={{
+										y: transformIlu2,
+									}}
+								>
+									<Image
+										className="mobile left"
+										src="/assets/hero-section/app_ilu_mobile-left.png"
+										alt="app ilu"
+										width={"100%"}
+										effect="blur"
+										style={{
+											objectFit: "contain",
+										}}
+									/>
+								</motion.div>
+								<motion.div
+									variants={titleVariants}
+									transition={{
+										delay: 0.2,
+									}}
+								>
+									<Image
+										className="mobile right"
+										src="/assets/hero-section/app_ilu_mobile-right.png"
+										alt="app ilu"
+										width={"100%"}
+										effect="blur"
+										style={{
+											objectFit: "contain",
+										}}
+									/>
+								</motion.div>
+							</MobileContainer>
 							<Image
 								className="tablet"
 								src="/assets/hero-section/app_ilu_tablet_v2.png"
@@ -333,7 +363,7 @@ const Heading = styled(motion.h1)`
 `
 const Description = styled(motion.p)`
 	max-width: 30.1rem;
-	margin: 0 auto 2.2rem;
+	margin: 0 auto 4.2rem;
 	text-align: center;
 
 	opacity: 0.8;
@@ -423,6 +453,31 @@ const IluContainer = styled(motion.div)`
 	perspective: 206rem;
 	transform-style: preserve-3d;
 	/* transform: rotateX(4deg); */
+`
+
+const MobileContainer = styled(motion.div)`
+	position: relative;
+	/* border: 1px solid red; */
+	height: 36rem;
+
+	.left {
+		position: absolute;
+		left: -3.6rem;
+		top: 3rem;
+	}
+	.right {
+		position: absolute;
+		top: -4rem;
+		right: -3.6rem;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		display: none;
+		visibility: hidden;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		}
+	}
 `
 
 const BlurFigure = styled(motion.figure)`
