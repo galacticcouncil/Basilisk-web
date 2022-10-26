@@ -158,10 +158,11 @@ const HeroSection: React.FC = () => {
 							<MobileContainer>
 								<motion.div variants={titleVariants}>
 									<Image
-										className="mobile right"
-										src="/assets/hero-section/app_ilu_mobile-right.png"
+										className="mobile left"
+										src="/assets/hero-section/app_ilu_mobile-left.png"
 										alt="app ilu"
 										width={"100%"}
+										height={"100%"}
 										effect="blur"
 										style={{
 											objectFit: "contain",
@@ -170,11 +171,10 @@ const HeroSection: React.FC = () => {
 								</motion.div>
 								<motion.div variants={titleVariants}>
 									<Image
-										className="mobile left"
-										src="/assets/hero-section/app_ilu_mobile-left.png"
+										className="mobile right"
+										src="/assets/hero-section/app_ilu_mobile-right.png"
 										alt="app ilu"
 										width={"100%"}
-										height={"100%"}
 										effect="blur"
 										style={{
 											objectFit: "contain",
@@ -452,15 +452,15 @@ const MobileContainer = styled(motion.div)`
 		position: absolute;
 		left: -6rem;
 		top: 5rem;
-		z-index: -1;
 		width: 100%;
 		height: 46rem;
+		z-index: 200;
 	}
 	.right {
 		position: absolute;
+		z-index: -1;
 		top: -4rem;
 		right: -3.6rem;
-		z-index: 200;
 		height: 46rem;
 	}
 
