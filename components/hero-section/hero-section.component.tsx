@@ -230,7 +230,7 @@ const SectionContainer = styled(motion.section)`
 	padding: 12.4rem 2rem 0;
 	overflow: hidden;
 	/* margin-top: 12.4rem; */
-	margin-bottom: -22rem;
+	margin-bottom: -16rem;
 	z-index: 2;
 	min-height: 90rem;
 
@@ -257,7 +257,7 @@ const SectionContainer = styled(motion.section)`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin-bottom: -30rem;
+		margin-bottom: -25rem;
 
 		.mobile {
 			display: none;
