@@ -403,11 +403,14 @@ const navLinksStyles = css`
 `
 
 const Logo = styled.div`
-	width: 19.879rem;
+	width: 50%;
+	margin: 0 auto;
 	/* display: none;
 	visibility: hidden; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		width: 19.879rem;
+		margin: unset;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* display: block;
 			visibility: visible; */

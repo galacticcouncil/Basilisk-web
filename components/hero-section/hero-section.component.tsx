@@ -247,6 +247,7 @@ const HeroSection: React.FC = () => {
 								effect="blur"
 								style={{
 									objectFit: "contain",
+									objectPosition: "top",
 								}}
 							/>
 						</IluContainer>
@@ -352,7 +353,7 @@ const SectionContainer = styled(motion.section)`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin-bottom: -40rem;
+			margin-bottom: -43rem;
 
 			.mobile {
 				display: none;
@@ -395,7 +396,7 @@ const Heading = styled(motion.h1)`
 			font-size: 7.2rem;
 			margin: 0 auto 2.8rem;
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				margin: 10rem auto 2.8rem;
 			}
 		}
@@ -456,7 +457,7 @@ const CtaContainer = styled(motion.div)`
 `
 
 const IluFigure = styled(motion.figure)`
-	max-width: 116.578rem;
+	/* max-width: 116.578rem; */
 	margin: 0 auto;
 	perspective: 120rem;
 
@@ -483,13 +484,11 @@ const IluFigure = styled(motion.figure)`
 			.tablet {
 			}
 			.desktop {
-				height: 100rem;
-				width: 110%;
-				transform: translateX(-5%);
-				@media all and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-					height: 115rem;
-					width: 120%;
-					transform: translateX(-8.5%);
+				width: 100%;
+				max-width: 150rem;
+				/* margin: 4rem auto -15rem; */
+				@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+					margin: 4rem auto -15rem;
 				}
 			}
 		}

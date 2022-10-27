@@ -18,7 +18,6 @@ const PrimaryButtonStyles = css<IStyledProps>`
 	font-family: inherit;
 	font-weight: 700;
 	line-height: 1;
-	font-size: 1.6rem;
 	color: ${({ theme }) => theme.button.color};
 
 	/* min-width: 20rem; */
@@ -35,7 +34,8 @@ const PrimaryButtonStyles = css<IStyledProps>`
 	margin-left: ${({ left }) => (left ? left : "initial")};
 	margin-bottom: ${({ bottom }) => (bottom ? bottom : "initial")};
 	line-height: 18px;
-	padding: 1.6rem 3.6rem;
+	font-size: 1.3rem;
+	padding: 1.4rem 3.6rem;
 
 	transition: all 0.3s ease-in;
 
@@ -71,6 +71,14 @@ const PrimaryButtonStyles = css<IStyledProps>`
 		--myColor1: ${({ theme }) => theme.button.activeFirstColor};
 		--myColor2: ${({ theme }) => theme.button.activeSecondColor};
 		box-shadow: ${({ theme }) => theme.button.activeBoxShadow};
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		padding: 1.6rem 3.6rem;
+		font-size: 1.6rem;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		}
 	}
 `
 
