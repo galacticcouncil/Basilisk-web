@@ -336,24 +336,31 @@ const Footer: React.FC = () => {
 												{item.list.map((listItem, index) => (
 													<MobileDropdownMenuItem key={index}>
 														<Link href={listItem.href} passHref>
-															<a>
-																<Image
-																	src={listItem.icon.src}
-																	alt={listItem.icon.alt}
-																	effect="blur"
-																	width={20}
-																	height={24}
-																	style={{
-																		objectFit: "contain",
-																		objectPosition: "center",
-																	}}
-																/>
-																{/* <listItem.Icon /> */}
-
-																<span>{listItem.label}</span>
-															</a>
+															<LabelA>
+																<LabelSpan>{listItem.label}</LabelSpan>
+															</LabelA>
 														</Link>
 													</MobileDropdownMenuItem>
+													// <MobileDropdownMenuItem key={index}>
+													// 	<Link href={listItem.href} passHref>
+													// 		<a>
+													// 			<Image
+													// 				src={listItem.icon.src}
+													// 				alt={listItem.icon.alt}
+													// 				effect="blur"
+													// 				width={20}
+													// 				height={24}
+													// 				style={{
+													// 					objectFit: "contain",
+													// 					objectPosition: "center",
+													// 				}}
+													// 			/>
+													// 			{/* <listItem.Icon /> */}
+
+													// 			<span>{listItem.label}</span>
+													// 		</a>
+													// 	</Link>
+													// </MobileDropdownMenuItem>
 												))}
 											</MobileDropdownList>
 										</MobileDropdownMenu>
@@ -664,14 +671,14 @@ const MobileDropdownMenuItem = styled(motion.li)`
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
-		padding: 2rem 2.4rem;
-		color: ${({ theme }) => theme.header.mobileMenu.dropdownMenu.navItemColor};
+		padding: 1rem 0.4rem;
+		font-size: 1.3rem;
+		color: ${({ theme }) => theme.footer.navItemColor};
+
+		transitions: all 0.3s ease-in;
 
 		&:hover {
-			color: ${({ theme }) =>
-				theme.header.mobileMenu.dropdownMenu.navItemColor};
-			background: ${({ theme }) =>
-				theme.header.mobileMenu.dropdownMenu.hoverBackground};
+			color: ${({ theme }) => theme.footer.hoverNavItemColor};
 		}
 	}
 
@@ -680,8 +687,11 @@ const MobileDropdownMenuItem = styled(motion.li)`
 		align-items: center;
 		justify-content: center;
 	}
-
+	/* 
 	&:not(:last-child) {
 		border-bottom: ${({ theme }) => theme.header.mobileMenu.navItemBorder};
+	} */
+	&:last-child {
+		margin-bottom: 2rem;
 	}
 `
