@@ -509,11 +509,11 @@ const MobileContainer = styled(motion.div)`
 		top: 5rem;
 		width: 100%;
 		height: 46rem;
-		z-index: 200;
+		z-index: -10000;
 	}
 	.right {
 		position: absolute;
-		z-index: -1;
+		z-index: 2;
 		top: -4rem;
 		right: -3.6rem;
 		height: 46rem;
