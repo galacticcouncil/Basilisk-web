@@ -201,7 +201,9 @@ const HeroSection: React.FC = () => {
 								<motion.div
 									variants={mobileLeftVariants}
 									style={{
+										position: "relative",
 										y: transformIlu2,
+										zIndex: -1,
 									}}
 								>
 									<Image
@@ -216,7 +218,13 @@ const HeroSection: React.FC = () => {
 										}}
 									/>
 								</motion.div>
-								<motion.div variants={mobileRightVariants}>
+								<motion.div
+									variants={mobileRightVariants}
+									style={{
+										position: "relative",
+										zIndex: 1,
+									}}
+								>
 									<Image
 										className="mobile right"
 										src="/assets/hero-section/app_ilu_mobile-right.png"
