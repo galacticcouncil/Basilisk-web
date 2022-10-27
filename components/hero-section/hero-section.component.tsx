@@ -66,14 +66,14 @@ const HeroSection: React.FC = () => {
 		hidden: {
 			opacity: 0,
 			y: 150,
-			perspective: "1200px",
-			zIndex: -1,
+			// perspective: "1200px",
+			// zIndex: -1,
 		},
 		visible: {
 			opacity: 1,
 			y: 0,
-			perspective: 0,
-			zIndex: -1,
+			// perspective: 0,
+			// zIndex: -1,
 			transition: {
 				type: "spring",
 				mass: 0.1,
@@ -188,6 +188,38 @@ const HeroSection: React.FC = () => {
 							y: transformIlu,
 						}}
 					>
+						<MobileContainer>
+							<motion.div
+								variants={mobileLeftVariants}
+								style={{
+									y: transformIlu2,
+								}}
+							>
+								<Image
+									className="mobile left"
+									src="/assets/hero-section/app_ilu_mobile-left.png"
+									alt="app ilu"
+									width={"100%"}
+									height={"100%"}
+									effect="blur"
+									style={{
+										objectFit: "contain",
+									}}
+								/>
+							</motion.div>
+							<motion.div variants={mobileRightVariants}>
+								<Image
+									className="mobile right"
+									src="/assets/hero-section/app_ilu_mobile-right.png"
+									alt="app ilu"
+									width={"100%"}
+									effect="blur"
+									style={{
+										objectFit: "contain",
+									}}
+								/>
+							</motion.div>
+						</MobileContainer>
 						<IluContainer
 							variants={iluVariants}
 							initial="hidden"
@@ -197,46 +229,6 @@ const HeroSection: React.FC = () => {
 								amount: 0.5,
 							}}
 						>
-							<MobileContainer>
-								<motion.div
-									variants={mobileLeftVariants}
-									style={{
-										position: "relative",
-										y: transformIlu2,
-										zIndex: -1,
-									}}
-								>
-									<Image
-										className="mobile left"
-										src="/assets/hero-section/app_ilu_mobile-left.png"
-										alt="app ilu"
-										width={"100%"}
-										height={"100%"}
-										effect="blur"
-										style={{
-											objectFit: "contain",
-										}}
-									/>
-								</motion.div>
-								<motion.div
-									variants={mobileRightVariants}
-									style={{
-										position: "relative",
-										zIndex: 1,
-									}}
-								>
-									<Image
-										className="mobile right"
-										src="/assets/hero-section/app_ilu_mobile-right.png"
-										alt="app ilu"
-										width={"100%"}
-										effect="blur"
-										style={{
-											objectFit: "contain",
-										}}
-									/>
-								</motion.div>
-							</MobileContainer>
 							<Image
 								className="tablet"
 								src="/assets/hero-section/app_ilu_tablet_v2.png"
@@ -299,6 +291,7 @@ const HeroSection: React.FC = () => {
 					effect="blur"
 					style={{
 						objectFit: "cover",
+						objectPosition: "top",
 					}}
 					visibleByDefault={true}
 					// threshold={200}
@@ -401,6 +394,10 @@ const Heading = styled(motion.h1)`
 			max-width: 79.3rem;
 			font-size: 7.2rem;
 			margin: 0 auto 2.8rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+				margin: 10rem auto 2.8rem;
+			}
 		}
 	}
 `
@@ -486,7 +483,14 @@ const IluFigure = styled(motion.figure)`
 			.tablet {
 			}
 			.desktop {
-				height: 80rem;
+				height: 100rem;
+				width: 110%;
+				transform: translateX(-5%);
+				@media all and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+					height: 115rem;
+					width: 120%;
+					transform: translateX(-8.5%);
+				}
 			}
 		}
 	}
@@ -505,15 +509,16 @@ const MobileContainer = styled(motion.div)`
 
 	.left {
 		position: absolute;
+		/* border: 1px solid blue; */
 		left: -6rem;
 		top: 5rem;
 		width: 100%;
 		height: 46rem;
-		z-index: -10000;
+		/* z-index: -10000; */
 	}
 	.right {
 		position: absolute;
-		z-index: 2;
+		/* z-index: 2; */
 		top: -4rem;
 		right: -3.6rem;
 		height: 46rem;
@@ -544,10 +549,10 @@ const BlurFigure = styled(motion.figure)`
 		/* bottom: -20rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* bottom: -65rem; */
-			width: 200rem;
+			width: 400rem;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: -40rem;
+			bottom: -150rem;
 		}
 	}
 `
