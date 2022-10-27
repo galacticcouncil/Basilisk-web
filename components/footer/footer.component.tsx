@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
 	const aboutItems = [
 		{
 			label: "Press Kit",
-			slug: "/",
+			slug: "https://github.com/galacticcouncil/Basilisk-assets/tree/master/Basilisk%20Press%20Kit",
 		},
 		{
 			label: "Tokenomics",
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
 		},
 		{
 			label: "Reddit",
-			slug: "/",
+			slug: "https://www.reddit.com/r/bsx_fi/",
 			icon: {
 				src: "/assets/icons/reddit.svg",
 				alt: "reddit",
@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
 				},
 				{
 					label: "Press Kit",
-					href: "/",
+					href: "https://github.com/galacticcouncil/Basilisk-assets/tree/master/Basilisk%20Press%20Kit",
 					icon: {
 						src: "/assets/icons/press-kit.svg",
 						alt: "twitter",
@@ -175,7 +175,7 @@ const Footer: React.FC = () => {
 				},
 				{
 					label: "Reddit",
-					href: "/",
+					href: "https://www.reddit.com/r/bsx_fi/",
 					icon: {
 						src: "/assets/icons/reddit.svg",
 						alt: "reddit",
@@ -263,7 +263,7 @@ const Footer: React.FC = () => {
 						</NavList>
 					</ColItem>
 					<ColItem>
-						<Link passHref href={"/"}>
+						<Link passHref href={"https://basiliskfi.substack.com/"}>
 							<a>
 								<Title>Blog</Title>
 							</a>

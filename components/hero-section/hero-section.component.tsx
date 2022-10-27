@@ -176,10 +176,19 @@ const HeroSection: React.FC = () => {
 						</motion.span>
 					</Description>
 					<CtaContainer variants={titleVariants}>
-						<ButtonLink rounded variant="GREEN" display="inline-flex" href="#">
+						<ButtonLink
+							rounded
+							variant="GREEN"
+							display="inline-flex"
+							href="https://kodadot.xyz/"
+						>
 							GO NFT
 						</ButtonLink>
-						<ButtonLink rounded display="inline-flex" href="#">
+						<ButtonLink
+							rounded
+							display="inline-flex"
+							href="https://app.basilisk.cloud/#/trade"
+						>
 							ENTER DEFI
 						</ButtonLink>
 					</CtaContainer>

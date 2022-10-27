@@ -55,27 +55,33 @@ const SupportSection: React.FC = () => {
 					<Title>Web Wallets:</Title>
 
 					<PartnersDirectory>
-						<Image
-							src="/assets/support-section/talisman-v2.svg"
-							alt="talisman"
-							height={"100%"}
-						/>
-						<Image
-							src="/assets/support-section/polkadot-v2.svg"
-							alt="polkadot"
-							height={"100%"}
-						/>
+						<a href="https://talisman.xyz/">
+							<Image
+								src="/assets/support-section/talisman-v2.svg"
+								alt="talisman"
+								height={"100%"}
+							/>
+						</a>
+						<a href="https://polkadot.js.org/extension/">
+							<Image
+								src="/assets/support-section/polkadot-v2.svg"
+								alt="polkadot"
+								height={"100%"}
+							/>
+						</a>
 					</PartnersDirectory>
 				</Col>
 				<Col variants={itemVariants}>
 					<Title>Mobile Wallets:</Title>
 
 					<PartnersDirectory>
-						<Image
-							src="/assets/support-section/nova.png"
-							alt="Nova"
-							height={"100%"}
-						/>
+						<a href="https://novawallet.io/">
+							<Image
+								src="/assets/support-section/nova.png"
+								alt="Nova"
+								height={"100%"}
+							/>
+						</a>
 					</PartnersDirectory>
 				</Col>
 			</Row>

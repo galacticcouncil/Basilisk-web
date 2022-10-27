@@ -73,10 +73,10 @@ const Header: React.FC = () => {
 				},
 				{
 					label: "Press Kit",
-					href: "/",
+					href: "https://github.com/galacticcouncil/Basilisk-assets/tree/master/Basilisk%20Press%20Kit",
 					icon: {
 						src: "/assets/icons/press-kit.svg",
-						alt: "twitter",
+						alt: "press-kit icon",
 						height: 30,
 					},
 					// Icon: PressKitIcon,
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
 				},
 				{
 					label: "Reddit",
-					href: "/",
+					href: "https://www.reddit.com/r/bsx_fi/",
 					icon: {
 						src: "/assets/icons/reddit.svg",
 						alt: "reddit",
@@ -139,7 +139,7 @@ const Header: React.FC = () => {
 		},
 		{
 			label: "Blog",
-			href: "/",
+			href: "https://basiliskfi.substack.com/",
 		},
 		{
 			label: "Github",
@@ -249,10 +249,10 @@ const Header: React.FC = () => {
 					</FlexContainer>
 
 					<CTAContainer>
-						<ButtonLink variant="GREEN" rounded href="#">
+						<ButtonLink variant="GREEN" rounded href="https://kodadot.xyz/">
 							GO NFT
 						</ButtonLink>
-						<ButtonLink rounded href="#">
+						<ButtonLink rounded href="https://app.basilisk.cloud/#/trade">
 							ENTER DEFI
 						</ButtonLink>
 					</CTAContainer>
