@@ -43,12 +43,12 @@ const RoadmapSection: React.FC = () => {
 		},
 		{
 			title: "LBP",
-			status: "Soon<sup>TM</sup>",
+			status: "Snek did it",
 			icon: {
 				src: "/assets/roadmap-section/bag-v2.png",
 				alt: "bag",
 			},
-			variant: "BLUE",
+			variant: "GREEN",
 			process: "56%",
 		},
 		{
