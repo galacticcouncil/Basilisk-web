@@ -18,7 +18,7 @@ const NftSection: React.FC = () => {
 			<SectionContent
 				title="Trade on Basilisk NFT Marketplace. <img 
 					class='koda'
-					src='/assets/ntf-section/koda-logo.png'
+					src='/assets/ntf-section/koda-logo-opt.png'
 					alt='koda logo'
 				/>"
 				titleIcon={{
@@ -36,7 +36,7 @@ const NftSection: React.FC = () => {
 					right: "-22rem",
 					bottom: "-12rem",
 					width: "120%",
-					src: "/assets/ntf-section/first-content-ilu-v2.png",
+					src: "/assets/ntf-section/first-content-ilu-v2-opt.png",
 					alt: "nft ilu",
 				}}
 				cta={{

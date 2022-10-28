@@ -206,7 +206,7 @@ const HeroSection: React.FC = () => {
 							>
 								<Image
 									className="mobile left"
-									src="/assets/hero-section/app_ilu_mobile-left.png"
+									src="/assets/hero-section/app_ilu_mobile-left-opt.png"
 									alt="app ilu"
 									width={"100%"}
 									height={"100%"}
@@ -219,7 +219,7 @@ const HeroSection: React.FC = () => {
 							<motion.div variants={mobileRightVariants}>
 								<Image
 									className="mobile right"
-									src="/assets/hero-section/app_ilu_mobile-right.png"
+									src="/assets/hero-section/app_ilu_mobile-right-opt.png"
 									alt="app ilu"
 									width={"100%"}
 									effect="blur"
@@ -240,7 +240,7 @@ const HeroSection: React.FC = () => {
 						>
 							<Image
 								className="tablet"
-								src="/assets/hero-section/app_ilu_tablet_v2.png"
+								src="/assets/hero-section/app_ilu_tablet_v2-min.png"
 								alt="app ilu"
 								width={"100%"}
 								effect="blur"
@@ -250,7 +250,7 @@ const HeroSection: React.FC = () => {
 							/>
 							<Image
 								className="desktop"
-								src="/assets/hero-section/app_ilu_desktop-v2.png"
+								src="/assets/hero-section/app_ilu_desktop-v2-min.png"
 								alt="app ilu"
 								width={"100%"}
 								effect="blur"
@@ -266,7 +266,7 @@ const HeroSection: React.FC = () => {
 
 			<BlurFigure className="mobile">
 				<Image
-					src="/assets/hero-section/bg-ilu_mobile-v2.png"
+					src="/assets/hero-section/bg-ilu_mobile-v2-opt.png"
 					alt="background ilu"
 					width={"100%"}
 					height={"100%"}
@@ -280,7 +280,7 @@ const HeroSection: React.FC = () => {
 			</BlurFigure>
 			<BlurFigure className="tablet">
 				<Image
-					src="/assets/hero-section/bg-ilu_tablet-v2.png"
+					src="/assets/hero-section/bg-ilu_tablet-v2-opt.png"
 					alt="background ilu 2"
 					width={"100%"}
 					height={"100%"}
@@ -294,7 +294,7 @@ const HeroSection: React.FC = () => {
 			</BlurFigure>
 			<BlurFigure className="desktop">
 				<Image
-					src="/assets/hero-section/bg-ilu-v3.png"
+					src="/assets/hero-section/bg-ilu-v3-opt.png"
 					alt="background ilu 3"
 					width={"100%"}
 					height={"100%"}

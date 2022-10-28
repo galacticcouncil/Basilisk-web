@@ -32,7 +32,7 @@ const EarnRewardsSection: React.FC = () => {
 					left: "0rem",
 					right: "0rem",
 					bottom: "-2rem",
-					src: "/assets/earn-rewards-section/first-content-ilu-v2.png",
+					src: "/assets/earn-rewards-section/first-content-ilu-v2-opt.png",
 					alt: "earn rewards ilu",
 				}}
 				cta={{
