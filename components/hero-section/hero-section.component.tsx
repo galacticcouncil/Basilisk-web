@@ -293,8 +293,8 @@ const HeroSection: React.FC = () => {
 				/>
 			</BlurFigure>
 			<BlurFigure className="desktop">
-				<Image
-					src="/assets/hero-section/bg-ilu-v3-opt.png"
+				{/* <Image
+					src="/assets/hero-section/bg-ilu-v3-opt-v3.png"
 					alt="background ilu 3"
 					width={"100%"}
 					height={"100%"}
@@ -306,7 +306,7 @@ const HeroSection: React.FC = () => {
 					visibleByDefault={true}
 					// threshold={200}
 					// afterLoad={() => setTrue()}
-				/>
+				/> */}
 			</BlurFigure>
 		</SectionContainer>
 	)
@@ -557,10 +557,22 @@ const BlurFigure = styled(motion.figure)`
 		/* bottom: -20rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* bottom: -65rem; */
-			width: 400rem;
+			/* width: 400rem;
+			height: 400rem; */
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: -150rem;
+			bottom: -85rem;
+
+			&.desktop {
+				width: 1786px;
+				height: 1765px;
+				-webkit-filter: blur(100px);
+				filter: blur(100px);
+				background: linear-gradient(270deg, #e8ff8a 0%, rgb(56, 255, 209) 100%);
+				/* border: 1px solid red; */
+				opacity: 0.52;
+				border-radius: 800px;
+			}
 		}
 	}
 `
