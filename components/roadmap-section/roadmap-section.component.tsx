@@ -49,7 +49,7 @@ const RoadmapSection: React.FC = () => {
 				alt: "bag",
 			},
 			variant: "GREEN",
-			process: "56%",
+			process: "45%",
 		},
 		{
 			title: "Moar Token Pairs",
