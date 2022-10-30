@@ -24,7 +24,14 @@ export const ButtonLink: React.FC<IButtonLinkProps> = (props) => {
 		<Link href={props.href || "#"}>
 			<AContainer {...props}>
 				<span>{props.children}</span>
-				{props.icon && <Image src={props.icon.src} alt={props.icon.alt} />}
+				{props.icon && (
+					<Image
+						src={props.icon.src}
+						alt={props.icon.alt}
+						width={15}
+						height={15}
+					/>
+				)}
 			</AContainer>
 		</Link>
 	)
