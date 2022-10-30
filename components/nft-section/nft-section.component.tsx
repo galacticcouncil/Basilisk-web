@@ -64,7 +64,7 @@ const NftSection: React.FC = () => {
 					right: 0,
 					bottom: 0,
 					width: "100%",
-					src: "/assets/ntf-section/second-content-ilu.svg",
+					src: "/assets/ntf-section/second-content-ilu-v2.png",
 					alt: "nft ilu 2",
 				}}
 				cta={{

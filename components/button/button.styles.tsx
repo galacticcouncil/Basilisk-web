@@ -84,7 +84,7 @@ const PrimaryButtonStyles = css<IStyledProps>`
 
 const greenVariantStyles = css<IStyledProps>`
 	background: unset;
-	font-weight: 500;
+	font-weight: 700;
 	background-color: ${({ theme }) => theme.button.greenVariantBackground};
 	color: ${({ theme }) => theme.button.greenVariantColor};
 	transition: all 0.2s ease-in;
