@@ -262,7 +262,7 @@ const RoadmapSection: React.FC = () => {
 				<Button
 					variant="GREEN"
 					icon={{
-						src: "/assets/roadmap-section/notion-logo.png",
+						src: "/assets/roadmap-section/notion-logo-v2.svg",
 						alt: "roadmap icon",
 					}}
 					rounded

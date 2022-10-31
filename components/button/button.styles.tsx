@@ -39,6 +39,11 @@ const PrimaryButtonStyles = css<IStyledProps>`
 
 	transition: all 0.3s ease-in;
 
+	img {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
 	@property --myColor1 {
 		syntax: "<color>";
 		initial-value: ${({ theme }) => theme.button.firstColor};
