@@ -16,7 +16,7 @@ const NftSection: React.FC = () => {
 			<SectionHeading variant="BLUE">NFT Features</SectionHeading>
 
 			<SectionContent
-				title="Trade on Basilisk NFT Marketplace. <img 
+				title="Buy and Sell NFTs. <img 
 					class='koda'
 					src='/assets/ntf-section/koda-logo-opt.png'
 					alt='koda logo'
@@ -25,7 +25,7 @@ const NftSection: React.FC = () => {
 					src: "/assets/icons/title-icon-blue.svg",
 					alt: "blue icon",
 				}}
-				description="Buy and sell your favorite NFTs. Make offers for unlisted NFTs or set royalty fees to support the artist."
+				description="Fully featured NFT Marketplace. Buy or sell your favorite NFTs, make offers for unlisted NFTs or set royalty fees to support the artist"
 				bgImage={{
 					src: "/assets/ntf-section/content-bg-ilu.svg",
 					alt: "bg ilu",
