@@ -69,7 +69,7 @@ const SwapTokensSection: React.FC = () => {
 				cta={{
 					type: "link",
 					href: "https://app.basilisk.cloud/#/lbp",
-					label: "GO TO LBP",
+					label: "Snek LBP",
 				}}
 			/>
 

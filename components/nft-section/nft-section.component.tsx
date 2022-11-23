@@ -13,7 +13,7 @@ const NftSection: React.FC = () => {
 				<Image src="/assets/ntf-section/left-ilu.svg" alt="left ilu" />
 			</SectionIlu>
 
-			<SectionHeading variant="BLUE">NFT Features</SectionHeading>
+			<SectionHeading variant="BLUE">NFT Marketplace</SectionHeading>
 
 			<SectionContent
 				title="Buy and Sell NFTs. <img 
