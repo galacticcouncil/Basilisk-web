@@ -182,14 +182,14 @@ const HeroSection: React.FC = () => {
 							display="inline-flex"
 							href="https://kodadot.xyz/"
 						>
-							GO NFT
+							NFT
 						</ButtonLink>
 						<ButtonLink
 							rounded
 							display="inline-flex"
 							href="https://app.basilisk.cloud/#/trade"
 						>
-							ENTER DEFI
+							DEFI
 						</ButtonLink>
 					</CtaContainer>
 					<IluFigure
@@ -319,9 +319,11 @@ const SectionContainer = styled(motion.section)`
 	padding: 12.4rem 2rem 0;
 	overflow: hidden;
 	/* margin-top: 12.4rem; */
-	margin-bottom: -16.5rem;
+	margin-bottom: 0rem;
+
+	/* margin-bottom: -16.5rem; */
 	z-index: 2;
-	min-height: 90rem;
+	min-height: 85rem;
 
 	&::before {
 		content: "";
@@ -346,7 +348,7 @@ const SectionContainer = styled(motion.section)`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin-bottom: -25rem;
+		min-height: 75rem;
 
 		.mobile {
 			display: none;
@@ -362,7 +364,8 @@ const SectionContainer = styled(motion.section)`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin-bottom: -43rem;
+			/* margin-bottom: -43rem; */
+			min-height: 90rem;
 
 			.mobile {
 				display: none;
@@ -467,7 +470,7 @@ const CtaContainer = styled(motion.div)`
 
 const IluFigure = styled(motion.figure)`
 	/* max-width: 116.578rem; */
-	margin: 0 auto;
+	margin: 0 auto -23rem;
 	perspective: 120rem;
 
 	.mobile {
@@ -482,12 +485,13 @@ const IluFigure = styled(motion.figure)`
 		.mobile {
 		}
 		.tablet {
-			height: 58rem;
 		}
 		.desktop {
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			margin: 0 auto -35rem;
+
 			.mobile {
 			}
 			.tablet {

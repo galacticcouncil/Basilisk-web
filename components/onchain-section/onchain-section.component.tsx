@@ -104,7 +104,7 @@ const OnChainSection: React.FC = () => {
 			exit="hidden"
 			viewport={{ once: true }}
 		>
-			<Container
+			{/* <Container
 				ref={ref}
 				variants={variants}
 				initial="hidden"
@@ -131,7 +131,7 @@ const OnChainSection: React.FC = () => {
 						</ItemValue>
 					</Item>
 				))}
-			</Container>
+			</Container> */}
 		</SectionContainer>
 	)
 }
@@ -144,6 +144,7 @@ const SectionContainer = styled(motion.section)`
 	padding: 6rem 2rem;
 	background: ${({ theme }) => theme.onChainSection.background};
 	color: ${({ theme }) => theme.onChainSection.color};
+	margin-top: -6rem;
 `
 
 const Container = styled(motion.div)`

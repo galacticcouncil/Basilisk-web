@@ -250,10 +250,10 @@ const Header: React.FC = () => {
 
 					<CTAContainer>
 						<ButtonLink variant="GREEN" rounded href="https://kodadot.xyz/">
-							GO NFT
+							NFT
 						</ButtonLink>
 						<ButtonLink rounded href="https://app.basilisk.cloud/#/trade">
-							ENTER DEFI
+							DEFI
 						</ButtonLink>
 					</CTAContainer>
 					<HamMenuButton isOpen={isMenuOpen} onClick={() => toggleMenu()} />
