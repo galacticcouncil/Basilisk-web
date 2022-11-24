@@ -376,7 +376,7 @@ const SectionContainer = styled(motion.section)`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* margin-bottom: -43rem; */
-			min-height: 90rem;
+			min-height: 80rem;
 
 			.mobile {
 				display: none;
@@ -512,7 +512,7 @@ const IluFigure = styled(motion.figure)`
 				max-width: 150rem;
 				/* margin: 4rem auto -15rem; */
 				@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-					margin: 4rem auto -15rem;
+					margin: -4rem auto -15rem;
 				}
 			}
 		}
@@ -570,6 +570,7 @@ const BlurFigure = styled(motion.figure)`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* bottom: -20rem; */
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* bottom: -65rem; */
 			width: 400rem;
