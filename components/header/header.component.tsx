@@ -55,6 +55,8 @@ const Header: React.FC = () => {
 				{
 					label: "Documentation",
 					href: "https://docs.bsx.fi/",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/docs.svg",
 						alt: "documantation",
@@ -67,13 +69,15 @@ const Header: React.FC = () => {
 					href: "/",
 					icon: {
 						src: "/assets/icons/tokenomics.svg",
-						alt: "github",
+						alt: "tokenomics",
 					},
 					// Icon: TokenomicsIcon,
 				},
 				{
 					label: "Press Kit",
 					href: "https://github.com/galacticcouncil/Basilisk-assets/tree/master/Basilisk%20Press%20Kit",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/press-kit.svg",
 						alt: "press-kit icon",
@@ -93,15 +97,20 @@ const Header: React.FC = () => {
 				{
 					label: "Discord",
 					href: "https://discord.com/invite/S8YZj5aXR6",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/discord.svg",
 						alt: "discord",
+						height: 24,
 					},
 					// Icon: DiscordIcon,
 				},
 				{
 					label: "Twitter",
 					href: "https://twitter.com/bsx_finance",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/twitter.svg",
 						alt: "twitter",
@@ -111,6 +120,8 @@ const Header: React.FC = () => {
 				{
 					label: "Telegram",
 					href: "https://t.me/bsx_fi",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/telegram.svg",
 						alt: "telegram",
@@ -120,6 +131,8 @@ const Header: React.FC = () => {
 				{
 					label: "Substack",
 					href: "https://basiliskfi.substack.com/",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/substack.svg",
 						alt: "substack",
@@ -129,6 +142,8 @@ const Header: React.FC = () => {
 				{
 					label: "Reddit",
 					href: "https://www.reddit.com/r/bsx_fi/",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/reddit.svg",
 						alt: "reddit",
@@ -139,10 +154,14 @@ const Header: React.FC = () => {
 		},
 		{
 			label: "Blog",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			href: "https://basiliskfi.substack.com/",
 		},
 		{
 			label: "Github",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			href: "https://github.com/galacticcouncil",
 		},
 	]
@@ -194,7 +213,13 @@ const Header: React.FC = () => {
 							<NavList>
 								{NAV_ITEMS.map((item, index) => (
 									<NavItem key={index}>
-										{item.href && <Link href={item.href}>{item.label}</Link>}
+										{item.href && (
+											<Link href={item.href} passHref>
+												<a rel={item.rel} target={item.target}>
+													{item.label}
+												</a>
+											</Link>
+										)}
 										{item.list && (
 											<DropdownButton ref={item.ref}>
 												<span>{item.label}</span>
@@ -219,13 +244,16 @@ const Header: React.FC = () => {
 															{item.list.map((listItem, index) => (
 																<DropdownMenuItem key={index}>
 																	<Link href={listItem.href} passHref>
-																		<a>
+																		<a
+																			ref={listItem.rel}
+																			target={listItem.target}
+																		>
 																			<Image
 																				src={listItem.icon.src}
 																				alt={listItem.icon.alt}
 																				effect="blur"
 																				width={20}
-																				height={listItem.icon.height || 24}
+																				height={listItem.icon?.height || 24}
 																				style={{
 																					objectFit: "contain",
 																					objectPosition: "center",
@@ -249,10 +277,21 @@ const Header: React.FC = () => {
 					</FlexContainer>
 
 					<CTAContainer>
-						<ButtonLink variant="GREEN" rounded href="https://kodadot.xyz/">
+						<ButtonLink
+							variant="GREEN"
+							rounded
+							href="https://kodadot.xyz/"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
 							NFT
 						</ButtonLink>
-						<ButtonLink rounded href="https://app.basilisk.cloud/#/trade">
+						<ButtonLink
+							rounded
+							href="https://app.basilisk.cloud/#/trade"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
 							DEFI
 						</ButtonLink>
 					</CTAContainer>
@@ -325,7 +364,10 @@ const Header: React.FC = () => {
 														{item.list.map((listItem, index) => (
 															<MobileDropdownMenuItem key={index}>
 																<Link href={listItem.href} passHref>
-																	<a>
+																	<a
+																		ref={listItem.rel}
+																		target={listItem.target}
+																	>
 																		<Image
 																			src={listItem.icon.src}
 																			alt={listItem.icon.alt}
