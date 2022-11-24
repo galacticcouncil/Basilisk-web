@@ -130,7 +130,7 @@ const Home = () => {
 			</Head>
 
 			<HeroSection />
-			<OnChainSection />
+			{/* <OnChainSection /> */}
 			<Suspense fallback={"loading..."}>
 				<SwapTokensSection />
 				{/* <SupportProjectsSection /> */}

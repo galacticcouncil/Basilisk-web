@@ -97,7 +97,13 @@ const LearnMoreSection: React.FC = () => {
 					<ButtonLink variant="GREEN_BLACK" rounded href="/">
 						Tokenomics
 					</ButtonLink>
-					<ButtonLink variant="GREEN_BLACK" rounded href="/">
+					<ButtonLink
+						variant="GREEN_BLACK"
+						rounded
+						href="https://github.com/galacticcouncil/Basilisk-assets/tree/master/Basilisk%20Press%20Kit"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
 						Press Kit
 					</ButtonLink>
 				</ButtonsContainer>

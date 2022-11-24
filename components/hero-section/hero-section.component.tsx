@@ -181,6 +181,8 @@ const HeroSection: React.FC = () => {
 							variant="GREEN"
 							display="inline-flex"
 							href="https://kodadot.xyz/"
+							rel="noopener noreferrer"
+							target="_blank"
 						>
 							NFT
 						</ButtonLink>
@@ -188,6 +190,8 @@ const HeroSection: React.FC = () => {
 							rounded
 							display="inline-flex"
 							href="https://app.basilisk.cloud/#/trade"
+							rel="noopener noreferrer"
+							target="_blank"
 						>
 							DEFI
 						</ButtonLink>
@@ -337,6 +341,9 @@ const SectionContainer = styled(motion.section)`
 	}
 
 	.mobile {
+		img {
+			margin-bottom: -1rem;
+		}
 	}
 	.tablet {
 		display: none;
@@ -348,7 +355,7 @@ const SectionContainer = styled(motion.section)`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		min-height: 75rem;
+		min-height: 65rem;
 
 		.mobile {
 			display: none;
@@ -357,6 +364,10 @@ const SectionContainer = styled(motion.section)`
 		.tablet {
 			display: block;
 			visibility: visible;
+
+			img {
+				margin-bottom: -1rem;
+			}
 		}
 		.desktop {
 			display: none;
@@ -564,7 +575,7 @@ const BlurFigure = styled(motion.figure)`
 			width: 400rem;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: -150rem;
+			bottom: -190rem;
 		}
 	}
 `

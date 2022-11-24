@@ -21,14 +21,20 @@ const Footer: React.FC = () => {
 		{
 			label: "Press Kit",
 			slug: "https://github.com/galacticcouncil/Basilisk-assets/tree/master/Basilisk%20Press%20Kit",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Tokenomics",
 			slug: "/",
+			rel: "noopener noreferrer",
+			// target: "_blank",
 		},
 		{
 			label: "Documentation",
 			slug: "https://docs.bsx.fi/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 	]
 
@@ -36,6 +42,8 @@ const Footer: React.FC = () => {
 		{
 			label: "Discord",
 			slug: "https://discord.com/invite/S8YZj5aXR6",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/icons/discord.svg",
 				alt: "discord",
@@ -44,6 +52,8 @@ const Footer: React.FC = () => {
 		{
 			label: "Github",
 			slug: "https://github.com/galacticcouncil",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/icons/github.svg",
 				alt: "github",
@@ -52,6 +62,8 @@ const Footer: React.FC = () => {
 		{
 			label: "Twitter",
 			slug: "https://twitter.com/bsx_finance",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/icons/twitter.svg",
 				alt: "twitter",
@@ -60,6 +72,8 @@ const Footer: React.FC = () => {
 		{
 			label: "Telegram",
 			slug: "https://t.me/bsx_fi",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/icons/telegram.svg",
 				alt: "telegram",
@@ -68,6 +82,8 @@ const Footer: React.FC = () => {
 		{
 			label: "Substack",
 			slug: "https://basiliskfi.substack.com/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/icons/substack.svg",
 				alt: "substack",
@@ -76,6 +92,8 @@ const Footer: React.FC = () => {
 		{
 			label: "Reddit",
 			slug: "https://www.reddit.com/r/bsx_fi/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/icons/reddit.svg",
 				alt: "reddit",
@@ -102,6 +120,8 @@ const Footer: React.FC = () => {
 				{
 					label: "Documentation",
 					href: "https://docs.bsx.fi/",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/docs.svg",
 						alt: "documantation",
@@ -121,6 +141,8 @@ const Footer: React.FC = () => {
 				{
 					label: "Press Kit",
 					href: "https://github.com/galacticcouncil/Basilisk-assets/tree/master/Basilisk%20Press%20Kit",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/press-kit.svg",
 						alt: "twitter",
@@ -140,6 +162,8 @@ const Footer: React.FC = () => {
 				{
 					label: "Discord",
 					href: "https://discord.com/invite/S8YZj5aXR6",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/discord.svg",
 						alt: "discord",
@@ -149,6 +173,8 @@ const Footer: React.FC = () => {
 				{
 					label: "Twitter",
 					href: "https://twitter.com/bsx_finance",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/twitter.svg",
 						alt: "twitter",
@@ -158,6 +184,8 @@ const Footer: React.FC = () => {
 				{
 					label: "Telegram",
 					href: "https://t.me/bsx_fi",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/telegram.svg",
 						alt: "telegram",
@@ -167,6 +195,8 @@ const Footer: React.FC = () => {
 				{
 					label: "Substack",
 					href: "https://basiliskfi.substack.com/",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/substack.svg",
 						alt: "substack",
@@ -176,6 +206,8 @@ const Footer: React.FC = () => {
 				{
 					label: "Reddit",
 					href: "https://www.reddit.com/r/bsx_fi/",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/reddit.svg",
 						alt: "reddit",
@@ -191,6 +223,8 @@ const Footer: React.FC = () => {
 		{
 			label: "Github",
 			href: "https://github.com/galacticcouncil",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 	]
 
@@ -236,7 +270,7 @@ const Footer: React.FC = () => {
 							{aboutItems.map((item, index) => (
 								<NavItem key={index}>
 									<Link href={item.slug} passHref>
-										<LabelA>
+										<LabelA rel={item.rel} target={item.target}>
 											<LabelSpan>{item.label}</LabelSpan>
 										</LabelA>
 									</Link>
@@ -254,7 +288,7 @@ const Footer: React.FC = () => {
 							{socialsItems.map((item, index) => (
 								<NavItem key={index}>
 									<Link href={item.slug} passHref>
-										<LabelA>
+										<LabelA rel={item.rel} target={item.target}>
 											<LabelSpan>{item.label}</LabelSpan>
 										</LabelA>
 									</Link>
@@ -264,7 +298,7 @@ const Footer: React.FC = () => {
 					</ColItem>
 					<ColItem>
 						<Link passHref href={"https://basiliskfi.substack.com/"}>
-							<a>
+							<a rel="noopener noreferrer" target="_blank">
 								<Title>Blog</Title>
 							</a>
 						</Link>
@@ -296,7 +330,11 @@ const Footer: React.FC = () => {
 					<MobileNavList>
 						{NAV_ITEMS.map((item, index) => (
 							<MobileNavItem key={index}>
-								{item.href && <Link href={item.href}>{item.label}</Link>}
+								{item.href && (
+									<Link rel={item.rel} target={item.target} href={item.href}>
+										{item.label}
+									</Link>
+								)}
 								{item.list && (
 									<MobileDropdownButton
 										isOpen={item.isOpen}
@@ -336,7 +374,7 @@ const Footer: React.FC = () => {
 												{item.list.map((listItem, index) => (
 													<MobileDropdownMenuItem key={index}>
 														<Link href={listItem.href} passHref>
-															<LabelA>
+															<LabelA rel={item.rel} target={item.target}>
 																<LabelSpan>{listItem.label}</LabelSpan>
 															</LabelA>
 														</Link>
