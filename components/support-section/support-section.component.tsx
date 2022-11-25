@@ -77,7 +77,7 @@ const SupportSection: React.FC = () => {
 					<PartnersDirectory>
 						<a href="https://novawallet.io/">
 							<Image
-								src="/assets/support-section/nova.png"
+								src="/assets/support-section/nova-v3.png"
 								alt="Nova"
 								height={"100%"}
 							/>
