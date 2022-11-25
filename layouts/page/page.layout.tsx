@@ -13,16 +13,33 @@ export interface IProps {
 
 const PageLayout: React.FC<IProps> = ({ children }) => {
 	return (
-		<>
-			{/* <EyesContainer></EyesContainer> */}
+		<ScrollContainer>
+			<EyesContainer>
+				<Image
+					src="/assets/eyes.svg"
+					alt="eyes ilu"
+					width={"100%"}
+					height={"100%"}
+					effect="blur"
+					style={{
+						objectFit: "contain",
+					}}
+				/>
+			</EyesContainer>
 			<Header />
 			<Main>{children}</Main>
 			<Footer />
-		</>
+		</ScrollContainer>
 	)
 }
 
 export default PageLayout
+
+const ScrollContainer = styled.div`
+	position: relative;
+	height: 100%;
+	scroll-snap-type: y mandatory;
+`
 
 const Main = styled.main`
 	position: relative;
@@ -31,10 +48,15 @@ const Main = styled.main`
 `
 
 const EyesContainer = styled.div`
+	padding: 0 2rem;
+	/* position: absolute; */
 	width: 100%;
-	height: 80rem;
-	border: 1px solid red;
-	background-image: url("/assets/eyes.svg");
-	background-repeat: no-repeat;
-	background-position: center top;
+	max-width: 70rem;
+	/* border: 1px solid red; */
+	/* top: 0rem; */
+	/* left: 50%;
+	transform: translateX(-50%); */
+	/* background-color: #444; */
+	/* z-index: 10; */
+	margin: 0 auto;
 `

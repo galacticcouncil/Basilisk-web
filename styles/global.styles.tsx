@@ -18,14 +18,9 @@ export const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
-    position: relative;
     scroll-behavior: smooth !important;
     scroll-snap-type: y proximity;
-	background-image: url("/assets/eyes.svg");
-	background-repeat: no-repeat;
-	background-position: center top;
-    background-color: #000;
-
+    /* background-image: url("/assets/eyes.svg"); */
   }
   body {
     line-height: 1.5;

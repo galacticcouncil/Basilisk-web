@@ -363,6 +363,9 @@ const CustomBlurContainer = styled.div`
 `
 
 const SectionContainer = styled(motion.section)`
+	/* scroll-snap-type: x mandatory; */
+	scroll-snap-align: start;
+
 	position: relative;
 	padding: 12.4rem 2rem 0;
 	overflow: hidden;
@@ -380,7 +383,7 @@ const SectionContainer = styled(motion.section)`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: ${({ theme }) => theme.heroSection.backgroundColor};
+		/* background-color: ${({ theme }) => theme.heroSection.backgroundColor}; */
 		z-index: -1;
 	}
 
@@ -606,27 +609,27 @@ const MobileContainer = styled(motion.div)`
 	}
 `
 
-const BlurFigure = styled(motion.figure)`
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	/* height: 100%; */
-	/* min-height: 100vh; */
+// const BlurFigure = styled(motion.figure)`
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	/* height: 100%; */
+// 	/* min-height: 100vh; */
 
-	right: 0;
-	z-index: -1;
-	/* bottom: -20rem; */
+// 	right: 0;
+// 	z-index: -1;
+// 	/* bottom: -20rem; */
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		/* bottom: -20rem; */
+// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+// 		/* bottom: -20rem; */
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			/* bottom: -65rem; */
-			width: 300rem;
-			left: 50%;
-			transform: translateX(-50%);
-			bottom: -98rem;
-		}
-	}
-`
+// 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+// 			/* bottom: -65rem; */
+// 			width: 300rem;
+// 			left: 50%;
+// 			transform: translateX(-50%);
+// 			bottom: -98rem;
+// 		}
+// 	}
+// `
