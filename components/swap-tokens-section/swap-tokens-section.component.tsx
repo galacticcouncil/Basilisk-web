@@ -4,17 +4,17 @@ import styled from "styled-components"
 // Components
 import SectionHeading from "../section-heading/section-heading.component"
 import SectionContent from "../section-content/section-content.component"
-import Image from "../image/image.component"
+// import Image from "../image/image.component"
 
 const SwapTokensSection: React.FC = () => {
 	return (
 		<Section id="swap-tokens">
-			<SectionIlu>
+			{/* <SectionIlu>
 				<Image
 					src="/assets/swap-tokens-section/top-left-ilu.svg"
 					alt="top left ilu"
 				/>
-			</SectionIlu>
+			</SectionIlu> */}
 
 			<SectionHeading variant="DEFAULT">DEFI features</SectionHeading>
 
