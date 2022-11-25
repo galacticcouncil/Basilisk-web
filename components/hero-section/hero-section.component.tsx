@@ -244,7 +244,7 @@ const HeroSection: React.FC = () => {
 						>
 							<Image
 								className="tablet"
-								src="/assets/hero-section/app_ilu_tablet_v2-min.png"
+								src="/assets/hero-section/app_ilu_desktop-v4-min.png"
 								alt="app ilu"
 								width={"100%"}
 								effect="blur"
@@ -254,7 +254,7 @@ const HeroSection: React.FC = () => {
 							/>
 							<Image
 								className="desktop"
-								src="/assets/hero-section/app_ilu_desktop-v2-min.png"
+								src="/assets/hero-section/app_ilu_desktop-v4-min.png"
 								alt="app ilu"
 								width={"100%"}
 								effect="blur"
@@ -493,6 +493,8 @@ const IluFigure = styled(motion.figure)`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin: 0 auto -10rem;
+
 		.mobile {
 		}
 		.tablet {
@@ -501,7 +503,7 @@ const IluFigure = styled(motion.figure)`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 0 auto -35rem;
+			margin: 0 auto -10rem;
 
 			.mobile {
 			}
@@ -510,9 +512,13 @@ const IluFigure = styled(motion.figure)`
 			.desktop {
 				width: 100%;
 				max-width: 150rem;
+
+				img {
+					height: auto !important;
+				}
 				/* margin: 4rem auto -15rem; */
 				@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-					margin: -4rem auto -15rem;
+					margin: -4rem auto 0;
 				}
 			}
 		}
@@ -573,10 +579,10 @@ const BlurFigure = styled(motion.figure)`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* bottom: -65rem; */
-			width: 400rem;
+			width: 300rem;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: -190rem;
+			bottom: -100rem;
 		}
 	}
 `
