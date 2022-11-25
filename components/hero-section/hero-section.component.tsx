@@ -493,7 +493,7 @@ const IluFigure = styled(motion.figure)`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin: 0 auto -10rem;
+		margin: 0 auto -15rem;
 
 		.mobile {
 		}
@@ -503,7 +503,7 @@ const IluFigure = styled(motion.figure)`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 0 auto -10rem;
+			margin: 0 auto -20rem;
 
 			.mobile {
 			}
@@ -582,7 +582,7 @@ const BlurFigure = styled(motion.figure)`
 			width: 300rem;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: -88rem;
+			bottom: -98rem;
 		}
 	}
 `
