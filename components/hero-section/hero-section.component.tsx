@@ -582,7 +582,7 @@ const BlurFigure = styled(motion.figure)`
 			width: 300rem;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: -100rem;
+			bottom: -88rem;
 		}
 	}
 `
