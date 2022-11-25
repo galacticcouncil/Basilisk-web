@@ -21,9 +21,11 @@ export const GlobalStyles = createGlobalStyle`
     position: relative;
     scroll-behavior: smooth !important;
     scroll-snap-type: y proximity;
-    background-image: url("/assets/eyes.svg");
-    background-repeat: no-repeat;
+	background-image: url("/assets/eyes.svg");
+	background-repeat: no-repeat;
+	background-position: center top;
     background-color: #000;
+
   }
   body {
     line-height: 1.5;

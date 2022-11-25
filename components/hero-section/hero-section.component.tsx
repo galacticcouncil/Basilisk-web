@@ -150,132 +150,134 @@ const HeroSection: React.FC = () => {
 	}
 
 	return (
-		<SectionContainer>
-			{isBgLoaded && (
-				<motion.div
-					variants={variants}
-					initial="hidden"
-					animate="visible"
-					exit="hidden"
-				>
-					<Heading
-						variants={titleVariants}
-						// initial="hidden" animate="visible"
+		<>
+			<SectionContainer>
+				{isBgLoaded && (
+					<motion.div
+						variants={variants}
+						initial="hidden"
+						animate="visible"
+						exit="hidden"
 					>
-						The Snek you don’t want to live without.
-					</Heading>
-					<Description
-						variants={descVariants}
-						// initial="hidden" animate="visible"
-					>
-						<motion.span>
-							Basilisk brings permissionless liquidity to Kusama
-						</motion.span>
-						<motion.span>
-							Support young projects. Swap tokens or flip NFTs and earn rewards.
-						</motion.span>
-					</Description>
-					<CtaContainer variants={titleVariants}>
-						<ButtonLink
-							rounded
-							variant="GREEN"
-							display="inline-flex"
-							href="https://kodadot.xyz/"
-							rel="noopener noreferrer"
-							target="_blank"
+						<Heading
+							variants={titleVariants}
+							// initial="hidden" animate="visible"
 						>
-							NFT
-						</ButtonLink>
-						<ButtonLink
-							rounded
-							display="inline-flex"
-							href="https://app.basilisk.cloud/#/trade"
-							rel="noopener noreferrer"
-							target="_blank"
+							The Snek you don’t want to live without.
+						</Heading>
+						<Description
+							variants={descVariants}
+							// initial="hidden" animate="visible"
 						>
-							DEFI
-						</ButtonLink>
-					</CtaContainer>
-					<IluFigure
-						style={{
-							y: transformIlu,
-						}}
-					>
-						<MobileContainer>
-							<motion.div
-								variants={mobileLeftVariants}
-								style={{
-									y: transformIlu2,
+							<motion.span>
+								Basilisk brings permissionless liquidity to Kusama
+							</motion.span>
+							<motion.span>
+								Support young projects. Swap tokens or flip NFTs and earn
+								rewards.
+							</motion.span>
+						</Description>
+						<CtaContainer variants={titleVariants}>
+							<ButtonLink
+								rounded
+								variant="GREEN"
+								display="inline-flex"
+								href="https://kodadot.xyz/"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								NFT
+							</ButtonLink>
+							<ButtonLink
+								rounded
+								display="inline-flex"
+								href="https://app.basilisk.cloud/#/trade"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								DEFI
+							</ButtonLink>
+						</CtaContainer>
+						<IluFigure
+							style={{
+								y: transformIlu,
+							}}
+						>
+							<MobileContainer>
+								<motion.div
+									variants={mobileLeftVariants}
+									style={{
+										y: transformIlu2,
+									}}
+								>
+									<Image
+										className="mobile left"
+										src="/assets/hero-section/app_ilu_mobile-left-opt.png"
+										alt="app ilu"
+										width={"100%"}
+										height={"100%"}
+										effect="blur"
+										style={{
+											objectFit: "contain",
+										}}
+									/>
+								</motion.div>
+								<motion.div variants={mobileRightVariants}>
+									<Image
+										className="mobile right"
+										src="/assets/hero-section/app_ilu_mobile-right-opt.png"
+										alt="app ilu"
+										width={"100%"}
+										effect="blur"
+										style={{
+											objectFit: "contain",
+										}}
+									/>
+								</motion.div>
+							</MobileContainer>
+							<IluContainer
+								variants={iluVariants}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{
+									once: true,
+									amount: 0.5,
 								}}
 							>
 								<Image
-									className="mobile left"
-									src="/assets/hero-section/app_ilu_mobile-left-opt.png"
+									className="tablet"
+									src="/assets/hero-section/app_ilu_desktop-v4-min.png"
 									alt="app ilu"
 									width={"100%"}
-									height={"100%"}
 									effect="blur"
 									style={{
 										objectFit: "contain",
 									}}
 								/>
-							</motion.div>
-							<motion.div variants={mobileRightVariants}>
 								<Image
-									className="mobile right"
-									src="/assets/hero-section/app_ilu_mobile-right-opt.png"
+									className="desktop"
+									src="/assets/hero-section/app_ilu_desktop-v4-min.png"
 									alt="app ilu"
 									width={"100%"}
 									effect="blur"
 									style={{
 										objectFit: "contain",
+										objectPosition: "top",
 									}}
 								/>
-							</motion.div>
-						</MobileContainer>
-						<IluContainer
-							variants={iluVariants}
-							initial="hidden"
-							whileInView="visible"
-							viewport={{
-								once: true,
-								amount: 0.5,
-							}}
-						>
-							<Image
-								className="tablet"
-								src="/assets/hero-section/app_ilu_desktop-v4-min.png"
-								alt="app ilu"
-								width={"100%"}
-								effect="blur"
-								style={{
-									objectFit: "contain",
-								}}
-							/>
-							<Image
-								className="desktop"
-								src="/assets/hero-section/app_ilu_desktop-v4-min.png"
-								alt="app ilu"
-								width={"100%"}
-								effect="blur"
-								style={{
-									objectFit: "contain",
-									objectPosition: "top",
-								}}
-							/>
-						</IluContainer>
-					</IluFigure>
-				</motion.div>
-			)}
+							</IluContainer>
+						</IluFigure>
+					</motion.div>
+				)}
 
-			<CustomBlurContainer>
-				<div className="bg">
-					<div className="green"></div>
-					<div className="black"></div>
-				</div>
-			</CustomBlurContainer>
+				<CustomBlurContainer>
+					<div className="bg">
+						<div className="green"></div>
+						<div className="black"></div>
+					</div>
+				</CustomBlurContainer>
 
-			{/* <BlurFigure className="mobile">
+				{/* <BlurFigure className="mobile">
 				<Image
 					src="/assets/hero-section/bg-ilu_mobile-v2-opt.png"
 					alt="background ilu"
@@ -319,7 +321,8 @@ const HeroSection: React.FC = () => {
 					// afterLoad={() => setTrue()}
 				/>
 			</BlurFigure> */}
-		</SectionContainer>
+			</SectionContainer>
+		</>
 	)
 }
 
