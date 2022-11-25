@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
     scroll-behavior: smooth !important;
-	/* scroll-snap-type: y mandatory; */
+	  /* scroll-snap-type: y mandatory; */
     scroll-snap-type: y proximity;
     /* background-image: url("/assets/eyes.svg"); */
   }
