@@ -18,8 +18,10 @@ export const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
-    scroll-behavior: smooth !important;
+	  /* scroll-snap-type: y mandatory; */
     scroll-snap-type: y proximity;
+    scroll-behavior: smooth !important;
+    /* background-image: url("/assets/eyes.svg"); */
   }
   body {
     line-height: 1.5;
@@ -29,6 +31,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #000;
     color: #fff;
     height: auto;
+    scroll-behavior: smooth !important;
   }
 
 
