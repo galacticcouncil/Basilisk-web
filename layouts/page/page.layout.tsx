@@ -39,7 +39,8 @@ const ScrollContainer = styled.div`
 	position: relative;
 	height: 100%;
 	scroll-behavior: smooth !important;
-	scroll-snap-type: y mandatory;
+	scroll-snap-type: y proximity;
+	/* scroll-snap-type: y mandatory; */
 `
 
 const Main = styled.main`
