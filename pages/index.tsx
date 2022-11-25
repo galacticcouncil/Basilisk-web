@@ -11,6 +11,8 @@ import Head from "next/head"
 // Types
 import { ReactElement } from "react"
 
+import styled from "styled-components"
+
 // Sections
 import HeroSection from "../components/hero-section/hero-section.component"
 import OnChainSection from "../components/onchain-section/onchain-section.component"
@@ -128,7 +130,6 @@ const Home = () => {
 				/>
 				<meta property="twitter:image" content="/assets/logo-mobile-v1.svg" />
 			</Head>
-
 			<HeroSection />
 			{/* <OnChainSection /> */}
 			<Suspense fallback={"loading..."}>

@@ -268,7 +268,14 @@ const HeroSection: React.FC = () => {
 				</motion.div>
 			)}
 
-			<BlurFigure className="mobile">
+			<CustomBlurContainer>
+				<div className="bg">
+					<div className="green"></div>
+					<div className="black"></div>
+				</div>
+			</CustomBlurContainer>
+
+			{/* <BlurFigure className="mobile">
 				<Image
 					src="/assets/hero-section/bg-ilu_mobile-v2-opt.png"
 					alt="background ilu"
@@ -311,12 +318,46 @@ const HeroSection: React.FC = () => {
 					// threshold={200}
 					// afterLoad={() => setTrue()}
 				/>
-			</BlurFigure>
+			</BlurFigure> */}
 		</SectionContainer>
 	)
 }
 
 export default HeroSection
+
+const CustomBlurContainer = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	min-height: 80rem;
+
+	.green {
+		position: absolute;
+		width: 100%;
+		height: 150%;
+		background: linear-gradient(
+			90deg,
+			rgba(73, 228, 159, 1) 0%,
+			rgba(187, 255, 134, 1) 100%
+		);
+	}
+	.black {
+		position: absolute;
+		padding-top: 50%;
+		content: "";
+		display: block;
+		background: radial-gradient(
+			rgba(255, 255, 255, 0) 0%,
+			rgba(0, 0, 0, 1) 60%
+		);
+		height: 150%;
+		width: 200%;
+		left: -50%;
+	}
+`
 
 const SectionContainer = styled(motion.section)`
 	position: relative;
