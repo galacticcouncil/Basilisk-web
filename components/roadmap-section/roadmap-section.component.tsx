@@ -6,7 +6,7 @@ import { isMobile } from "react-device-detect"
 // Components
 import SectionHeading from "../section-heading/section-heading.component"
 import RoadmapItem, { IProps } from "../roadmap-item/roadmap-item.component"
-import { Button } from "../button/button.component"
+import { ButtonLink } from "../button/button.component"
 import Image from "../image/image.component"
 
 const RoadmapSection: React.FC = () => {
@@ -259,7 +259,7 @@ const RoadmapSection: React.FC = () => {
 			</RoadmapContainer>
 
 			<motion.div>
-				<Button
+				<ButtonLink
 					variant="GREEN"
 					icon={{
 						src: "/assets/roadmap-section/notion-logo-v2.svg",
@@ -268,9 +268,12 @@ const RoadmapSection: React.FC = () => {
 					rounded
 					left="auto"
 					right="auto"
+					href="https://sassy-potential-fac.notion.site/Basilisk-Features-Roadmap-External-d70cd8f064634bdfb547726dc57a2b2e"
+					rel="noopener noreferrer"
+					target="_blank"
 				>
 					Check live roadmap
-				</Button>
+				</ButtonLink>
 			</motion.div>
 		</Section>
 	)
