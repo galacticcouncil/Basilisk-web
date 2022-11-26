@@ -258,8 +258,14 @@ const RoadmapSection: React.FC = () => {
 				))}
 			</RoadmapContainer>
 
-			<motion.div>
+			<motion.div
+				style={{
+					display: "flex",
+					justifyContent: "center",
+				}}
+			>
 				<ButtonLink
+					display="inline-flex"
 					variant="GREEN"
 					icon={{
 						src: "/assets/roadmap-section/notion-logo-v2.svg",
