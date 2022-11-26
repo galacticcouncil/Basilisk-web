@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 // Components
 import Header from "../../components/header/header.component"
-import Image from "../../components/image/image.component"
+// import Image from "../../components/image/image.component"
 import Footer from "../../components/footer/footer.component"
 
 // Types
@@ -14,7 +14,7 @@ export interface IProps {
 const PageLayout: React.FC<IProps> = ({ children }) => {
 	return (
 		<>
-			<EyesContainer>
+			{/* <EyesContainer>
 				<Image
 					src="/assets/eyes.svg"
 					alt="eyes ilu"
@@ -25,7 +25,7 @@ const PageLayout: React.FC<IProps> = ({ children }) => {
 						objectFit: "contain",
 					}}
 				/>
-			</EyesContainer>
+			</EyesContainer> */}
 			<Header />
 			<Main>{children}</Main>
 			<Footer />
