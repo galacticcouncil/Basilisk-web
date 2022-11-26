@@ -363,8 +363,7 @@ const CustomBlurContainer = styled.div`
 `
 
 const SectionContainer = styled(motion.section)`
-	/* scroll-snap-type: x mandatory; */
-	scroll-snap-align: start;
+	/* scroll-snap-align: start; */
 
 	position: relative;
 	padding: 12.4rem 2rem 0;
