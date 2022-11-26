@@ -18,10 +18,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
-	  /* scroll-snap-type: y mandatory; */
     scroll-snap-type: y proximity;
     scroll-behavior: smooth !important;
-    /* background-image: url("/assets/eyes.svg"); */
   }
   body {
     line-height: 1.5;

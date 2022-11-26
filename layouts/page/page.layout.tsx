@@ -46,6 +46,7 @@ const Main = styled.main`
 	position: relative;
 	z-index: 1;
 	background: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);
+	scroll-behavior: smooth !important;
 `
 
 const EyesContainer = styled.div`
