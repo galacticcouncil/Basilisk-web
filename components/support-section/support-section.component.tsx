@@ -184,10 +184,12 @@ const Title = styled(motion.h3)`
 
 const PartnersDirectory = styled.div`
 	display: flex;
+	justify-content: center;
 	gap: 2rem;
 	height: 4.2rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		justify-content: flex-start;
 		height: 3.2rem;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
