@@ -40,7 +40,13 @@ const SwapTokensSection: React.FC = () => {
 				}}
 				cta={{
 					type: "link",
+
 					href: "https://docs.bsx.fi/product_snek_swap/",
+					label: "Learn more",
+				}}
+				cta2={{
+					type: "link",
+					href: "https://app.basilisk.cloud/#/trade",
 					label: "OPEN SNEK SWAP",
 				}}
 			/>
@@ -68,8 +74,13 @@ const SwapTokensSection: React.FC = () => {
 				}}
 				cta={{
 					type: "link",
+					href: "https://docs.bsx.fi/product_snek_lbp",
+					label: "Learn more",
+				}}
+				cta2={{
+					type: "link",
 					href: "https://app.basilisk.cloud/#/lbp",
-					label: "Snek LBP",
+					label: "OPEN SNEK LBP",
 				}}
 			/>
 
@@ -94,9 +105,10 @@ const SwapTokensSection: React.FC = () => {
 					alt: "earn rewards third ilu",
 				}}
 				cta={{
-					type: "link",
-					href: "https://app.basilisk.cloud/#/lbp",
-					label: "LEARN MORE",
+					type: "button",
+					disabled: true,
+					// href: "https://app.basilisk.cloud/#/lbp",
+					label: "COMING SOON",
 				}}
 			/>
 		</Section>

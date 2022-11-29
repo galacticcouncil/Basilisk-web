@@ -68,10 +68,10 @@ const NftSection: React.FC = () => {
 					alt: "nft ilu 2",
 				}}
 				cta={{
-					type: "link",
-					href: "https://docs.bsx.fi/product_snek_swap/",
-					label: "OPEN SNEK SWAP",
-					// disabled: true,
+					type: "button",
+					// href: "https://docs.bsx.fi/product_snek_swap/",
+					label: "COMING SOON",
+					disabled: true,
 				}}
 			/>
 		</Section>

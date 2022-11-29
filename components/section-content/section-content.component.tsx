@@ -38,6 +38,12 @@ export interface IProps extends IRowProps {
 		label: string
 		disabled?: boolean
 	}
+	cta2?: {
+		type: "link" | "button"
+		href?: string
+		label: string
+		disabled?: boolean
+	}
 }
 
 const SectionContent: React.FC<IProps> = ({
@@ -47,6 +53,7 @@ const SectionContent: React.FC<IProps> = ({
 	image,
 	bgImage,
 	cta,
+	cta2,
 	reverse,
 }) => {
 	const variants: Variants = {
@@ -193,6 +200,25 @@ const SectionContent: React.FC<IProps> = ({
 					{description}
 				</ContentDescription>
 				<ButtonsContainer variants={titleVariants}>
+					{cta2?.type === "button" && (
+						<Button
+							// variant="GREEN"
+							disabled={cta2.disabled}
+							rounded
+						>
+							{cta2.label}
+						</Button>
+					)}
+					{cta2?.type === "link" && (
+						<ButtonLink
+							// variant="GREEN"
+							rounded
+							display="inline-flex"
+							href={cta2.href}
+						>
+							{cta2.label}
+						</ButtonLink>
+					)}
 					{cta.type === "button" && (
 						<Button variant="GREEN" disabled={cta.disabled} rounded>
 							{cta.label}
@@ -355,6 +381,8 @@ const ContentDescription = styled(motion.p)`
 const ButtonsContainer = styled(motion.div)`
 	display: flex;
 	justify-content: center;
+	gap: 1.6rem;
+	flex-wrap: wrap;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		justify-content: start;

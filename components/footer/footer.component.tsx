@@ -26,9 +26,9 @@ const Footer: React.FC = () => {
 		},
 		{
 			label: "Tokenomics",
-			slug: "/",
+			slug: "https://docs.bsx.fi/tokenomics/",
 			rel: "noopener noreferrer",
-			// target: "_blank",
+			target: "_blank",
 		},
 		{
 			label: "Documentation",
@@ -40,26 +40,6 @@ const Footer: React.FC = () => {
 
 	const socialsItems = [
 		{
-			label: "Discord",
-			slug: "https://discord.com/invite/S8YZj5aXR6",
-			rel: "noopener noreferrer",
-			target: "_blank",
-			icon: {
-				src: "/assets/icons/discord.svg",
-				alt: "discord",
-			},
-		},
-		{
-			label: "Github",
-			slug: "https://github.com/galacticcouncil",
-			rel: "noopener noreferrer",
-			target: "_blank",
-			icon: {
-				src: "/assets/icons/github.svg",
-				alt: "github",
-			},
-		},
-		{
 			label: "Twitter",
 			slug: "https://twitter.com/bsx_finance",
 			rel: "noopener noreferrer",
@@ -69,6 +49,17 @@ const Footer: React.FC = () => {
 				alt: "twitter",
 			},
 		},
+		{
+			label: "Discord",
+			slug: "https://discord.com/invite/S8YZj5aXR6",
+			rel: "noopener noreferrer",
+			target: "_blank",
+			icon: {
+				src: "/assets/icons/discord.svg",
+				alt: "discord",
+			},
+		},
+
 		{
 			label: "Telegram",
 			slug: "https://t.me/bsx_fi",
@@ -97,6 +88,16 @@ const Footer: React.FC = () => {
 			icon: {
 				src: "/assets/icons/reddit.svg",
 				alt: "reddit",
+			},
+		},
+		{
+			label: "Github",
+			slug: "https://github.com/galacticcouncil",
+			rel: "noopener noreferrer",
+			target: "_blank",
+			icon: {
+				src: "/assets/icons/github.svg",
+				alt: "github",
 			},
 		},
 	]
@@ -131,7 +132,9 @@ const Footer: React.FC = () => {
 				},
 				{
 					label: "Tokenomics",
-					href: "/",
+					href: "https://docs.bsx.fi/tokenomics/",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/tokenomics.svg",
 						alt: "github",
@@ -217,14 +220,16 @@ const Footer: React.FC = () => {
 			],
 		},
 		{
-			label: "Blog",
-			href: "/",
-		},
-		{
 			label: "Github",
 			href: "https://github.com/galacticcouncil",
 			rel: "noopener noreferrer",
 			target: "_blank",
+		},
+		{
+			label: "Newsletter",
+			rel: "noopener noreferrer",
+			target: "_blank",
+			href: "https://basiliskfi.substack.com/",
 		},
 	]
 
@@ -299,7 +304,7 @@ const Footer: React.FC = () => {
 					<ColItem>
 						<Link passHref href={"https://basiliskfi.substack.com/"}>
 							<a rel="noopener noreferrer" target="_blank">
-								<Title>Blog</Title>
+								<Title>Newsletter</Title>
 							</a>
 						</Link>
 					</ColItem>
