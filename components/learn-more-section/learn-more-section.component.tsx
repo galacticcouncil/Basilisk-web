@@ -94,10 +94,25 @@ const LearnMoreSection: React.FC = () => {
 					<br /> about Basilisk
 				</Title>
 				<ButtonsContainer variants={titleVariants}>
-					<ButtonLink variant="GREEN_BLACK" rounded href="/">
+					<ButtonLink
+						variant="GREEN_BLACK"
+						rounded
+						href="https://docs.bsx.fi/tokenomics/"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
 						Tokenomics
 					</ButtonLink>
 					<ButtonLink
+						variant="GREEN_BLACK"
+						rounded
+						href="https://basiliskfi.substack.com/"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						Newsletter
+					</ButtonLink>
+					{/* <ButtonLink
 						variant="GREEN_BLACK"
 						rounded
 						href="https://github.com/galacticcouncil/Basilisk-assets/tree/master/Basilisk%20Press%20Kit"
@@ -105,7 +120,7 @@ const LearnMoreSection: React.FC = () => {
 						target="_blank"
 					>
 						Press Kit
-					</ButtonLink>
+					</ButtonLink> */}
 				</ButtonsContainer>
 			</Container>
 		</Section>

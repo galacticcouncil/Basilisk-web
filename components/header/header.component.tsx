@@ -66,7 +66,9 @@ const Header: React.FC = () => {
 				},
 				{
 					label: "Tokenomics",
-					href: "/",
+					href: "https://docs.bsx.fi/tokenomics/",
+					rel: "noopener noreferrer",
+					target: "_blank",
 					icon: {
 						src: "/assets/icons/tokenomics.svg",
 						alt: "tokenomics",
@@ -95,6 +97,17 @@ const Header: React.FC = () => {
 			toggle: toggleSocialMenu,
 			list: [
 				{
+					label: "Twitter",
+					href: "https://twitter.com/bsx_finance",
+					rel: "noopener noreferrer",
+					target: "_blank",
+					icon: {
+						src: "/assets/icons/twitter.svg",
+						alt: "twitter",
+					},
+					// Icon: TwitterIcon,
+				},
+				{
 					label: "Discord",
 					href: "https://discord.com/invite/S8YZj5aXR6",
 					rel: "noopener noreferrer",
@@ -106,17 +119,7 @@ const Header: React.FC = () => {
 					},
 					// Icon: DiscordIcon,
 				},
-				{
-					label: "Twitter",
-					href: "https://twitter.com/bsx_finance",
-					rel: "noopener noreferrer",
-					target: "_blank",
-					icon: {
-						src: "/assets/icons/twitter.svg",
-						alt: "twitter",
-					},
-					// Icon: TwitterIcon,
-				},
+
 				{
 					label: "Telegram",
 					href: "https://t.me/bsx_fi",
@@ -153,16 +156,16 @@ const Header: React.FC = () => {
 			],
 		},
 		{
-			label: "Blog",
-			rel: "noopener noreferrer",
-			target: "_blank",
-			href: "https://basiliskfi.substack.com/",
-		},
-		{
 			label: "Github",
 			rel: "noopener noreferrer",
 			target: "_blank",
 			href: "https://github.com/galacticcouncil",
+		},
+		{
+			label: "Newsletter",
+			rel: "noopener noreferrer",
+			target: "_blank",
+			href: "https://basiliskfi.substack.com/",
 		},
 	]
 
