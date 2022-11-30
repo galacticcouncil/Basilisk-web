@@ -115,7 +115,7 @@ const Home = () => {
 					property="og:description"
 					content="Snek brings permissionless liquidity to the Kusama ecosystem. Swap tokens, flip NFTs and earn rewards. Help young crypto projects bootstrap liquidity and receive tokens."
 				/>
-				<meta property="og:image" content="/assets/logo-mobile-v1.svg" />
+				<meta property="og:image" content="/assets/meta_image-v2-min.png" />
 
 				{/* <!-- Twitter --> */}
 				<meta property="twitter:card" content="summary_large_image" />
@@ -128,7 +128,10 @@ const Home = () => {
 					property="twitter:description"
 					content="Snek brings permissionless liquidity to the Kusama ecosystem. Swap tokens, flip NFTs and earn rewards. Help young crypto projects bootstrap liquidity and receive tokens."
 				/>
-				<meta property="twitter:image" content="/assets/logo-mobile-v1.svg" />
+				<meta
+					property="twitter:image"
+					content="/assets/meta_image-v2-min.png"
+				/>
 			</Head>
 			<HeroSection />
 			{/* <OnChainSection /> */}
