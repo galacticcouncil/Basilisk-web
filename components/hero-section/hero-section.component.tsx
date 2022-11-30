@@ -186,7 +186,7 @@ const HeroSection: React.FC = () => {
 								rel="noopener noreferrer"
 								target="_blank"
 							>
-								NFT
+								GO NFTS!
 							</ButtonLink>
 							<ButtonLink
 								rounded
@@ -195,7 +195,7 @@ const HeroSection: React.FC = () => {
 								rel="noopener noreferrer"
 								target="_blank"
 							>
-								DEFI
+								OPEN DEFI
 							</ButtonLink>
 						</CtaContainer>
 						<IluFigure
