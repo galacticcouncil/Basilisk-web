@@ -130,7 +130,7 @@ const Home = () => {
 				/>
 				<meta
 					property="twitter:image"
-					content="/assets/meta_image-v2-min.png"
+					content="https://bsx.fi/assets/meta_image-v2-min.png"
 				/>
 			</Head>
 			<HeroSection />
