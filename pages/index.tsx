@@ -115,7 +115,7 @@ const Home = () => {
 					property="og:description"
 					content="Snek brings permissionless liquidity to the Kusama ecosystem. Swap tokens, flip NFTs and earn rewards. Help young crypto projects bootstrap liquidity and receive tokens."
 				/>
-				<meta property="og:image" content="/assets/meta_image-v3.png" />
+				<meta property="og:image" content="/assets/meta_image-v4.png" />
 
 				{/* <!-- Twitter --> */}
 				<meta property="twitter:card" content="summary_large_image" />
@@ -130,7 +130,7 @@ const Home = () => {
 				/>
 				<meta
 					property="twitter:image"
-					content="https://bsx.fi/assets/meta_image-v3.png"
+					content="https://bsx.fi/assets/meta_image-v4.png"
 				/>
 			</Head>
 			<HeroSection />
