@@ -170,7 +170,7 @@ const HeroSection: React.FC = () => {
 							// initial="hidden" animate="visible"
 						>
 							<motion.span>
-								Basilisk brings permissionless liquidity to Kusama 
+								Basilisk brings permissionless liquidity to Kusama.{" "}
 							</motion.span>
 							<motion.span>
 								Support young projects. Swap tokens or flip NFTs and earn
@@ -246,7 +246,7 @@ const HeroSection: React.FC = () => {
 							>
 								<Image
 									className="tablet"
-									src="/assets/hero-section/app_ilu_desktop-v4-min.png"
+									src="/assets/hero-section/app_ilu_desktop-v5.svg"
 									alt="app ilu"
 									width={"100%"}
 									effect="blur"
@@ -256,7 +256,7 @@ const HeroSection: React.FC = () => {
 								/>
 								<Image
 									className="desktop"
-									src="/assets/hero-section/app_ilu_desktop-v4-min.png"
+									src="/assets/hero-section/app_ilu_desktop-v5.svg"
 									alt="app ilu"
 									width={"100%"}
 									effect="blur"
