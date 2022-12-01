@@ -170,7 +170,7 @@ const HeroSection: React.FC = () => {
 							// initial="hidden" animate="visible"
 						>
 							<motion.span>
-								Basilisk brings permissionless liquidity to Kusama
+								Basilisk brings permissionless liquidity to Kusama 
 							</motion.span>
 							<motion.span>
 								Support young projects. Swap tokens or flip NFTs and earn
