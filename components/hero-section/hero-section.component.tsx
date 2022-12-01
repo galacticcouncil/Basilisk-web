@@ -246,7 +246,7 @@ const HeroSection: React.FC = () => {
 							>
 								<Image
 									className="tablet"
-									src="/assets/hero-section/app_ilu_desktop-v5.svg"
+									src="/assets/hero-section/app_ilu_desktop-v4-min.png"
 									alt="app ilu"
 									width={"100%"}
 									effect="blur"
@@ -256,7 +256,7 @@ const HeroSection: React.FC = () => {
 								/>
 								<Image
 									className="desktop"
-									src="/assets/hero-section/app_ilu_desktop-v5.svg"
+									src="/assets/hero-section/app_ilu_desktop-v4-min.png"
 									alt="app ilu"
 									width={"100%"}
 									effect="blur"
