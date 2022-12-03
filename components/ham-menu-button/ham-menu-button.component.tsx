@@ -27,7 +27,7 @@ const ToggleButton = styled.button`
 	gap: 1rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		@media all and (min-width: 1140px) {
 			display: none;
 			outline: none;
 			border: none;
