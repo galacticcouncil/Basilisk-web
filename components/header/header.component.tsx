@@ -471,12 +471,12 @@ const Nav = styled.nav`
 	visibility: hidden;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		@media all and (min-width: 1140px) {
 			display: block;
 			visibility: visible;
-			@media all and (min-width: 1107px) {
-				margin-left: 4rem;
-			}
+			/* @media all and (min-width: 1107px) { */
+			margin-left: 4rem;
+			/* } */
 		}
 	}
 `
@@ -601,7 +601,8 @@ const CTAContainer = styled.div`
 	visibility: hidden;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) { */
+		@media all and (min-width: 1140px) {
 			display: flex;
 			gap: 1.2rem;
 			visibility: visible;
@@ -623,7 +624,7 @@ const MobileMenuContainer = styled(motion.div)`
 	background-color: ${({ theme }) => theme.header.mobileMenu.background};
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		@media all and (min-width: 1140px) {
 			display: none;
 			visibility: hidden;
 		}
