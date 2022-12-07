@@ -21,7 +21,7 @@ const nextConfig = {
 					{
 						key: "Content-Security-Policy",
 						value:
-							"default-src 'self' 'unsafe-eval' 'unsafe-inline' api.fontshare.com; frame-ancestors 'none'; font-src 'self' 'unsafe-eval' ; connect-src 'self'"
+							"default-src 'self' 'unsafe-eval' 'unsafe-inline' api.fontshare.com; frame-ancestors 'none'; font-src 'self' 'unsafe-eval' data:; connect-src 'self'"
 								.replace(/\s{2,}/g, " ")
 								.trim(),
 					},
