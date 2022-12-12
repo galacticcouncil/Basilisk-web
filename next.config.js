@@ -29,6 +29,14 @@ const nextConfig = {
 			},
 		]
 	},
+	redirects: async () => [
+		{
+			source: "/vi",
+			destination: "/",
+			statusCode: 301,
+			permanent: true,
+		},
+	],
 }
 
 module.exports = nextConfig
