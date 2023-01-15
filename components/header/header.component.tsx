@@ -327,7 +327,11 @@ const Header: React.FC = () => {
 							<MobileNavList>
 								{NAV_ITEMS.map((item, index) => (
 									<MobileNavItem key={index}>
-										{item.href && <Link href={item.href}>{item.label}</Link>}
+										{item.href && (
+											<div onClick={() => toggleMenu()}>
+												<Link href={item.href}>{item.label}</Link>
+											</div>
+										)}
 										{item.list && (
 											<MobileDropdownButton
 												isOpen={item.isOpen}
@@ -365,7 +369,10 @@ const Header: React.FC = () => {
 												>
 													<MobileDropdownList>
 														{item.list.map((listItem, index) => (
-															<MobileDropdownMenuItem key={index}>
+															<MobileDropdownMenuItem
+																key={index}
+																onClick={() => toggleMenu()}
+															>
 																<Link href={listItem.href} passHref>
 																	<a
 																		ref={listItem.rel}
