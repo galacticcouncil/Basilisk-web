@@ -71,14 +71,14 @@ const SupportSection: React.FC = () => {
             </a>
             <a href="https://subwallet.app/">
               <Image
-                src="/assets/support-section/sub-wallet.png"
+                src="/assets/support-section/sub-wallet-v2.png"
                 alt="subwallet"
                 height={"100%"}
               />
             </a>
             <a href="https://www.enkrypt.com/">
               <Image
-                src="/assets/support-section/enkrypt-logo-color.svg"
+                src="/assets/support-section/enkrypt-logo-color-v2.png"
                 alt="enkrypt"
                 height={"100%"}
               />
