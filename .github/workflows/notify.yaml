@@ -1,0 +1,17 @@
+name: Discord notification
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: notify
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@0.3.2
