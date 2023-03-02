@@ -59,6 +59,7 @@ const SupportSection: React.FC = () => {
               <Image
                 src="/assets/support-section/talisman-v2.svg"
                 alt="talisman"
+                width={"100%"}
                 height={"100%"}
               />
             </a>
@@ -66,6 +67,7 @@ const SupportSection: React.FC = () => {
               <Image
                 src="/assets/support-section/polkadot-v2.svg"
                 alt="polkadot"
+                width={"100%"}
                 height={"100%"}
               />
             </a>
@@ -73,6 +75,7 @@ const SupportSection: React.FC = () => {
               <Image
                 src="/assets/support-section/sub-wallet-v2.png"
                 alt="subwallet"
+                width={"100%"}
                 height={"100%"}
               />
             </a>
@@ -80,6 +83,7 @@ const SupportSection: React.FC = () => {
               <Image
                 src="/assets/support-section/enkrypt-logo-color-v2.png"
                 alt="enkrypt"
+                width={"100%"}
                 height={"100%"}
               />
             </a>
@@ -93,6 +97,7 @@ const SupportSection: React.FC = () => {
               <Image
                 src="/assets/support-section/nova-v3.png"
                 alt="Nova"
+                width={"100%"}
                 height={"100%"}
               />
             </a>
@@ -203,12 +208,23 @@ const PartnersDirectory = styled.div`
   width: 100%;
   height: 4.2rem;
 
+  a {
+    display: block;
+    width: 4.2rem;
+  }
+
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     justify-content: flex-start;
     height: 3.2rem;
+    a {
+      width: 3.2rem;
+    }
 
     @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       height: 6rem;
+      a {
+        width: 6.2rem;
+      }
     }
   }
 `
