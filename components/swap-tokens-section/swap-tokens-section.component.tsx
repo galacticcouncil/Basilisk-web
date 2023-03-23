@@ -105,10 +105,9 @@ const SwapTokensSection: React.FC = () => {
 					alt: "earn rewards third ilu",
 				}}
 				cta={{
-					type: "button",
-					disabled: true,
-					// href: "https://app.basilisk.cloud/#/lbp",
-					label: "COMING SOON",
+					type: "link",
+					href: "https://app.basilisk.cloud/#/pools-and-farms",
+					label: "OPEN SNEK FARMS",
 				}}
 			/>
 		</Section>
